@@ -4,9 +4,9 @@ Tailwiki is a multipurpose Wiki template designed for creating fast-loading page
 
 HTML wiki/knowledge base/documentation website template deployed by Baklib WIKI.
 
-![Baklib WIKI based index theme](./assets/images/theme/index.png)
-![Baklib WIKI based index theme](./assets/images/theme/index-1.png)
-![Baklib WIKI based page theme](./assets/images/theme/index-2.png)
+![Baklib WIKI based index theme](./assets/images/theme/index.webp)
+![Baklib WIKI based index theme](./assets/images/theme/page.webp)
+![Baklib WIKI based page theme](./assets/images/theme/changelog.webp)
 
 
 ## 🚀 Project Structure
