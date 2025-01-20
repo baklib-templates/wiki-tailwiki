@@ -1,0 +1,669 @@
+
+  <main id="content">
+    <!-- =========={ HERO }==========  -->
+    <div id="hero" class="relative pt-14 pb-20 md:pt-16 md:pb-24 jarallax">
+      <!-- background parallax -->
+      <img class="jarallax-img" src="{{ 'images/img-min/bg3.jpg' | asset_url }}" alt="title">
+
+      <!-- background overlay -->
+      <div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"></div>
+
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <div class="flex flex-wrap flex-row -mx-4 items-center justify-center mb-6">
+          <!-- content -->
+          <div class="max-w-full w-11/12 lg:w-7/12 px-4">
+            <div class="mt-6 py-4 lg:py-8 text-center">
+              <h1 class="text-4xl lg:text-5xl leading-normal font-semibold text-white capitalize mb-4">We are Creative <span class="text-yellow-300">Graphic design</span> Agency.</h1>
+              <p class="text-gray-100 leading-relaxed font-light text-xl mx-auto pb-2 mb-12">We work with brands to help them connect to their audience with the use of a visual identity, marketing collateral, print & publication design.</p>
+              <a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-transparent border border-gray-100 hover:text-gray-900 hover:bg-gray-200 hover:ring-0 hover:border-gray-200 focus:text-gray-900 focus:bg-gray-200 focus:border-gray-200 focus:outline-none focus:ring-0 mb-4 sm:mb-0 me-6" href="#portfolio">
+                Portfolio
+              </a>
+              <a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-transparent border border-gray-100 hover:text-gray-900 hover:bg-gray-200 hover:ring-0 hover:border-gray-200 focus:text-gray-900 focus:bg-gray-200 focus:border-gray-200 focus:outline-none focus:ring-0" href="#services">
+                Services
+              </a>
+            </div>
+          </div><!-- end content -->
+        </div>
+        <!-- masthead -->
+        <div class="text-center absolute bottom-8 w-full start-0 animate-bounce hidden md:block">
+          <a href="#portfolio">
+            <div class="mx-auto py-5 px-3 w-6 h-8 rounded-xl opacity-80 border-2 border-white">
+              <div class="h-2 w-0.5 bg-white"><span class="invisible">Scroll button</span></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div><!-- end hero -->
+
+    <!-- =========={ PORTFOLIO }==========  -->
+    <div id="portfolio" class="relative py-20 md:py-24 bg-gray-50 dark:bg-gray-900 dark:g-opacity-20">
+      <div x-data="{ tab: 'all' }" class="container xl:max-w-6xl mx-auto px-4">
+        <!-- section header -->
+        <header class="text-center mx-auto mb-12">
+          <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"><span class="font-light">Latest</span> Work</h2>
+          <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
+        </header><!-- end section header -->
+
+        <!-- navigation -->
+        <div class="space-x-5 text-center">
+          <button @click.prevent="tab = 'all'" :class="{ 'text-primary-700' : tab === 'all' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none text-primary-700">
+            All
+          </button>
+
+          <button @click.prevent="tab = 'web'" :class="{ 'text-primary-700' : tab === 'web' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none">
+            Web
+          </button>
+
+          <button @click.prevent="tab = 'graphic'" :class="{ 'text-primary-700' : tab === 'graphic' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none">
+            Graphic
+          </button>
+
+          <button @click.prevent="tab = 'photo'" :class="{ 'text-primary-700' : tab === 'photo' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none">
+            Photograpy
+          </button>
+        </div><!-- end navigation -->
+
+        <!-- Portfolio Content -->
+        <div class="flex flex-wrap flex-row -mx-4 lightgallery-thumbnail">
+          <figure x-show="tab === 'graphic' || tab === 'photo' || tab === 'all'" data-src="{{ 'images/img-min/project_1.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+            <div class="relative overflow-hidden cursor-pointer mb-6">
+              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_1.jpg' | asset_url }}" alt="Image Description">
+              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Logo Design</h3>
+                <small class="d-block">Branding</small>
+              </figcaption>
+            </div>
+          </figure>
+
+          <figure x-show="tab === 'web' || tab === 'all'" data-src="{{ 'images/img-min/project_2.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+            <div class="relative overflow-hidden cursor-pointer mb-6">
+              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_2.jpg' | asset_url }}" alt="Image Description">
+              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Web Development</h3>
+                <small class="d-block">Web</small>
+              </figcaption>
+            </div>
+          </figure>
+
+          <figure x-show="tab === 'graphic' || tab === 'all'" data-src="{{ 'images/img-min/project_3.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+            <div class="relative overflow-hidden cursor-pointer mb-6">
+              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_3.jpg' | asset_url }}" alt="Image Description">
+              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Graphic Design</h3>
+                <small class="d-block">Graphic</small>
+              </figcaption>
+            </div>
+          </figure>
+
+          <figure x-show="tab === 'graphic' || tab === 'all'" data-src="{{ 'images/img-min/project_4.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+            <div class="relative overflow-hidden cursor-pointer mb-6">
+              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_4.jpg' | asset_url }}" alt="Image Description">
+              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Video Marketing</h3>
+                <small class="d-block">Video</small>
+              </figcaption>
+            </div>
+          </figure>
+
+          <figure x-show="tab === 'photo' || tab === 'all'" data-src="{{ 'images/img-min/project_5.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+            <div class="relative overflow-hidden cursor-pointer mb-6">
+              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_5.jpg' | asset_url }}" alt="Image Description">
+              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Photography</h3>
+                <small class="d-block">Photo</small>
+              </figcaption>
+            </div>
+          </figure>
+
+          <figure x-show="tab === 'web' || tab === 'all'" data-src="{{ 'images/img-min/project_6.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+            <div class="relative overflow-hidden cursor-pointer mb-6">
+              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_6.jpg' | asset_url }}" alt="Image Description">
+              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Apps Development</h3>
+                <small class="d-block">Apps</small>
+              </figcaption>
+            </div>
+          </figure>
+        </div>
+      </div>
+      
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <div class="flex flex-wrap flex-row -mx-4">
+          <div class="w-full px-4 text-center mt-6">
+            <a href="#" class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0">View all latest project</a>
+          </div>
+        </div>
+      </div>
+    </div><!-- End portfolio -->
+
+    <!-- =========={ SERVICE }==========  -->
+    <div id="services" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-white dark:bg-gray-800">
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <!-- section header -->
+        <header class="text-center mx-auto mb-12 lg:px-20">
+          <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"><span class="font-light">Our</span> Services</h2>
+          <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
+          <p class="text-gray-600 leading-relaxed font-light text-xl mx-auto pb-2">We help the companies build market through design and creativity. We are a creative serving local and international business ranging from Small to big companies all from various industries.</p>
+        </header><!-- end section header -->
+
+        <!-- row -->
+        <div class="flex flex-wrap flex-row -mx-4">
+          <div class="max-w-full px-4 w-full sm:w-1/2 lg:w-1/4">
+            <!-- service block -->
+            <div class="py-5 px-6 border rounded bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-12 wow fadeInUp" data-wow-duration="1s">
+              <h3 class="text-lg leading-normal mb-2 font-semibold text-gray-700 dark:text-gray-200 capitalize">Design Identity</h3>
+              <ul>
+                <li class="py-2 list-disc list-inside">Logo Design</li>
+                <li class="py-2 list-disc list-inside">Visual Guideline</li>
+                <li class="py-2 list-disc list-inside">Brand Identity</li>
+                <li class="py-2 list-disc list-inside">Brand Applications</li>
+                <li class="py-2 list-disc list-inside">Visual Identity</li>
+              </ul>
+            </div><!-- end service block -->
+          </div>
+
+          <div class="max-w-full px-4 w-full sm:w-1/2 lg:w-1/4">
+            <!-- service block -->
+            <div class="py-5 px-6 border rounded bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+              <h3 class="text-lg leading-normal mb-2 font-semibold text-gray-700 dark:text-gray-200 capitalize">Printed</h3>
+              <ul>
+                <li class="py-2 list-disc list-inside">Marketing Collateral</li>
+                <li class="py-2 list-disc list-inside">Packaging Design</li>
+                <li class="py-2 list-disc list-inside">Profile Card</li>
+                <li class="py-2 list-disc list-inside">Calendar Design</li>
+                <li class="py-2 list-disc list-inside">Annual Report</li>
+              </ul>
+            </div><!-- end service block -->
+          </div>
+
+          <div class="max-w-full px-4 w-full sm:w-1/2 lg:w-1/4">
+            <!-- service block -->
+            <div class="py-5 px-6 border rounded bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+              <h3 class="text-lg leading-normal mb-2 font-semibold text-gray-700 dark:text-gray-200 capitalize">Digital Design</h3>
+              <ul>
+                <li class="py-2 list-disc list-inside">Web Development</li>
+                <li class="py-2 list-disc list-inside">UI/UX Design</li>
+                <li class="py-2 list-disc list-inside">Videography</li>
+                <li class="py-2 list-disc list-inside">Banner Ads Design</li>
+                <li class="py-2 list-disc list-inside">Photography</li>
+              </ul>
+            </div><!-- end service block -->
+          </div>
+
+          <div class="max-w-full px-4 w-full sm:w-1/2 lg:w-1/4">
+            <!-- service block -->
+            <div class="py-5 px-6 border rounded bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+              <h3 class="text-lg leading-normal mb-2 font-semibold text-gray-700 dark:text-gray-200 capitalize">Subscriptions</h3>
+              <ul>
+                <li class="py-2 list-disc list-inside">Unlimited Design</li>
+                <li class="py-2 list-disc list-inside">Unlimited Revisions</li>
+                <li class="py-2 list-disc list-inside">Dedicated Designer</li>
+                <li class="py-2 list-disc list-inside">One Flat Monthly Fee</li>
+                <li class="py-2 list-disc list-inside">Free Stock Photos</li>
+              </ul>
+            </div><!-- end service block -->
+          </div>
+        </div><!-- end row -->
+      </div>
+    </div><!-- end section -->
+
+    <!-- =========={ TEAM }==========  -->
+    <div id="team" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-gray-50 dark:bg-gray-900 dark:g-opacity-20">
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <!-- section header -->
+        <header class="text-center mx-auto mb-12 lg:px-20">
+          <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"><span class="font-light">Professional</span> Team</h2>
+          <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
+        </header><!-- end section header -->
+
+        <!-- row -->
+        <div class="flex flex-wrap flex-row -mx-4 justify-center">
+          <div class="flex-shrink max-w-full px-4 w-10/12 sm:w-1/2">
+            <!-- team block -->
+            <div class="relative overflow-hidden rounded shadow bg-white dark:bg-gray-800 mb-12">
+              <!-- Row -->
+              <div class="flex flex-wrap flex-row">
+                <div class="flex-shrink max-w-full p-4 w-full lg:w-5/12">
+                  <!-- team thumbnail -->
+                  <div class="relative overflow-hidden bg-primary-700 z-0">
+                    <!-- scribble -->
+                    <figure class="absolute top-0 end-0 -mt-12 -me-12 wow fadeInDown" data-wow-duration="1s" style="z-index:-1">
+                      <svg class="text-white opacity-30" width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="currentColor" d="M42.5,-66.2C57.1,-56.7,72.5,-48.4,81.1,-35.3C89.8,-22.2,91.8,-4.4,89.6,13C87.3,30.4,80.7,47.4,69.5,60.1C58.3,72.9,42.4,81.5,25.9,84.6C9.5,87.8,-7.4,85.4,-22.7,79.8C-37.9,74.1,-51.5,65.2,-60.9,53.3C-70.4,41.4,-75.8,26.6,-79,10.8C-82.1,-5,-83.1,-21.7,-77.7,-36.4C-72.4,-51,-60.7,-63.7,-46.7,-73.5C-32.7,-83.3,-16.4,-90.1,-1.2,-88.2C13.9,-86.3,27.8,-75.7,42.5,-66.2Z" transform="translate(100 100)" />
+                      </svg>
+                    </figure>
+                    <img src="{{ 'images/img-min/avatar.png' | asset_url }}" class="max-w-full w-full h-auto" alt="title image">
+                    <div class="py-2 px-0 inset-x-4 absolute text-center bottom-4 rounded bg-white dark:bg-gray-800">
+                      <ul class="space-x-3">
+                        <li class="inline-block">
+                          <a class="hover:text-primary-700" aria-label="Twitter link" href="#">
+                            <!-- <i class="fab fa-twitter text-twitter"></i> -->
+                             <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 512 512"><path fill="currentColor" d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"></path></svg>
+                          </a>
+                        </li>
+                        <li class="inline-block">
+                          <a class="hover:text-primary-700" aria-label="Facebook link" href="#">
+                            <!-- <i class="fab fa-facebook text-facebook"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 512 512"><path fill="currentColor" d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z"></path></svg>
+                          </a>
+                        </li>
+                        <li class="inline-block">
+                          <a class="hover:text-primary-700" aria-label="Instagram link" href="#">
+                            <!-- <i class="fab fa-instagram text-instagram"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 512 512"><path fill="currentColor" d="M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z"></path><path fill="currentColor" d="M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z"></path><path fill="currentColor" d="M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z"></path></svg>
+                          </a>
+                        </li>
+                        <li class="inline-block">
+                         <a class="hover:text-primary-700" aria-label="Linkedin link" href="#">
+                            <!-- <i class="fab fa-linkedin text-linkedin"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 512 512"><path fill="currentColor" d="M444.17,32H70.28C49.85,32,32,46.7,32,66.89V441.61C32,461.91,49.85,480,70.28,480H444.06C464.6,480,480,461.79,480,441.61V66.89C480.12,46.7,464.6,32,444.17,32ZM170.87,405.43H106.69V205.88h64.18ZM141,175.54h-.46c-20.54,0-33.84-15.29-33.84-34.43,0-19.49,13.65-34.42,34.65-34.42s33.85,14.82,34.31,34.42C175.65,160.25,162.35,175.54,141,175.54ZM405.43,405.43H341.25V296.32c0-26.14-9.34-44-32.56-44-17.74,0-28.24,12-32.91,23.69-1.75,4.2-2.22,9.92-2.22,15.76V405.43H209.38V205.88h64.18v27.77c9.34-13.3,23.93-32.44,57.88-32.44,42.13,0,74,27.77,74,87.64Z"></path></svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div><!-- end team thumbnail -->
+                </div>
+                <div class="flex-shrink max-w-full px-4 w-full lg:w-7/12">
+                  <!-- team info -->
+                  <div class="p-6">
+                    <p class="text-xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Joe Antonio</p>
+                    <p class="text-gray-500 mb-2">Founder CEO</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nihil tenetur minus quidem .</p>
+                  </div><!-- end team info -->
+                </div>
+              </div><!-- Row -->
+            </div><!-- team block -->
+          </div>
+
+          <div class="flex-shrink max-w-full px-4 w-10/12 sm:w-1/2">
+            <!-- team block -->
+            <div class="relative overflow-hidden rounded shadow bg-white dark:bg-gray-800 mb-12">
+              <!-- Row -->
+              <div class="flex flex-wrap flex-row">
+                <div class="flex-shrink max-w-full p-4 w-full lg:w-5/12">
+                  <!-- team thumbnail -->
+                  <div class="relative overflow-hidden bg-primary-700 z-0">
+                    <!-- scribble -->
+                    <figure class="absolute top-0 end-0 -mt-12 -me-12 wow fadeInDown" data-wow-duration="1s" data-wow-delay=".1s" style="z-index:-1">
+                      <svg class="text-white opacity-30" width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="currentColor" d="M42.5,-66.2C57.1,-56.7,72.5,-48.4,81.1,-35.3C89.8,-22.2,91.8,-4.4,89.6,13C87.3,30.4,80.7,47.4,69.5,60.1C58.3,72.9,42.4,81.5,25.9,84.6C9.5,87.8,-7.4,85.4,-22.7,79.8C-37.9,74.1,-51.5,65.2,-60.9,53.3C-70.4,41.4,-75.8,26.6,-79,10.8C-82.1,-5,-83.1,-21.7,-77.7,-36.4C-72.4,-51,-60.7,-63.7,-46.7,-73.5C-32.7,-83.3,-16.4,-90.1,-1.2,-88.2C13.9,-86.3,27.8,-75.7,42.5,-66.2Z" transform="translate(100 100)" />
+                      </svg>
+                    </figure>
+                    <img src="{{ 'images/img-min/avatar2.png' | asset_url }}" class="max-w-full w-full h-auto" alt="title image">
+                    <div class="py-2 px-0 inset-x-4 absolute text-center bottom-4 rounded bg-white dark:bg-gray-800">
+                      <ul class="space-x-3">
+                        <li class="inline-block">
+                          <a class="hover:text-primary-700" aria-label="Twitter link" href="#">
+                            <!-- <i class="fab fa-twitter text-twitter"></i> -->
+                             <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 512 512"><path fill="currentColor" d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"></path></svg>
+                          </a>
+                        </li>
+                        <li class="inline-block">
+                          <a class="hover:text-primary-700" aria-label="Facebook link" href="#">
+                            <!-- <i class="fab fa-facebook text-facebook"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 512 512"><path fill="currentColor" d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z"></path></svg>
+                          </a>
+                        </li>
+                        <li class="inline-block">
+                          <a class="hover:text-primary-700" aria-label="Instagram link" href="#">
+                            <!-- <i class="fab fa-instagram text-instagram"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 512 512"><path fill="currentColor" d="M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z"></path><path fill="currentColor" d="M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z"></path><path fill="currentColor" d="M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z"></path></svg>
+                          </a>
+                        </li>
+                        <li class="inline-block">
+                         <a class="hover:text-primary-700" aria-label="Linkedin link" href="#">
+                            <!-- <i class="fab fa-linkedin text-linkedin"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 512 512"><path fill="currentColor" d="M444.17,32H70.28C49.85,32,32,46.7,32,66.89V441.61C32,461.91,49.85,480,70.28,480H444.06C464.6,480,480,461.79,480,441.61V66.89C480.12,46.7,464.6,32,444.17,32ZM170.87,405.43H106.69V205.88h64.18ZM141,175.54h-.46c-20.54,0-33.84-15.29-33.84-34.43,0-19.49,13.65-34.42,34.65-34.42s33.85,14.82,34.31,34.42C175.65,160.25,162.35,175.54,141,175.54ZM405.43,405.43H341.25V296.32c0-26.14-9.34-44-32.56-44-17.74,0-28.24,12-32.91,23.69-1.75,4.2-2.22,9.92-2.22,15.76V405.43H209.38V205.88h64.18v27.77c9.34-13.3,23.93-32.44,57.88-32.44,42.13,0,74,27.77,74,87.64Z"></path></svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div><!-- end team thumbnail -->
+                </div>
+                <div class="flex-shrink max-w-full px-4 w-full lg:w-7/12">
+                  <!-- team info -->
+                  <div class="p-6">
+                    <p class="text-xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Thony Khan</p>
+                    <p class="text-gray-500 mb-2">Senior Designer</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nihil tenetur minus quidem .</p>
+                  </div><!-- end team info -->
+                </div>
+              </div><!-- Row -->
+            </div><!-- team block -->
+          </div>
+
+          <div class="flex-shrink max-w-full px-4 w-10/12 sm:w-1/2">
+            <!-- team block -->
+            <div class="relative overflow-hidden rounded shadow bg-white dark:bg-gray-800 mb-12">
+              <!-- Row -->
+              <div class="flex flex-wrap flex-row">
+                <div class="flex-shrink max-w-full p-4 w-full lg:w-5/12">
+                  <!-- team thumbnail -->
+                  <div class="relative overflow-hidden bg-primary-700 z-0">
+                    <!-- scribble -->
+                    <figure class="absolute top-0 end-0 -mt-12 -me-12 wow fadeInDown" data-wow-duration="1s" style="z-index:-1">
+                      <svg class="text-white opacity-30" width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="currentColor" d="M42.5,-66.2C57.1,-56.7,72.5,-48.4,81.1,-35.3C89.8,-22.2,91.8,-4.4,89.6,13C87.3,30.4,80.7,47.4,69.5,60.1C58.3,72.9,42.4,81.5,25.9,84.6C9.5,87.8,-7.4,85.4,-22.7,79.8C-37.9,74.1,-51.5,65.2,-60.9,53.3C-70.4,41.4,-75.8,26.6,-79,10.8C-82.1,-5,-83.1,-21.7,-77.7,-36.4C-72.4,-51,-60.7,-63.7,-46.7,-73.5C-32.7,-83.3,-16.4,-90.1,-1.2,-88.2C13.9,-86.3,27.8,-75.7,42.5,-66.2Z" transform="translate(100 100)" />
+                      </svg>
+                    </figure>
+                    <img src="{{ 'images/img-min/avatar3.png' | asset_url }}" class="max-w-full w-full h-auto" alt="title image">
+                    <div class="py-2 px-0 inset-x-4 absolute text-center bottom-4 rounded bg-white dark:bg-gray-800">
+                      <ul class="space-x-3">
+                        <li class="inline-block">
+                          <a class="hover:text-primary-700" aria-label="Twitter link" href="#">
+                            <!-- <i class="fab fa-twitter text-twitter"></i> -->
+                             <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 512 512"><path fill="currentColor" d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"></path></svg>
+                          </a>
+                        </li>
+                        <li class="inline-block">
+                          <a class="hover:text-primary-700" aria-label="Facebook link" href="#">
+                            <!-- <i class="fab fa-facebook text-facebook"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 512 512"><path fill="currentColor" d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z"></path></svg>
+                          </a>
+                        </li>
+                        <li class="inline-block">
+                          <a class="hover:text-primary-700" aria-label="Instagram link" href="#">
+                            <!-- <i class="fab fa-instagram text-instagram"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 512 512"><path fill="currentColor" d="M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z"></path><path fill="currentColor" d="M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z"></path><path fill="currentColor" d="M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z"></path></svg>
+                          </a>
+                        </li>
+                        <li class="inline-block">
+                         <a class="hover:text-primary-700" aria-label="Linkedin link" href="#">
+                            <!-- <i class="fab fa-linkedin text-linkedin"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 512 512"><path fill="currentColor" d="M444.17,32H70.28C49.85,32,32,46.7,32,66.89V441.61C32,461.91,49.85,480,70.28,480H444.06C464.6,480,480,461.79,480,441.61V66.89C480.12,46.7,464.6,32,444.17,32ZM170.87,405.43H106.69V205.88h64.18ZM141,175.54h-.46c-20.54,0-33.84-15.29-33.84-34.43,0-19.49,13.65-34.42,34.65-34.42s33.85,14.82,34.31,34.42C175.65,160.25,162.35,175.54,141,175.54ZM405.43,405.43H341.25V296.32c0-26.14-9.34-44-32.56-44-17.74,0-28.24,12-32.91,23.69-1.75,4.2-2.22,9.92-2.22,15.76V405.43H209.38V205.88h64.18v27.77c9.34-13.3,23.93-32.44,57.88-32.44,42.13,0,74,27.77,74,87.64Z"></path></svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div><!-- end team thumbnail -->
+                </div>
+                <div class="flex-shrink max-w-full px-4 w-full lg:w-7/12">
+                  <!-- team info -->
+                  <div class="p-6">
+                    <p class="text-xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">John Timito</p>
+                    <p class="text-gray-500 mb-2">Marketing</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nihil tenetur minus quidem .</p>
+                  </div><!-- end team info -->
+                </div>
+              </div><!-- Row -->
+            </div><!-- team block -->
+          </div>
+
+          <div class="flex-shrink max-w-full px-4 w-10/12 sm:w-1/2">
+            <!-- team block -->
+            <div class="relative overflow-hidden rounded shadow bg-white dark:bg-gray-800 mb-12">
+              <!-- Row -->
+              <div class="flex flex-wrap flex-row">
+                <div class="flex-shrink max-w-full p-4 w-full lg:w-5/12">
+                  <!-- team thumbnail -->
+                  <div class="relative overflow-hidden bg-primary-700 z-0">
+                    <!-- scribble -->
+                    <figure class="absolute top-0 end-0 -mt-12 -me-12 wow fadeInDown" data-wow-duration="1s" data-wow-delay=".1s" style="z-index:-1">
+                      <svg class="text-white opacity-30" width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="currentColor" d="M42.5,-66.2C57.1,-56.7,72.5,-48.4,81.1,-35.3C89.8,-22.2,91.8,-4.4,89.6,13C87.3,30.4,80.7,47.4,69.5,60.1C58.3,72.9,42.4,81.5,25.9,84.6C9.5,87.8,-7.4,85.4,-22.7,79.8C-37.9,74.1,-51.5,65.2,-60.9,53.3C-70.4,41.4,-75.8,26.6,-79,10.8C-82.1,-5,-83.1,-21.7,-77.7,-36.4C-72.4,-51,-60.7,-63.7,-46.7,-73.5C-32.7,-83.3,-16.4,-90.1,-1.2,-88.2C13.9,-86.3,27.8,-75.7,42.5,-66.2Z" transform="translate(100 100)" />
+                      </svg>
+                    </figure>
+                    <img src="{{ 'images/img-min/avatar4.png' | asset_url }}" class="max-w-full w-full h-auto" alt="title image">
+                    <div class="py-2 px-0 inset-x-4 absolute text-center bottom-4 rounded bg-white dark:bg-gray-800">
+                      <ul class="space-x-3">
+                        <li class="inline-block">
+                          <a class="hover:text-primary-700" aria-label="Twitter link" href="#">
+                            <!-- <i class="fab fa-twitter text-twitter"></i> -->
+                             <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 512 512"><path fill="currentColor" d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"></path></svg>
+                          </a>
+                        </li>
+                        <li class="inline-block">
+                          <a class="hover:text-primary-700" aria-label="Facebook link" href="#">
+                            <!-- <i class="fab fa-facebook text-facebook"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 512 512"><path fill="currentColor" d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z"></path></svg>
+                          </a>
+                        </li>
+                        <li class="inline-block">
+                          <a class="hover:text-primary-700" aria-label="Instagram link" href="#">
+                            <!-- <i class="fab fa-instagram text-instagram"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 512 512"><path fill="currentColor" d="M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z"></path><path fill="currentColor" d="M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z"></path><path fill="currentColor" d="M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z"></path></svg>
+                          </a>
+                        </li>
+                        <li class="inline-block">
+                         <a class="hover:text-primary-700" aria-label="Linkedin link" href="#">
+                            <!-- <i class="fab fa-linkedin text-linkedin"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 512 512"><path fill="currentColor" d="M444.17,32H70.28C49.85,32,32,46.7,32,66.89V441.61C32,461.91,49.85,480,70.28,480H444.06C464.6,480,480,461.79,480,441.61V66.89C480.12,46.7,464.6,32,444.17,32ZM170.87,405.43H106.69V205.88h64.18ZM141,175.54h-.46c-20.54,0-33.84-15.29-33.84-34.43,0-19.49,13.65-34.42,34.65-34.42s33.85,14.82,34.31,34.42C175.65,160.25,162.35,175.54,141,175.54ZM405.43,405.43H341.25V296.32c0-26.14-9.34-44-32.56-44-17.74,0-28.24,12-32.91,23.69-1.75,4.2-2.22,9.92-2.22,15.76V405.43H209.38V205.88h64.18v27.77c9.34-13.3,23.93-32.44,57.88-32.44,42.13,0,74,27.77,74,87.64Z"></path></svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div><!-- end team thumbnail -->
+                </div>
+                <div class="flex-shrink max-w-full px-4 w-full lg:w-7/12">
+                  <!-- team info -->
+                  <div class="p-6">
+                    <p class="text-xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Daniel Emo</p>
+                    <p class="text-gray-500 mb-2">Senior Designer</p>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nihil tenetur minus quidem .</p>
+                  </div><!-- end team info -->
+                </div>
+              </div><!-- Row -->
+            </div><!-- team block -->
+          </div>
+        </div>
+      </div>
+    </div><!-- End Team-->
+
+    <!-- =========={ CTA }==========  -->
+    <div id="cta" class="relative py-20 md:py-24 bg-primary-700 jarallax">
+      <!-- background parallax -->
+      <img class="jarallax-img" src="{{ 'images/img-min/bg3.jpg' | asset_url }}" alt="title">
+
+      <!-- background overlay -->
+      <div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"></div>
+
+      <div class="container xl:max-w-6xl mx-auto px-4 text-center">
+        <h3 class="text-4xl leading-normal font-semibold text-white mb-3">Let's Work Together</h3>
+        <p class="text-gray-100 leading-relaxed font-light text-xl mx-auto pb-2 mb-12">Send Us the story of your company, your vision, or your big dream.<br> We’ll happy to make it happen, together with you!</p>
+        <!-- buttom -->
+        <a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-transparent border border-gray-100 hover:text-gray-900 hover:bg-gray-200 hover:ring-0 hover:border-gray-200 focus:text-gray-900 focus:bg-gray-200 focus:border-gray-200 focus:outline-none focus:ring-0" href="#contact">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" fill="currentColor" class="inline-block me-2" viewBox="0 0 512 512"><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+          Contact Us
+        </a>
+      </div>
+    </div><!-- End cta -->
+
+    <!-- =========={ BLOG }==========  -->
+    <div id="blogs" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-white dark:bg-gray-800">
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <!-- section header -->
+        <header class="text-center mx-auto mb-12 lg:px-20">
+          <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"><span class="font-light">From the</span> Blog</h2>
+          <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
+        </header><!-- end section header -->
+      
+        <!-- row -->
+        <div class="flex flex-wrap flex-row justify-center -mx-4">
+          <div class="flex-shrink w-11/12 max-w-full md:w-1/2 lg:w-1/3 px-4 lg:px-6">
+            <!-- Card -->
+            <div class="flex flex-col bg-white dark:bg-gray-800 mb-12 rounded overflow-hidden wow fadeInUp" data-wow-duration="1s">
+              <div class="relative overflow-hidden">
+                <a href="#">
+                  <div class="absolute inset-0 hover:bg-black opacity-0 transition duration-700 hover:opacity-20"></div>
+                  <img class="max-w-full h-auto" src="{{ 'images/img-min/blog_1.jpg' | asset_url }}" alt="alt title">
+                </a>
+              </div>
+              <div class="pt-6 flex-1">
+                <div class="mb-2">
+                  <h3 class="text-xl leading-normal mb-4 font-semibold text-gray-800 dark:text-gray-200"><a href="#" class="hover:text-primary-700 dark:hover:text-gray-100">New web design layout trends in 2021</a></h3>
+                  <div class="text-gray-600">
+                    <svg class="bi bi-calendar me-2 inline-block" width=".8rem" height=".8rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M14 0H2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M6.5 7a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                      </svg><span>04 May 2020</span>
+                  </div>
+                </div>
+                <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ducimus est, excepturi nam odit possimus.</p>
+              </div>
+            </div><!-- End card -->
+          </div>
+
+          <div class="flex-shrink w-11/12 max-w-full md:w-1/2 lg:w-1/3 px-4 lg:px-6">
+            <!-- Card -->
+            <div class="flex flex-col bg-white dark:bg-gray-800 mb-12 rounded overflow-hidden wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+              <div class="relative overflow-hidden">
+                <a href="#">
+                  <div class="absolute inset-0 hover:bg-black opacity-0 transition duration-700 hover:opacity-20"></div>
+                  <img class="max-w-full h-auto" src="{{ 'images/img-min/blog_2.jpg' | asset_url }}" alt="alt title">
+                </a>
+              </div>
+              <div class="pt-6 flex-1">
+               <div class="mb-2">
+                  <h3 class="text-xl leading-normal mb-4 font-semibold text-gray-800 dark:text-gray-200"><a href="#" class="hover:text-primary-700 dark:hover:text-gray-100">Tips and tricks for building a Startup Company</a></h3>
+                  <div class="text-gray-600">
+                    <svg class="bi bi-calendar me-2 inline-block" width=".8rem" height=".8rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M14 0H2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M6.5 7a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                      </svg><span>04 May 2020</span>
+                  </div>
+                </div>
+                <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ducimus est, excepturi nam odit possimus.</p>
+              </div>
+            </div><!-- end card -->
+          </div>
+
+          <div class="flex-shrink w-11/12 max-w-full md:w-1/2 lg:w-1/3 px-4 lg:px-6">
+            <!-- Card -->
+            <div class="flex flex-col bg-white dark:bg-gray-800 mb-12 rounded overflow-hidden wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+              <div class="relative overflow-hidden">
+                <a href="#">
+                  <div class="absolute inset-0 hover:bg-black opacity-0 transition duration-700 hover:opacity-20"></div>
+                  <img class="max-w-full h-auto" src="{{ 'images/img-min/blog_3.jpg' | asset_url }}" alt="alt title">
+                </a>
+              </div>
+              <div class="pt-6 flex-1">
+                <div class="mb-2">
+                  <h3 class="text-xl leading-normal mb-4 font-semibold text-gray-800 dark:text-gray-200"><a href="#" class="hover:text-primary-700 dark:hover:text-gray-100">Web Vitals will become SEO ranking signals in 2021</a></h3>
+                  <div class="text-gray-600">
+                    <svg class="bi bi-calendar me-2 inline-block" width=".8rem" height=".8rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M14 0H2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M6.5 7a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                      </svg><span>04 May 2020</span>
+                  </div>
+                </div>
+                <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ducimus est, excepturi nam odit possimus.</p>
+              </div>
+            </div><!-- End card -->
+          </div>
+        </div>
+      </div>
+    </div><!-- End Blog -->
+
+    <!-- =========={ CONTACT }==========  -->
+    <div id="contact" class="relative py-20 md:py-24 bg-gray-50 dark:bg-gray-900 dark:g-opacity-20">
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <!-- row -->
+        <div class="flex flex-wrap flex-row -mx-4">
+          <div class="flex-shrink max-w-full w-full px-4 lg:w-5/12 lg:pe-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
+            <div class="p-12 shadow rounded bg-white dark:bg-gray-800">
+              <!-- contact email -->
+              <div class="mb-6">
+                <div class="flex flex-wrap flex-row -mx-4">
+                  <div class="flex-shrink max-w-full w-1/6 px-4 text-center">
+                    <!-- icon -->
+                    <svg class="mt-2 text-3xl text-primary-700 inline-block" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><rect stroke="currentColor" x="48" y="96" width="416" height="320" rx="40" ry="40" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><polyline stroke="currentColor" points="112 160 256 272 400 160" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                    <!-- <i class="text-primary icon fas fa-envelope"></i> -->
+                  </div>
+                  <div class="flex-shrink max-w-full w-10/12 px-4">
+                    <p class="text-lg leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Email:</p>
+                    <p>support@domain.com</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- contact phone -->
+              <div class="mb-6">
+                <div class="flex flex-wrap flex-row -mx-4">
+                  <div class="flex-shrink max-w-full w-1/6 px-4 text-center">
+                    <!-- icon -->
+                    <svg class="mt-2 text-3xl text-primary-700 inline-block transform ltr:rotate-0 rtl:-rotate-90" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path stroke="currentColor" d="M451,374c-15.88-16-54.34-39.35-73-48.76C353.7,313,351.7,312,332.6,326.19c-12.74,9.47-21.21,17.93-36.12,14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48,5.41-23.23,14.79-36c13.22-18,12.22-21,.92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9,44,119.9,47,108.83,51.6A160.15,160.15,0,0,0,83,65.37C67,76,58.12,84.83,51.91,98.1s-9,44.38,23.07,102.64,54.57,88.05,101.14,134.49S258.5,406.64,310.85,436c64.76,36.27,89.6,29.2,102.91,23s22.18-15,32.83-31a159.09,159.09,0,0,0,13.8-25.8C465,391.17,468,391.17,451,374Z" style="fill:none;stroke-miterlimit:10;stroke-width:32px"/></svg>
+                    <!-- <i class="text-primary icon fas fa-phone"></i> -->
+                  </div>
+                  <div class="flex-shrink max-w-full w-10/12 px-4">
+                    <p class="text-lg leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Call:</p>
+                    <p class="mb-0">+1 234 567 890</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- hour working -->
+              <div class="mb-6">
+                <div class="flex flex-wrap flex-row -mx-4">
+                  <div class="flex-shrink max-w-full w-1/6 px-4 text-center">
+                    <!-- icon -->
+                    <svg class="mt-2 text-3xl text-primary-700 inline-block" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path stroke="currentColor" d="M256,64C150,64,64,150,64,256s86,192,192,192,192-86,192-192S362,64,256,64Z" style="fill:none;stroke-miterlimit:10;stroke-width:32px"/><polyline stroke="currentColor" points="256 128 256 272 352 272" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                    <!-- <i class="text-primary icon fas fa-clock"></i> -->
+                  </div>
+                  <div class="flex-shrink max-w-full w-10/12 px-4">
+                    <p class="text-lg leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Working Time:</p>
+                    <p class="mb-0">08.00AM to 20.00PM</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- address -->
+              <div class="mb-6">
+                <div class="flex flex-wrap flex-row -mx-4">
+                  <div class="flex-shrink max-w-full w-1/6 px-4 text-center">
+                    <!-- icon -->
+                    <svg class="mt-2 text-3xl text-primary-700 inline-block" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path stroke="currentColor" d="M313.27,124.64,198.73,51.36a32,32,0,0,0-29.28.35L56.51,127.49A16,16,0,0,0,48,141.63v295.8a16,16,0,0,0,23.49,14.14l97.82-63.79a32,32,0,0,1,29.5-.24l111.86,73a32,32,0,0,0,29.27-.11l115.43-75.94a16,16,0,0,0,8.63-14.2V74.57a16,16,0,0,0-23.49-14.14l-98,63.86A32,32,0,0,1,313.27,124.64Z" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line stroke="currentColor" x1="328" y1="128" x2="328" y2="464" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line stroke="currentColor" x1="184" y1="48" x2="184" y2="384" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                    <!-- <i class="text-primary icon fas fa-map-marked"></i> -->
+                  </div>
+                  <div class="flex-shrink max-w-full w-10/12 px-4">
+                    <p class="text-lg leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Location:</p>
+                    <p class="mb-0">Amphitheatre, Mountain View, San Francisco, CA 9321, United States</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- maps responsive -->
+              <div class="relative overflow-hidden mb-6" style="padding-bottom: 75%">
+                <iframe class="absolute top-0 start-0 w-full h-full lazy" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1537389.2000627194!2d-105.93786665117793!3d41.18442046635789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sid!4v1585008753367!5m2!1sen!2sid" aria-label="Google maps" width="800" height="600" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              </div><!-- end maps responsive -->
+            </div>
+          </div>
+
+          <div class="flex-shrink max-w-full w-full px-4 lg:w-7/12 lg:ps-0 mt-12 lg:mt-0 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+            <div class="w-100 p-12 shadow rounded bg-white dark:bg-gray-800">
+              <!-- contact form -->
+              <form action="#">
+                <div class="flex flex-wrap flex-row -mx-4">
+                  <div class="flex-shrink w-full max-w-full md:w-1/2 px-4 mb-6">
+                    <label class="inline-block mb-2" for="name">Your Name</label>
+                    <input type="text" name="name" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" id="name">
+                    <div class="validate"></div>
+                  </div>
+                  <div class="flex-shrink w-full max-w-full md:w-1/2 px-4 mb-6">
+                    <label class="inline-block mb-2" for="email">Your Email</label>
+                    <input type="email" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" name="email" id="email">
+                    <div class="validate"></div>
+                  </div>
+                </div>
+                <div class="mb-6">
+                  <label class="inline-block mb-2" for="subject">Subject</label>
+                  <input type="text" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" name="subject" id="subject">
+                  <div class="validate"></div>
+                </div>
+                <div class="mb-6">
+                  <label class="inline-block mb-2" for="messages">Message</label>
+                  <textarea class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" name="message" rows="10" id="messages"></textarea>
+                  <div class="validate"></div>
+                </div>
+                <div class="text-center mb-6">
+                  <button class="py-3 px-5 -ms-1 rounded-md leading-5 text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" fill="currentColor" class="me-2 transform ltr:rotate-0 rtl:-rotate-90 inline-block" viewBox="0 0 512 512"><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line></svg>
+                    Send Message
+                  </button>
+                </div>
+              </form><!-- end contact form -->
+            </div>
+          </div>
+        </div><!-- end row -->
+      </div>
+    </div><!-- End contact -->
+  </main>

@@ -1,0 +1,517 @@
+
+  <main id="content">
+    <!-- =========={ HERO }==========  -->
+    <div id="hero" class="relative py-12 jarallax">
+      <!-- background parallax -->
+      <img class="jarallax-img" src="{{ 'images/img/bg/bg-planet.jpg' | asset_url }}" alt="title">
+      <!-- background overlay -->
+      <div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"></div>
+
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <div class="flex flex-wrap flex-row -mx-4 items-center justify-center">
+          <!-- content -->
+          <div class="max-w-full w-full lg:w-7/12 px-4">
+            <nav aria-label="breadcrumb">
+              <ol class="flex flex-wrap justify-center bg-transparent text-sm mb-0 space-x-1">
+                <li>
+                  <a href="#" class="text-gray-200 hover:text-white">
+                    Home
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="/s/index" class="text-gray-200 hover:text-white">
+                    Snippets
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                  </a>
+                </li>
+                <li class="hidden md:block text-white" aria-current="page">Newsletter Sections</li>
+              </ol>
+            </nav>
+
+            <div class="mt-0 pt-6 text-center">
+              <h1 class="text-2xl md:text-3xl leading-normal mb-2 font-semibold text-white">Newsletter Sections</h1>    
+              <hr class="block w-12 h-0.5 mx-auto my-5 bg-yellow-300 border-yellow-300">       
+            </div>
+          </div><!-- end content -->
+        </div>
+      </div>
+    </div><!-- End hero -->
+
+    <!-- =========={ SNIPPETS }==========  -->
+    <div id="snippets" class="relative pt-12 bg-white dark:bg-gray-800">
+      <div class="container mx-auto px-6 lg:px-4">
+        <!-- row -->
+        <div class="flex flex-wrap flex-row -mx-4">
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Newsletter Sections style 1
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- Newsletter start -->
+                <div id="subcribe" class="relative py-20 md:py-24 bg-white dark:bg-gray-800">
+                  <!-- particle moving animation -->
+                  <div class="particle">
+                    <div class="scroll-rotate absolute opacity-50 text-primary-700" style="right:9%;bottom: 72%;">
+                      <svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                    <div class="scroll-rotate absolute opacity-50 text-yellow-300" style="right:12%;bottom: 30%;">
+                      <svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                    <div class="scroll-rotate absolute opacity-50 text-red-700 hidden lg:block" style="right:22%;bottom: 55%;">
+                      <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                    <div class="scroll-rotate absolute opacity-50 text-red-700 hidden lg:block" style="left:40%;top: 20%;">
+                      <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                    <div class="scroll-rotate absolute opacity-50 text-primary-700" style="left:60%;bottom: 20%;">
+                      <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                    <div class="scroll-rotate absolute opacity-50 text-yellow-300" style="left:20%;bottom: 60%;">
+                      <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                    <div class="scroll-rotate absolute opacity-50 text-primary-700" style="left:12%;bottom: 30%;">
+                      <svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                    <div class="scroll-rotate absolute opacity-50 text-green-600" style="left:6%;bottom:75%;">
+                      <svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                  </div>
+
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <div class="flex flex-wrap flex-row -mx-4 justify-center">
+                      <div class="max-w-full w-8/12 md:w-1/2 px-4" data-aos="fade-up">
+                        <!-- Title -->
+                        <div class="text-center mx-auto mb-6">
+                          <svg class="bi bi-envelope-open text-primary-700 inline-block mb-6" width="5rem" height="5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M.243 6.929l.514-.858L8 10.417l7.243-4.346.514.858L8 11.583.243 6.93z" clip-rule="evenodd"></path>
+                            <path fill-rule="evenodd" d="M7.184 10.68L.752 14.432l-.504-.864L6.68 9.816l.504.864zm1.632 0l6.432 3.752.504-.864L9.32 9.816l-.504.864z" clip-rule="evenodd"></path>
+                            <path fill-rule="evenodd" d="M8.47 1.318a1 1 0 00-.94 0l-6 3.2A1 1 0 001 5.4V14a1 1 0 001 1h12a1 1 0 001-1V5.4a1 1 0 00-.53-.882l-6-3.2zM7.06.435a2 2 0 011.882 0l6 3.2A2 2 0 0116 5.4V14a2 2 0 01-2 2H2a2 2 0 01-2-2V5.4a2 2 0 011.059-1.765l6-3.2z" clip-rule="evenodd"></path>
+                          </svg>
+                          <h2 class="text-3xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100"><span class="font-light">Subcribe</span> Newsletter</h2>
+                          <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
+                          <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">Subscribe to our mailing list to receives daily updates!</p>
+                        </div><!-- End Title -->
+
+                        <!--form-->
+                        <div class="mx-auto">
+                          <form id="subscribe1" action="#" novalidate="">
+                            <div class="flex flex-wrap flex-row justify-center">
+                              <div class="flex-shrink max-w-full w-full lg:w-8/12 lg:px-4 mb-6 lg:mb-0">
+                                <input type="email" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" id="email" placeholder="Email address" name="email"  aria-label="newsletter form">
+                              </div>
+                              <div class="flex-shrink max-w-full w-full lg:w-1/3 text-center">
+                                <div class="grid">
+                                  <button type="submit" class="py-3 px-5 block sm:inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0">Subcribe!</button>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div><!--end form-->
+                      </div>
+                    </div>
+                  </div><!-- end subcribe -->
+                </div><!-- End newsletter -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- Newsletter start --&gt;
+                    &lt;div id="subcribe" class="relative py-20 md:py-24 bg-white dark:bg-gray-800"&gt;
+                      &lt;!-- particle moving animation --&gt;
+                      &lt;div class="particle"&gt;
+                        &lt;div class="scroll-rotate absolute opacity-50 text-primary-700" style="right:9%;bottom: 72%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                        &lt;div class="scroll-rotate absolute opacity-50 text-yellow-300" style="right:12%;bottom: 30%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                        &lt;div class="scroll-rotate absolute opacity-50 text-red-700 hidden lg:block" style="right:22%;bottom: 55%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                        &lt;div class="scroll-rotate absolute opacity-50 text-red-700 hidden lg:block" style="left:40%;top: 20%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                        &lt;div class="scroll-rotate absolute opacity-50 text-primary-700" style="left:60%;bottom: 20%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                        &lt;div class="scroll-rotate absolute opacity-50 text-yellow-300" style="left:20%;bottom: 60%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                        &lt;div class="scroll-rotate absolute opacity-50 text-primary-700" style="left:12%;bottom: 30%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                        &lt;div class="scroll-rotate absolute opacity-50 text-green-600" style="left:6%;bottom:75%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                      &lt;/div&gt;
+
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4 justify-center"&gt;
+                          &lt;div class="max-w-full w-8/12 md:w-1/2 px-4" data-aos="fade-up"&gt;
+                            &lt;!-- Title --&gt;
+                            &lt;div class="text-center mx-auto mb-6"&gt;
+                              &lt;svg class="bi bi-envelope-open text-primary-700 inline-block mb-6" width="5rem" height="5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                                &lt;path fill-rule="evenodd" d="M.243 6.929l.514-.858L8 10.417l7.243-4.346.514.858L8 11.583.243 6.93z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                &lt;path fill-rule="evenodd" d="M7.184 10.68L.752 14.432l-.504-.864L6.68 9.816l.504.864zm1.632 0l6.432 3.752.504-.864L9.32 9.816l-.504.864z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                &lt;path fill-rule="evenodd" d="M8.47 1.318a1 1 0 00-.94 0l-6 3.2A1 1 0 001 5.4V14a1 1 0 001 1h12a1 1 0 001-1V5.4a1 1 0 00-.53-.882l-6-3.2zM7.06.435a2 2 0 011.882 0l6 3.2A2 2 0 0116 5.4V14a2 2 0 01-2 2H2a2 2 0 01-2-2V5.4a2 2 0 011.059-1.765l6-3.2z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                              &lt;/svg&gt;
+                              &lt;h2 class="text-3xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100"&gt;&lt;span class="font-light"&gt;Subcribe&lt;/span&gt; Newsletter&lt;/h2&gt;
+                              &lt;hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700"&gt;
+                              &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2"&gt;Subscribe to our mailing list to receives daily updates!&lt;/p&gt;
+                            &lt;/div&gt;&lt;!-- End Title --&gt;
+
+                            &lt;!--form--&gt;
+                            &lt;div class="mx-auto"&gt;
+                              &lt;form id="subscribe1" action="#" novalidate=""&gt;
+                                &lt;div class="flex flex-wrap flex-row justify-center"&gt;
+                                  &lt;div class="flex-shrink max-w-full w-full lg:w-8/12 lg:px-4 mb-6 lg:mb-0"&gt;
+                                    &lt;input type="email" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" id="email" placeholder="Email address" name="email"  aria-label="newsletter form"&gt;
+                                  &lt;/div&gt;
+                                  &lt;div class="flex-shrink max-w-full w-full lg:w-1/3 text-center"&gt;
+                                    &lt;div class="grid"&gt;
+                                      &lt;button type="submit" class="py-3 px-5 block sm:inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0"&gt;Subcribe!&lt;/button&gt;
+                                    &lt;/div&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+                              &lt;/form&gt;
+                            &lt;/div&gt;&lt;!--end form--&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;&lt;!-- end subcribe --&gt;
+                    &lt;/div&gt;&lt;!-- End newsletter --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Newsletter Sections style 2
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- Newsletter start -->
+                <div id="newsletter" class="relative py-20 md:py-24 bg-white dark:bg-gray-800 jarallax">
+                  <!-- background parallax -->
+                  <img class="jarallax-img" src="{{ 'images/img/bg/bg3.jpg' | asset_url }}" alt="title">
+
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <div class="flex flex-wrap flex-row -mx-4 justify-center">
+                      <div class="flex-shrink max-w-full px-4 w-11/12 sm:w-10/12 md:w-3/4 dark:bg-gray-800">
+                        <div class="flex flex-wrap flex-row">
+                          <!-- img block -->
+                          <div class="flex-shrink max-w-full px-4 w-full lg:w-1/2 lg:order-2 text-white bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20">
+                            <div class="z-10 py-12 text-center">
+                              <img class="max-w-full h-auto w-full" src="{{ 'images/img-min/social.svg' | asset_url }}" alt="subcribe">
+                            </div>
+                          </div>
+
+                          <!-- content block -->
+                          <div class="flex-shrink max-w-full w-full lg:w-1/2 lg:order-1 my-auto bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20">
+                            <div class="p-12 md:p-16 bg-white dark:bg-gray-800 text-center">
+                              <h3 class="text-2xl leading-normal mb-2 font-bold">Subcribe!</h3>
+                              <p class="mb-4 text-gray-500">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                              <form action="#">
+                                <div class="mb-6">
+                                  <input type="text" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" placeholder="Full name" aria-label="full name" id="fullname" required>
+                                </div>
+                                <div class="mb-6">
+                                  <input type="email" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" placeholder="Email address" aria-label="email" id="exampleInputEmail1" required>
+                                </div>
+                                <div class="mb-6">
+                                  <button type="submit" class="w-full py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0">Submit</button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End newsletter -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- Newsletter start --&gt;
+                    &lt;div id="newsletter" class="relative py-20 md:py-24 bg-white dark:bg-gray-800 jarallax"&gt;
+                      &lt;!-- background parallax --&gt;
+                      &lt;img class="jarallax-img" src="{{ 'images/img/bg/bg3.jpg' | asset_url }}" alt="title"&gt;
+
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4 justify-center"&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-11/12 sm:w-10/12 md:w-3/4 dark:bg-gray-800"&gt;
+                            &lt;div class="flex flex-wrap flex-row"&gt;
+                              &lt;!-- img block --&gt;
+                              &lt;div class="flex-shrink max-w-full px-4 w-full lg:w-1/2 lg:order-2 text-white bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20"&gt;
+                                &lt;div class="z-10 py-12 text-center"&gt;
+                                  &lt;img class="max-w-full h-auto w-full" src="{{ 'images/img-min/social.svg' | asset_url }}" alt="subcribe"&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+
+                              &lt;!-- content block --&gt;
+                              &lt;div class="flex-shrink max-w-full w-full lg:w-1/2 lg:order-1 my-auto bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20"&gt;
+                                &lt;div class="p-12 md:p-16 bg-white dark:bg-gray-800 text-center"&gt;
+                                  &lt;h3 class="text-2xl leading-normal mb-2 font-bold"&gt;Subcribe!&lt;/h3&gt;
+                                  &lt;p class="mb-4 text-gray-500"&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. &lt;/p&gt;
+                                  &lt;form action="#"&gt;
+                                    &lt;div class="mb-6"&gt;
+                                      &lt;input type="text" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" placeholder="Full name" aria-label="full name" id="fullname" required&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="mb-6"&gt;
+                                      &lt;input type="email" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" placeholder="Email address" aria-label="email" id="exampleInputEmail1" required&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="mb-6"&gt;
+                                      &lt;button type="submit" class="w-full py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0"&gt;Submit&lt;/button&gt;
+                                    &lt;/div&gt;
+                                  &lt;/form&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- End newsletter --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Newsletter Sections style 3
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- Newsletter start -->
+                <div id="newsletter" class="relative py-20 md:py-24 bg-gray-50" style="background-image: url('../src/img/bg/email-pattern.png');background-repeat: repeat;">
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <div class="flex flex-wrap flex-row -mx-4 justify-center">
+                      <div class="flex-shrink max-w-full px-4 w-10/12 lg:w-1/2 lg:order-2">
+                        <h2 class="text-3xl text-gray-800 leading-normal font-bold mb-4">How to Grow <span>Your Business</span></h2>
+                        <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
+                        <ul class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mb-12 lg:mb-2">
+                          <li class="py-2">
+                            <svg class="bi bi-check-circle text-green-700 me-3 inline-block" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"></path>
+                              <path fill-rule="evenodd" d="M8 2.5A5.5 5.5 0 1013.5 8a.5.5 0 011 0 6.5 6.5 0 11-3.25-5.63.5.5 0 11-.5.865A5.472 5.472 0 008 2.5z" clip-rule="evenodd"></path>
+                            </svg>Business Plan
+                          </li>
+                          <li class="py-2">
+                            <svg class="bi bi-check-circle text-green-700 me-3 inline-block" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"></path>
+                              <path fill-rule="evenodd" d="M8 2.5A5.5 5.5 0 1013.5 8a.5.5 0 011 0 6.5 6.5 0 11-3.25-5.63.5.5 0 11-.5.865A5.472 5.472 0 008 2.5z" clip-rule="evenodd"></path>
+                            </svg>Financial Strategy
+                          </li>
+                          <li class="py-2">
+                            <svg class="bi bi-check-circle text-green-700 me-3 inline-block" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"></path>
+                              <path fill-rule="evenodd" d="M8 2.5A5.5 5.5 0 1013.5 8a.5.5 0 011 0 6.5 6.5 0 11-3.25-5.63.5.5 0 11-.5.865A5.472 5.472 0 008 2.5z" clip-rule="evenodd"></path>
+                            </svg>Loan and Taxs
+                          </li>
+                          <li class="py-2">
+                            <svg class="bi bi-check-circle text-green-700 me-3 inline-block" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"></path>
+                              <path fill-rule="evenodd" d="M8 2.5A5.5 5.5 0 1013.5 8a.5.5 0 011 0 6.5 6.5 0 11-3.25-5.63.5.5 0 11-.5.865A5.472 5.472 0 008 2.5z" clip-rule="evenodd"></path>
+                            </svg>Sales and Marketing
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="flex-shrink max-w-full w-full lg:w-1/2 lg:order-1 px-12 md:px-24 lg:px-0">
+                        <!-- Card -->
+                        <div class="p-6 md:p-12 rounded shadow lg:mx-16 bg-white dark:bg-gray-800">
+                          <div class="text-center mb-6">
+                            <h3 class="text-2xl leading-normal font-bold mb-0">Subcribe!</h3>
+                          </div>
+                          <!-- Form -->
+                          <form>
+                            <div class="mb-4">
+                              <input type="text" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" id="Name" aria-label="name" placeholder="Name" required>
+                            </div>
+                            <div class="mb-4">
+                              <input type="email" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" id="Email" aria-label="email" placeholder="Email" required>
+                            </div>
+                            <div class="mb-4">
+                              <input type="password" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" id="Password" aria-label="password" placeholder="Password" required>
+                            </div>
+                            <div class="grid mb-6">
+                              <button class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0" type="submit">
+                                Subcribe Newsletter
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End newsletter -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- Newsletter start --&gt;
+                    &lt;div id="newsletter" class="relative py-20 md:py-24 bg-gray-50" style="background-image: url('../src/img/bg/email-pattern.png');background-repeat: repeat;"&gt;
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4 justify-center"&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-10/12 lg:w-1/2 lg:order-2"&gt;
+                            &lt;h2 class="text-3xl text-gray-800 leading-normal font-bold mb-4"&gt;How to Grow &lt;span&gt;Your Business&lt;/span&gt;&lt;/h2&gt;
+                            &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2"&gt;
+                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            &lt;/p&gt;
+                            &lt;ul class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mb-12 lg:mb-2"&gt;
+                              &lt;li class="py-2"&gt;
+                                &lt;svg class="bi bi-check-circle text-green-700 me-3 inline-block" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                                  &lt;path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                  &lt;path fill-rule="evenodd" d="M8 2.5A5.5 5.5 0 1013.5 8a.5.5 0 011 0 6.5 6.5 0 11-3.25-5.63.5.5 0 11-.5.865A5.472 5.472 0 008 2.5z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                &lt;/svg&gt;Business Plan
+                              &lt;/li&gt;
+                              &lt;li class="py-2"&gt;
+                                &lt;svg class="bi bi-check-circle text-green-700 me-3 inline-block" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                                  &lt;path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                  &lt;path fill-rule="evenodd" d="M8 2.5A5.5 5.5 0 1013.5 8a.5.5 0 011 0 6.5 6.5 0 11-3.25-5.63.5.5 0 11-.5.865A5.472 5.472 0 008 2.5z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                &lt;/svg&gt;Financial Strategy
+                              &lt;/li&gt;
+                              &lt;li class="py-2"&gt;
+                                &lt;svg class="bi bi-check-circle text-green-700 me-3 inline-block" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                                  &lt;path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                  &lt;path fill-rule="evenodd" d="M8 2.5A5.5 5.5 0 1013.5 8a.5.5 0 011 0 6.5 6.5 0 11-3.25-5.63.5.5 0 11-.5.865A5.472 5.472 0 008 2.5z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                &lt;/svg&gt;Loan and Taxs
+                              &lt;/li&gt;
+                              &lt;li class="py-2"&gt;
+                                &lt;svg class="bi bi-check-circle text-green-700 me-3 inline-block" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                                  &lt;path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                  &lt;path fill-rule="evenodd" d="M8 2.5A5.5 5.5 0 1013.5 8a.5.5 0 011 0 6.5 6.5 0 11-3.25-5.63.5.5 0 11-.5.865A5.472 5.472 0 008 2.5z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                &lt;/svg&gt;Sales and Marketing
+                              &lt;/li&gt;
+                            &lt;/ul&gt;
+                          &lt;/div&gt;
+
+                          &lt;div class="flex-shrink max-w-full w-full lg:w-1/2 lg:order-1 px-12 md:px-24 lg:px-0"&gt;
+                            &lt;!-- Card --&gt;
+                            &lt;div class="p-6 md:p-12 rounded shadow lg:mx-16 bg-white dark:bg-gray-800"&gt;
+                              &lt;div class="text-center mb-6"&gt;
+                                &lt;h3 class="text-2xl leading-normal font-bold mb-0"&gt;Subcribe!&lt;/h3&gt;
+                              &lt;/div&gt;
+                              &lt;!-- Form --&gt;
+                              &lt;form&gt;
+                                &lt;div class="mb-4"&gt;
+                                  &lt;input type="text" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" id="Name" aria-label="name" placeholder="Name" required&gt;
+                                &lt;/div&gt;
+                                &lt;div class="mb-4"&gt;
+                                  &lt;input type="email" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" id="Email" aria-label="email" placeholder="Email" required&gt;
+                                &lt;/div&gt;
+                                &lt;div class="mb-4"&gt;
+                                  &lt;input type="password" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" id="Password" aria-label="password" placeholder="Password" required&gt;
+                                &lt;/div&gt;
+                                &lt;div class="grid mb-6"&gt;
+                                  &lt;button class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0" type="submit"&gt;
+                                    Subcribe Newsletter
+                                  &lt;/button&gt;
+                                &lt;/div&gt;
+                              &lt;/form&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- End newsletter --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end row -->
+      </div>
+    </div><!-- End snippets -->
+  </main>

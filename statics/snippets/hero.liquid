@@ -1,0 +1,1295 @@
+
+  <main id="content">
+    <!-- =========={ HERO }==========  -->
+    <div id="hero" class="relative py-12 jarallax">
+      <!-- background parallax -->
+      <img class="jarallax-img" src="{{ 'images/img-min/bg-planet.jpg' | asset_url }}" alt="title">
+      <!-- background overlay -->
+      <div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"></div>
+
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <div class="flex flex-wrap flex-row -mx-4 items-center justify-center">
+          <!-- content -->
+          <div class="max-w-full w-full lg:w-7/12 px-4">
+            <nav aria-label="breadcrumb">
+              <ol class="flex flex-wrap justify-center bg-transparent text-sm mb-0 space-x-1">
+                <li>
+                  <a href="#" class="text-gray-200 hover:text-white">
+                    Home
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="/s/index" class="text-gray-200 hover:text-white">
+                    Snippets
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                  </a>
+                </li>
+                <li class="hidden md:block text-white" aria-current="page">Hero Sections</li>
+              </ol>
+            </nav>
+
+            <div class="mt-0 pt-6 text-center">
+              <h1 class="text-2xl md:text-3xl leading-normal mb-2 font-semibold text-white">Hero Sections</h1>    
+              <hr class="block w-12 h-0.5 mx-auto my-5 bg-yellow-300 border-yellow-300">       
+            </div>
+          </div><!-- end content -->
+        </div>
+      </div>
+    </div><!-- End hero -->
+
+    <!-- =========={ SNIPPETS }==========  -->
+    <div id="snippets" class="relative pt-12 bg-white dark:bg-gray-800">
+      <div class="container mx-auto px-6 lg:px-4">
+        <!-- row -->
+        <div class="flex flex-wrap flex-row -mx-4">
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Hero Sections style 1
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- hero start -->
+                <div id="hero" class="relative pt-3 sm:pt-6 lg:pt-12 pb-0 bg-gradient-to-b from-primary-800 via-primary-600 to-green-400 bg-primary-700">
+                  <!-- particle moving animation -->
+                  <div class="my-0">
+                    <div class="scroll-rotate none lg:block absolute opacity-50 text-gray-100" style="right: 9%; bottom: 72%; transform: rotate(0deg);">
+                      <svg class="bi bi-bounding-box-circles" width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <div class="scroll-rotate absolute opacity-50 text-gray-100" style="right: 12%; bottom: 30%; transform: rotate(0deg);">
+                      <svg class="bi bi-bounding-box-circles" width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <div class="scroll-rotate none lg:block absolute opacity-50 text-gray-100" style="right: 22%; bottom: 55%; transform: rotate(0deg);">
+                      <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <div class="scroll-rotate absolute opacity-50 text-gray-100" style="right: 30%; top: 15%; transform: rotate(0deg);">
+                      <svg class="bi bi-bounding-box-circles" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <div class="scroll-rotate none lg:block absolute opacity-50 text-gray-100" style="left: 60%; bottom: 20%; transform: rotate(0deg);">
+                      <svg class="bi bi-bounding-box-circles" width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <div class="scroll-rotate none lg:block absolute opacity-50 text-gray-100" style="left: 20%; bottom: 60%; transform: rotate(0deg);">
+                      <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <div class="scroll-rotate none lg:block absolute opacity-50 text-gray-100" style="left: 38%; bottom: 40%; transform: rotate(0deg);">
+                      <svg class="bi bi-bounding-box-circles" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <div class="scroll-rotate absolute opacity-50 text-gray-100" style="left: 12%; bottom: 30%; transform: rotate(0deg);">
+                      <svg class="bi bi-bounding-box-circles" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <div class="scroll-rotate absolute opacity-50 text-gray-100" style="left: 6%; bottom: 75%; transform: rotate(0deg);">
+                      <svg class="bi bi-bounding-box-circles" width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <div class="flex flex-wrap flex-row -mx-4 items-center justify-center">
+                      <!-- content -->
+                      <div class="max-w-full w-full lg:w-4/5 px-4">
+                        <div class="mt-12 lg:mt-16 py-6 text-center">
+                          <h1 class="text-4xl leading-tight lg:text-5xl lg:leading-snug font-bold text-white capitalize mb-4">Multipurpose <span class="hidden sm:inline-block text-yellow-300">Tailwind</span> Template<br> with Baklib CMS</h1>
+                          <p class="text-gray-100 leading-relaxed font-light text-xl mx-auto pb-2 mb-12">TailPro <span class="hidden md:inline-block">multipurpose Tailwind</span> template is <span class="text-yellow-300 font-semibold" data-toggle="typed" data-options='{"strings": ["Fast loading", "Easy development", "Seo friendly"]}'></span></p>
+
+                          <a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-800 bg-yellow-300 border border-yellow-300 hover:text-gray-900 hover:bg-yellow-400 hover:ring-0 hover:border-yellow-400 focus:bg-yellow-400 focus:border-yellow-400 focus:outline-none focus:ring-0" href="#demos">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="inline me-1" viewBox="0 0 16 16">
+                              <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"></path>
+                            </svg> Live Preview
+                          </a>
+                        </div>
+                      </div><!-- end content -->
+
+                      <div class="max-w-full w-full px-4 text-center">
+                        <img src="{{ 'images/img-min/Tailwind-agency-templates.png' | asset_url }}" class="w-full max-w-full h-auto" alt="Tailwind agency template">
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- end hero -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- hero start --&gt;
+                    &lt;div id="hero" class="relative pt-3 sm:pt-6 lg:pt-12 pb-0 bg-gradient-to-b from-primary-800 via-primary-600 to-green-400 bg-primary-700"&gt;
+                      &lt;!-- particle moving animation --&gt;
+                      &lt;div class="my-0"&gt;
+                        &lt;div class="scroll-rotate none lg:block absolute opacity-50 text-gray-100" style="right: 9%; bottom: 72%; transform: rotate(0deg);"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt;
+                        &lt;div class="scroll-rotate absolute opacity-50 text-gray-100" style="right: 12%; bottom: 30%; transform: rotate(0deg);"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt;
+                        &lt;div class="scroll-rotate none lg:block absolute opacity-50 text-gray-100" style="right: 22%; bottom: 55%; transform: rotate(0deg);"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt;
+                        &lt;div class="scroll-rotate absolute opacity-50 text-gray-100" style="right: 30%; top: 15%; transform: rotate(0deg);"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt;
+                        &lt;div class="scroll-rotate none lg:block absolute opacity-50 text-gray-100" style="left: 60%; bottom: 20%; transform: rotate(0deg);"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt;
+                        &lt;div class="scroll-rotate none lg:block absolute opacity-50 text-gray-100" style="left: 20%; bottom: 60%; transform: rotate(0deg);"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt;
+                        &lt;div class="scroll-rotate none lg:block absolute opacity-50 text-gray-100" style="left: 38%; bottom: 40%; transform: rotate(0deg);"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt;
+                        &lt;div class="scroll-rotate absolute opacity-50 text-gray-100" style="left: 12%; bottom: 30%; transform: rotate(0deg);"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt;
+                        &lt;div class="scroll-rotate absolute opacity-50 text-gray-100" style="left: 6%; bottom: 75%; transform: rotate(0deg);"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4 items-center justify-center"&gt;
+                          &lt;!-- content --&gt;
+                          &lt;div class="max-w-full w-full lg:w-4/5 px-4"&gt;
+                            &lt;div class="mt-12 lg:mt-16 py-6 text-center"&gt;
+                              &lt;h1 class="text-4xl leading-tight lg:text-5xl lg:leading-snug font-bold text-white capitalize mb-4"&gt;Multipurpose &lt;span class="hidden sm:inline-block text-yellow-300"&gt;Tailwind&lt;/span&gt; Template&lt;br&gt; with Baklib CMS&lt;/h1&gt;
+                              &lt;p class="text-gray-100 leading-relaxed font-light text-xl mx-auto pb-2 mb-12"&gt;TailPro &lt;span class="hidden md:inline-block"&gt;multipurpose Tailwind&lt;/span&gt; template is &lt;span class="text-yellow-300 font-semibold" data-toggle="typed" data-options='{"strings": ["Fast loading", "Easy development", "Seo friendly"]}'&gt;&lt;/span&gt;&lt;/p&gt;
+
+                              &lt;a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-800 bg-yellow-300 border border-yellow-300 hover:text-gray-900 hover:bg-yellow-400 hover:ring-0 hover:border-yellow-400 focus:bg-yellow-400 focus:border-yellow-400 focus:outline-none focus:ring-0" href="#demos"&gt;
+                                &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="inline me-1" viewBox="0 0 16 16"&gt;
+                                  &lt;path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"&gt;&lt;/path&gt;
+                                &lt;/svg&gt; Live Preview
+                              &lt;/a&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;&lt;!-- end content --&gt;
+
+                          &lt;div class="max-w-full w-full px-4 text-center"&gt;
+                            &lt;img src="{{ 'images/img-min/Tailwind-agency-templates.png' | asset_url }}" class="w-full max-w-full h-auto" alt="Tailwind agency template"&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- end hero --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Hero Sections style 2
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- hero start -->
+                <div id="hero" class="relative overflow-hidden z-0">
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <!-- bg wrapper -->
+                    <div class="absolute inset-y-0 start-auto end-0 w-1/2 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20" style="z-index:-1;background-image: url({{ 'images/img-min/advertising.jpg' | asset_url }});background-repeat: no-repeat;background-size: cover;"></div>
+                    <div class="absolute inset-y-0 start-auto end-0 lg:hidden w-full bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20" style="z-index:-1;background-image: url({{ 'images/img-min/advertising.jpg' | asset_url }});background-repeat: no-repeat;background-size: cover;"></div>
+                    <div class="absolute inset-y-0 end-auto start-0 hidden lg:block h-full w-1/2 bg-primary-700" style="z-index:-1;"></div>
+
+                    <div class="flex flex-wrap flex-row">
+                      <!-- img block -->
+                      <div class="flex-shrink w-full max-w-full lg:w-1/2 lg:order-2"></div>
+
+                      <!-- content block -->
+                      <div class="flex-shrink w-full max-w-full lg:w-1/2 lg:order-1 my-auto">
+                        <div class="py-16 lg:py-24 px-2 sm:px-12 lg:px-0">
+                          <div class="py-8 px-6 md:p-12 bg-white dark:bg-gray-800 rounded-xl shadow-xl lg:ltr:-me-32 lg:rtl:-ms-32 text-center lg:text-start">
+                            <h1 class="text-3xl md:text-4xl leading-normal md:leading-tight mb-2 font-bold text-gray-800 dark:text-gray-100">Optimize Your Entire <span class="text-primary-700">Advertising Campaign</span></h1>
+                            <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mb-12">If you have a great product or service but are confused about your sales and marketing plans, we are the right solution for you.</p>
+                            <a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0 me-4" href="#start-now">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor" class="bi bi-megaphone me-1 inline-block" viewBox="0 0 16 16">
+                                <path d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-.214c-2.162-1.241-4.49-1.843-6.912-2.083l.405 2.712A1 1 0 0 1 5.51 15.1h-.548a1 1 0 0 1-.916-.599l-1.85-3.49a68.14 68.14 0 0 0-.202-.003A2.014 2.014 0 0 1 0 9V7a2.02 2.02 0 0 1 1.992-2.013 74.663 74.663 0 0 0 2.483-.075c3.043-.154 6.148-.849 8.525-2.199V2.5zm1 0v11a.5.5 0 0 0 1 0v-11a.5.5 0 0 0-1 0zm-1 1.35c-2.344 1.205-5.209 1.842-8 2.033v4.233c.18.01.359.022.537.036 2.568.189 5.093.744 7.463 1.993V3.85zm-9 6.215v-4.13a95.09 95.09 0 0 1-1.992.052A1.02 1.02 0 0 0 1 7v2c0 .55.448 1.002 1.006 1.009A60.49 60.49 0 0 1 4 10.065zm-.657.975l1.609 3.037.01.024h.548l-.002-.014-.443-2.966a68.019 68.019 0 0 0-1.722-.082z"/>
+                              </svg>
+                              Start Advertising
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- end hero -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- hero start --&gt;
+                    &lt;div id="hero" class="relative overflow-hidden z-0"&gt;
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;!-- bg wrapper --&gt;
+                        &lt;div class="absolute inset-y-0 start-auto end-0 w-1/2 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20" style="z-index:-1;background-image: url('src/img-min/human/advertising.jpg');background-repeat: no-repeat;background-size: cover;"&gt;&lt;/div&gt;
+                        &lt;div class="absolute inset-y-0 start-auto end-0 lg:hidden w-full bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20" style="z-index:-1;background-image: url('src/img-min/human/advertising.jpg');background-repeat: no-repeat;background-size: cover;"&gt;&lt;/div&gt;
+                        &lt;div class="absolute inset-y-0 end-auto start-0 hidden lg:block h-full w-1/2 bg-primary-700" style="z-index:-1;"&gt;&lt;/div&gt;
+
+                        &lt;div class="flex flex-wrap flex-row"&gt;
+                          &lt;!-- img block --&gt;
+                          &lt;div class="flex-shrink w-full max-w-full lg:w-1/2 lg:order-2"&gt;&lt;/div&gt;
+
+                          &lt;!-- content block --&gt;
+                          &lt;div class="flex-shrink w-full max-w-full lg:w-1/2 lg:order-1 my-auto"&gt;
+                            &lt;div class="py-16 lg:py-24 px-2 sm:px-12 lg:px-0"&gt;
+                              &lt;div class="py-8 px-6 md:p-12 bg-white dark:bg-gray-800 rounded-xl shadow-xl lg:ltr:-me-32 lg:rtl:-ms-32 text-center lg:text-start"&gt;
+                                &lt;h1 class="text-3xl md:text-4xl leading-normal md:leading-tight mb-2 font-bold text-gray-800 dark:text-gray-100"&gt;Optimize Your Entire &lt;span class="text-primary-700"&gt;Advertising Campaign&lt;/span&gt;&lt;/h1&gt;
+                                &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mb-12"&gt;If you have a great product or service but are confused about your sales and marketing plans, we are the right solution for you.&lt;/p&gt;
+                                &lt;a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0 me-4" href="#start-now"&gt;
+                                  &lt;svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" fill="currentColor" class="bi bi-megaphone me-1 inline-block" viewBox="0 0 16 16"&gt;
+                                    &lt;path d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-.214c-2.162-1.241-4.49-1.843-6.912-2.083l.405 2.712A1 1 0 0 1 5.51 15.1h-.548a1 1 0 0 1-.916-.599l-1.85-3.49a68.14 68.14 0 0 0-.202-.003A2.014 2.014 0 0 1 0 9V7a2.02 2.02 0 0 1 1.992-2.013 74.663 74.663 0 0 0 2.483-.075c3.043-.154 6.148-.849 8.525-2.199V2.5zm1 0v11a.5.5 0 0 0 1 0v-11a.5.5 0 0 0-1 0zm-1 1.35c-2.344 1.205-5.209 1.842-8 2.033v4.233c.18.01.359.022.537.036 2.568.189 5.093.744 7.463 1.993V3.85zm-9 6.215v-4.13a95.09 95.09 0 0 1-1.992.052A1.02 1.02 0 0 0 1 7v2c0 .55.448 1.002 1.006 1.009A60.49 60.49 0 0 1 4 10.065zm-.657.975l1.609 3.037.01.024h.548l-.002-.014-.443-2.966a68.019 68.019 0 0 0-1.722-.082z"/&gt;
+                                  &lt;/svg&gt;
+                                  Start Advertising
+                                &lt;/a&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- end hero --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Hero Sections style 3
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- hero start -->
+                <div id="hero" class="relative py-20 md:py-24 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20 z-0">
+                  <!-- bg wrapper -->
+                  <div class="absolute inset-y-0 start-auto end-0 hidden lg:block w-1/3 h-full bg-white dark:bg-gray-800"></div>
+                  <div class="absolute inset-y-0 start-auto end-0 block lg:hidden w-1/2 h-full top-auto bg-white dark:bg-gray-800" style="z-index:-1"></div>
+
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <div class="flex flex-wrap flex-row -mx-4 items-center justify-center">
+                      <!-- content -->
+                      <div class="flex-shrink max-w-full px-4 w-11/12 sm:w-10/12 lg:w-1/2">
+                        <div class="text-center lg:text-start mb-12 lg:mb-0 lg:pe-12 xl:pe-24">
+                          <h1 class="text-4xl md:text-5xl leading-normal md:leading-tight font-semibold text-gray-800 dark:text-gray-100 mb-4">Build your <span class="text-primary-700 font-semibold">Brand identity</span> with us</h1>
+                          <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mb-12">We believe that Brand and Business are two different sides of a coin. Although different, they complement each other and cannot be separated.</p>
+                          <a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0 me-4" href="#about">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-signpost-split inline-block me-1" viewBox="0 0 16 16">
+                              <path d="M7 7V1.414a1 1 0 0 1 2 0V2h5a1 1 0 0 1 .8.4l.975 1.3a.5.5 0 0 1 0 .6L14.8 5.6a1 1 0 0 1-.8.4H9v10H7v-5H2a1 1 0 0 1-.8-.4L.225 9.3a.5.5 0 0 1 0-.6L1.2 7.4A1 1 0 0 1 2 7h5zm1 3V8H2l-.75 1L2 10h6zm0-5h6l.75-1L14 3H8v2z"/>
+                            </svg>
+                            What we do
+                          </a>
+                        </div>
+                      </div><!-- end content -->
+
+                      <!-- slider -->
+                      <div class="flex-shrink max-w-full px-4 w-full lg:w-1/2 align-center">
+                        <div class="relative">
+                          <div id="thumbnail-slider" class="carousel nav-inset-button nav-light-dots nav-primary-button" data-flickity='{ "cellAlign": "left", "wrapAround": true, "draggable": false, "adaptiveHeight": true, "prevNextButtons": true , "imagesLoaded": true }'>
+                            <div class="carousel-cell text-center w-full px-2">
+                              <a href="#">
+                                <img alt="title" class="w-full max-w-full h-auto rounded" src="{{ 'images/img-min/content-agency.jpg' | asset_url }}">
+                              </a>
+                            </div>
+                            <div class="carousel-cell text-center w-full px-2">
+                              <a href="#">
+                                <img alt="title" class="w-full max-w-full h-auto rounded" src="{{ 'images/img-min/hero-agency.jpg' | asset_url }}">
+                              </a>
+                            </div>
+                            <div class="carousel-cell text-center w-full px-2">
+                              <a href="#">
+                                <img alt="title" class="w-full max-w-full h-auto rounded" src="{{ 'images/img-min/advertising.jpg' | asset_url }}">
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!-- end slider -->
+                    </div>
+                  </div>
+                </div><!-- end hero -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- hero start --&gt;
+                    &lt;div id="hero" class="relative py-20 md:py-24 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20 z-0"&gt;
+                      &lt;!-- bg wrapper --&gt;
+                      &lt;div class="absolute inset-y-0 start-auto end-0 hidden lg:block w-1/3 h-full bg-white dark:bg-gray-800"&gt;&lt;/div&gt;
+                      &lt;div class="absolute inset-y-0 start-auto end-0 block lg:hidden w-1/2 h-full top-auto bg-white dark:bg-gray-800" style="z-index:-1"&gt;&lt;/div&gt;
+
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4 items-center justify-center"&gt;
+                          &lt;!-- content --&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-11/12 sm:w-10/12 lg:w-1/2"&gt;
+                            &lt;div class="text-center lg:text-start mb-12 lg:mb-0 lg:pe-12 xl:pe-24"&gt;
+                              &lt;h1 class="text-4xl leading-normal md:leading-tight font-semibold text-gray-800 dark:text-gray-100 mb-4"&gt;Build your &lt;span class="text-primary-700 font-semibold"&gt;Brand identity&lt;/span&gt; with us&lt;/h1&gt;
+                              &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mb-12"&gt;We believe that Brand and Business are two different sides of a coin. Although different, they complement each other and cannot be separated.&lt;/p&gt;
+                              &lt;a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0 me-4" href="#about"&gt;
+                                &lt;svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-signpost-split inline-block me-1" viewBox="0 0 16 16"&gt;
+                                  &lt;path d="M7 7V1.414a1 1 0 0 1 2 0V2h5a1 1 0 0 1 .8.4l.975 1.3a.5.5 0 0 1 0 .6L14.8 5.6a1 1 0 0 1-.8.4H9v10H7v-5H2a1 1 0 0 1-.8-.4L.225 9.3a.5.5 0 0 1 0-.6L1.2 7.4A1 1 0 0 1 2 7h5zm1 3V8H2l-.75 1L2 10h6zm0-5h6l.75-1L14 3H8v2z"/&gt;
+                                &lt;/svg&gt;
+                                What we do
+                              &lt;/a&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;&lt;!-- end content --&gt;
+
+                          &lt;!-- slider --&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-full lg:w-1/2 align-center"&gt;
+                            &lt;div class="relative"&gt;
+                              &lt;div id="thumbnail-slider" class="carousel nav-inset-button nav-light-dots nav-primary-button" data-flickity='{ "cellAlign": "left", "wrapAround": true, "draggable": false, "adaptiveHeight": true, "prevNextButtons": true , "imagesLoaded": true }'&gt;
+                                &lt;div class="carousel-cell text-center w-full px-2"&gt;
+                                  &lt;a href="#"&gt;
+                                    &lt;img alt="title" class="w-full max-w-full h-auto rounded" src="{{ 'images/img-min/content-agency.jpg' | asset_url }}"&gt;
+                                  &lt;/a&gt;
+                                &lt;/div&gt;
+                                &lt;div class="carousel-cell text-center w-full px-2"&gt;
+                                  &lt;a href="#"&gt;
+                                    &lt;img alt="title" class="w-full max-w-full h-auto rounded" src="{{ 'images/img-min/hero-agency.jpg' | asset_url }}"&gt;
+                                  &lt;/a&gt;
+                                &lt;/div&gt;
+                                &lt;div class="carousel-cell text-center w-full px-2"&gt;
+                                  &lt;a href="#"&gt;
+                                    &lt;img alt="title" class="w-full max-w-full h-auto rounded" src="{{ 'images/img-min/advertising.jpg' | asset_url }}"&gt;
+                                  &lt;/a&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;&lt;!-- end slider --&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- end hero --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Hero Sections style 4
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- hero start -->
+                <div id="hero" class="relative z-0 py-16 md:py-20 bg-white dark:bg-gray-800">
+                  <!-- bg wrapper -->
+                  <div class="absolute inset-y-0 end-auto start-0 hidden lg:block w-1/3 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20" style="z-index:-1"></div>
+                  <div class="absolute inset-x-0 bottom-auto top-0 block lg:hidden h-full w-1/2 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20" style="z-index:-1"></div>
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <div class="flex flex-wrap flex-row -mx-4 justify-center">
+                      <!-- content -->
+                      <div class="flex-shrink max-w-full px-4 w-full sm:w-9/12 lg:w-1/2 self-center">
+                        <img src="{{ 'images/img-min/creative.svg' | asset_url }}" class="w-full max-w-full h-auto" alt="creative agency">
+                      </div><!-- end content -->
+
+                      <!-- text -->
+                      <div class="flex-shrink max-w-full px-4 w-full md:w-9/12 lg:w-1/2 self-center lg:pe-12">
+                        <div class="text-center lg:text-start mt-6 lg:mt-0">
+                          <div class="mb-12">
+                            <h1 class="text-4xl leading-normal text-gray-800 dark:text-gray-100 font-bold mb-4">We are <span class="text-primary-700">Creative Agency</span> that serves <span data-toggle="typed" data-options='{"strings": ["Logo design", "Web design", "Mobile App", "Photography", "Videography"]}'></span></h1>
+                            <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">We would direct you to limitless ideas and move your brand into a global landscape.</p>
+                          </div>
+                          <a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0 me-4" href="#service">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block me-1" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"><rect x="64" y="176" width="384" height="256" rx="28.87" ry="28.87" style="fill:none;stroke:currentColor;stroke-linejoin:round;stroke-width:32px"></rect><line x1="144" y1="80" x2="368" y2="80" style="stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"></line><line x1="112" y1="128" x2="400" y2="128" style="stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"></line></svg>
+                             Our Service
+                          </a>
+
+                          <a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-800 bg-gray-100 border border-gray-100 hover:text-gray-900 hover:ring-0 hover:border-gray-200 focus:bg-gray-200 focus:border-gray-200 focus:outline-none focus:ring-0" href="#project">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block me-1" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"><path d="M304,384V360c0-29,31.54-56.43,52-76,28.84-27.57,44-64.61,44-108,0-80-63.73-144-144-144A143.6,143.6,0,0,0,112,176c0,41.84,15.81,81.39,44,108,20.35,19.21,52,46.7,52,76v24" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="224" y1="480" x2="288" y2="480" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="208" y1="432" x2="304" y2="432" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="256" y1="384" x2="256" y2="256" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><path d="M294,240s-21.51,16-38,16-38-16-38-16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                             Latest Project
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- end Hero -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- hero start --&gt;
+                    &lt;div id="hero" class="relative z-0 py-16 md:py-20 bg-white dark:bg-gray-800"&gt;
+                      &lt;!-- bg wrapper --&gt;
+                      &lt;div class="absolute inset-y-0 end-auto start-0 hidden lg:block w-1/3 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20" style="z-index:-1"&gt;&lt;/div&gt;
+                      &lt;div class="absolute inset-x-0 bottom-auto top-0 block lg:hidden h-full w-1/2 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20" style="z-index:-1"&gt;&lt;/div&gt;
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4 justify-center"&gt;
+                          &lt;!-- content --&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-full sm:w-9/12 lg:w-1/2 self-center"&gt;
+                            &lt;img src="{{ 'images/img-min/creative.svg' | asset_url }}" class="w-full max-w-full h-auto" alt="creative agency"&gt;
+                          &lt;/div&gt;&lt;!-- end content --&gt;
+
+                          &lt;!-- text --&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-full md:w-9/12 lg:w-1/2 self-center lg:pe-12"&gt;
+                            &lt;div class="text-center lg:text-start mt-6 lg:mt-0"&gt;
+                              &lt;div class="mb-12"&gt;
+                                &lt;h1 class="text-4xl leading-normal text-gray-800 dark:text-gray-100 font-bold mb-4"&gt;We are &lt;span class="text-primary-700"&gt;Creative Agency&lt;/span&gt; that serves &lt;span data-toggle="typed" data-options='{"strings": ["Logo design", "Web design", "Mobile App", "Photography", "Videography"]}'&gt;&lt;/span&gt;&lt;/h1&gt;
+                                &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2"&gt;We would direct you to limitless ideas and move your brand into a global landscape.&lt;/p&gt;
+                              &lt;/div&gt;
+                              &lt;a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0 me-4" href="#service"&gt;
+                                &lt;svg xmlns="http://www.w3.org/2000/svg" class="inline-block me-1" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;rect x="64" y="176" width="384" height="256" rx="28.87" ry="28.87" style="fill:none;stroke:currentColor;stroke-linejoin:round;stroke-width:32px"&gt;&lt;/rect&gt;&lt;line x1="144" y1="80" x2="368" y2="80" style="stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"&gt;&lt;/line&gt;&lt;line x1="112" y1="128" x2="400" y2="128" style="stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"&gt;&lt;/line&gt;&lt;/svg&gt;
+                                 Our Service
+                              &lt;/a&gt;
+
+                              &lt;a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-800 bg-gray-100 border border-gray-100 hover:text-gray-900 hover:ring-0 hover:border-gray-200 focus:bg-gray-200 focus:border-gray-200 focus:outline-none focus:ring-0" href="#project"&gt;
+                                &lt;svg xmlns="http://www.w3.org/2000/svg" class="inline-block me-1" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;path d="M304,384V360c0-29,31.54-56.43,52-76,28.84-27.57,44-64.61,44-108,0-80-63.73-144-144-144A143.6,143.6,0,0,0,112,176c0,41.84,15.81,81.39,44,108,20.35,19.21,52,46.7,52,76v24" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;line x1="224" y1="480" x2="288" y2="480" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;line x1="208" y1="432" x2="304" y2="432" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;line x1="256" y1="384" x2="256" y2="256" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;path d="M294,240s-21.51,16-38,16-38-16-38-16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;/svg&gt;
+                                 Latest Project
+                              &lt;/a&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- end Hero --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Hero Sections style 5
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- hero start -->
+                <div id="hero" class="relative z-0 py-14 md:py-16 bg-white dark:bg-gray-800 overflow-hidden">
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <!-- row -->
+                    <div class="flex flex-wrap flex-row -mx-4 justify-center">
+                      <!-- hero content -->
+                      <div class="flex-shrink max-w-full px-4 w-full md:w-9/12 lg:w-1/2 self-center lg:pe-12">
+                        <div class="text-center lg:text-start mt-6 lg:mt-0 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
+                          <div class="mb-4">
+                            <span class="text-sm py-1 px-2 bg-primary-700 text-gray-100 rounded">100%</span>
+                            <span class="ms-1">Satisfaction Guarantee</span>
+                          </div>
+                          <div class="mb-12">
+                            <h1 class="text-4xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100">A <span class="text-primary-700">Digital Agency</span> that will help your business.
+                            </h1>
+                            <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">We help brands grow their online presence, dominate their niche, and make more sales.</p>
+                          </div>
+                          <a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0 me-4" href="#about-us">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block me-1" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="336 176 225.2 304 176 255.8" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><path d="M463.1,112.37C373.68,96.33,336.71,84.45,256,48,175.29,84.45,138.32,96.33,48.9,112.37,32.7,369.13,240.58,457.79,256,464,271.42,457.79,479.3,369.13,463.1,112.37Z" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                            About Us
+                          </a>
+                          <a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-gray-900 border border-gray-900 hover:text-white hover:bg-black hover:ring-0 hover:border-black focus:bg-black focus:border-black focus:outline-none focus:ring-0" href="#service">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block me-1" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"><rect x="64" y="176" width="384" height="256" rx="28.87" ry="28.87" style="fill:none;stroke:currentColor;stroke-linejoin:round;stroke-width:32px"/><line x1="144" y1="80" x2="368" y2="80" style="stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/><line x1="112" y1="128" x2="400" y2="128" style="stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/></svg>
+                             Our Service
+                          </a>
+                        </div>
+                      </div>
+
+                      <!-- hero image -->
+                      <div class="flex-shrink max-w-full px-4 w-full md:w-9/12 lg:w-1/2 self-center">
+                        <div class="px-12 md:ms-16 md:pe-0 md:mt-0 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".1s">
+                          <figure class="relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                              <!-- Path back image-->
+                              <path class="text-gray-100 dark:text-gray-900" fill="currentColor" d="M51.2,-53.5C67.6,-47.4,82.7,-32.3,85.6,-15.2C88.6,2,79.2,21.2,67.7,37.2C56.2,53.3,42.5,66.2,26.7,70.8C11,75.4,-6.9,71.6,-19.6,63C-32.4,54.4,-40,41,-48.6,27.4C-57.2,13.9,-66.7,0.2,-68.1,-15.5C-69.5,-31.3,-62.8,-49.1,-50.1,-55.9C-37.5,-62.7,-18.7,-58.4,-0.6,-57.6C17.5,-56.9,34.9,-59.7,51.2,-53.5Z" transform="translate(100 100)" />
+                              <!-- Clip path image -->
+                              <defs>
+                                <clipPath id="svg-mask1">
+                                  <path fill="currentColor" d="M39.2,-57.5C49.8,-46.3,56.6,-33.5,62.7,-19.3C68.7,-5.2,73.9,10.3,71.6,25C69.2,39.8,59.3,53.9,46.1,58C32.9,62.2,16.5,56.3,1.2,54.7C-14.2,53.1,-28.3,55.8,-42.1,51.9C-56,48,-69.5,37.5,-68.6,25.7C-67.7,14,-52.3,1,-45.9,-13.6C-39.4,-28.2,-41.7,-44.5,-35.6,-57.1C-29.4,-69.7,-14.7,-78.7,-0.2,-78.4C14.3,-78.1,28.6,-68.6,39.2,-57.5Z" transform="translate(100 100)" />
+                                </clipPath>
+                              </defs>
+                              <!-- Source image -->
+                              <image transform="matrix(1 0 0 1 0 0)" clip-path="url(#svg-mask1)" xlink:href="{{ 'images/img-min/hero-agency.jpg' | asset_url }}"width="235" height="200"></image>
+                            </svg>
+                          </figure>
+                        </div>
+                      </div>
+                    </div><!-- end row -->
+                  </div>
+                </div><!-- end hero -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- hero start --&gt;
+                    &lt;div id="hero" class="relative z-0 py-14 md:py-16 bg-white dark:bg-gray-800 overflow-hidden"&gt;
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;!-- row --&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4 justify-center"&gt;
+                          &lt;!-- hero content --&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-full md:w-9/12 lg:w-1/2 self-center lg:pe-12"&gt;
+                            &lt;div class="text-center lg:text-start mt-6 lg:mt-0 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s"&gt;
+                              &lt;div class="mb-4"&gt;
+                                &lt;span class="text-sm py-1 px-2 bg-primary-700 text-gray-100 rounded"&gt;100%&lt;/span&gt;
+                                &lt;span class="ms-1"&gt;Satisfaction Guarantee&lt;/span&gt;
+                              &lt;/div&gt;
+                              &lt;div class="mb-12"&gt;
+                                &lt;h1 class="text-4xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"&gt;A &lt;span class="text-primary-700"&gt;Digital Agency&lt;/span&gt; that will help your business.
+                                &lt;/h1&gt;
+                                &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2"&gt;We help brands grow their online presence, dominate their niche, and make more sales.&lt;/p&gt;
+                              &lt;/div&gt;
+                              &lt;a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0 me-4" href="#about-us"&gt;
+                                &lt;svg xmlns="http://www.w3.org/2000/svg" class="inline-block me-1" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;polyline points="336 176 225.2 304 176 255.8" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;path d="M463.1,112.37C373.68,96.33,336.71,84.45,256,48,175.29,84.45,138.32,96.33,48.9,112.37,32.7,369.13,240.58,457.79,256,464,271.42,457.79,479.3,369.13,463.1,112.37Z" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;/svg&gt;
+                                About Us
+                              &lt;/a&gt;
+                              &lt;a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-gray-900 border border-gray-900 hover:text-white hover:bg-black hover:ring-0 hover:border-black focus:bg-black focus:border-black focus:outline-none focus:ring-0" href="#service"&gt;
+                                &lt;svg xmlns="http://www.w3.org/2000/svg" class="inline-block me-1" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;rect x="64" y="176" width="384" height="256" rx="28.87" ry="28.87" style="fill:none;stroke:currentColor;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;line x1="144" y1="80" x2="368" y2="80" style="stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/&gt;&lt;line x1="112" y1="128" x2="400" y2="128" style="stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/&gt;&lt;/svg&gt;
+                                 Our Service
+                              &lt;/a&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+
+                          &lt;!-- hero image --&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-full md:w-9/12 lg:w-1/2 self-center"&gt;
+                            &lt;div class="px-12 md:ms-16 md:pe-0 md:mt-0 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".1s"&gt;
+                              &lt;figure class="relative"&gt;
+                                &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"&gt;
+                                  &lt;!-- Path back image--&gt;
+                                  &lt;path class="text-gray-100" fill="currentColor" d="M51.2,-53.5C67.6,-47.4,82.7,-32.3,85.6,-15.2C88.6,2,79.2,21.2,67.7,37.2C56.2,53.3,42.5,66.2,26.7,70.8C11,75.4,-6.9,71.6,-19.6,63C-32.4,54.4,-40,41,-48.6,27.4C-57.2,13.9,-66.7,0.2,-68.1,-15.5C-69.5,-31.3,-62.8,-49.1,-50.1,-55.9C-37.5,-62.7,-18.7,-58.4,-0.6,-57.6C17.5,-56.9,34.9,-59.7,51.2,-53.5Z" transform="translate(100 100)" /&gt;
+                                  &lt;!-- Clip path image --&gt;
+                                  &lt;defs&gt;
+                                    &lt;clipPath id="svg-mask1"&gt;
+                                      &lt;path fill="currentColor" d="M39.2,-57.5C49.8,-46.3,56.6,-33.5,62.7,-19.3C68.7,-5.2,73.9,10.3,71.6,25C69.2,39.8,59.3,53.9,46.1,58C32.9,62.2,16.5,56.3,1.2,54.7C-14.2,53.1,-28.3,55.8,-42.1,51.9C-56,48,-69.5,37.5,-68.6,25.7C-67.7,14,-52.3,1,-45.9,-13.6C-39.4,-28.2,-41.7,-44.5,-35.6,-57.1C-29.4,-69.7,-14.7,-78.7,-0.2,-78.4C14.3,-78.1,28.6,-68.6,39.2,-57.5Z" transform="translate(100 100)" /&gt;
+                                    &lt;/clipPath&gt;
+                                  &lt;/defs&gt;
+                                  &lt;!-- Source image --&gt;
+                                  &lt;image transform="matrix(1 0 0 1 0 0)" clip-path="url(#svg-mask1)" xlink:href="{{ 'images/img-min/hero-agency.jpg' | asset_url }}"width="235" height="200"&gt;&lt;/image&gt;
+                                &lt;/svg&gt;
+                              &lt;/figure&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;&lt;!-- end row --&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- end hero --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Hero Sections style 6
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- hero start -->
+                <div id="hero" class="relative pt-14 pb-20 md:pt-16 md:pb-24 jarallax">
+                  <!-- background parallax -->
+                  <img class="jarallax-img" src="{{ 'images/img-min/bg3.jpg' | asset_url }}" alt="title">
+
+                  <!-- background overlay -->
+                  <div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"></div>
+
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <div class="flex flex-wrap flex-row -mx-4 items-center justify-center mb-6">
+                      <!-- content -->
+                      <div class="max-w-full w-11/12 lg:w-7/12 px-4">
+                        <div class="mt-6 py-4 lg:py-8 text-center">
+                          <h1 class="text-4xl lg:text-5xl leading-normal font-semibold text-white capitalize mb-4">We are Creative <span class="text-yellow-300">Graphic design</span> Agency.</h1>
+                          <p class="text-gray-100 leading-relaxed font-light text-xl mx-auto pb-2 mb-12">We work with brands to help them connect to their audience with the use of a visual identity, marketing collateral, print & publication design.</p>
+                          <a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-transparent border border-gray-100 hover:text-gray-900 hover:bg-gray-200 hover:ring-0 hover:border-gray-200 focus:text-gray-900 focus:bg-gray-200 focus:border-gray-200 focus:outline-none focus:ring-0 mb-4 sm:mb-0 me-6" href="#portfolio">
+                            Portfolio
+                          </a>
+                          <a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-transparent border border-gray-100 hover:text-gray-900 hover:bg-gray-200 hover:ring-0 hover:border-gray-200 focus:text-gray-900 focus:bg-gray-200 focus:border-gray-200 focus:outline-none focus:ring-0 mb-4 sm:mb-0" href="#services">
+                            Services
+                          </a>
+                        </div>
+                      </div><!-- end content -->
+                    </div>
+                    <!-- masthead -->
+                    <div class="text-center absolute bottom-8 w-full start-0 animate-bounce hidden md:block">
+                      <a href="#portfolio">
+                        <div class="mx-auto py-5 px-3 w-6 h-8 rounded-xl opacity-80 border-2 border-white">
+                          <div class="h-2 w-0.5 bg-white"><span class="invisible">Scroll button</span></div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div><!-- end hero -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- hero start --&gt;
+                    &lt;div id="hero" class="relative pt-14 pb-20 md:pt-16 md:pb-24 jarallax"&gt;
+                      &lt;!-- background parallax --&gt;
+                      &lt;img class="jarallax-img" src="{{ 'images/img-min/bg3.jpg' | asset_url }}" alt="title"&gt;
+
+                      &lt;!-- background overlay --&gt;
+                      &lt;div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"&gt;&lt;/div&gt;
+
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4 items-center justify-center mb-6"&gt;
+                          &lt;!-- content --&gt;
+                          &lt;div class="max-w-full w-11/12 lg:w-7/12 px-4"&gt;
+                            &lt;div class="mt-6 py-4 lg:py-8 text-center"&gt;
+                              &lt;h1 class="text-4xl lg:text-5xl leading-normal font-semibold text-white capitalize mb-4"&gt;We are Creative &lt;span class="text-yellow-300"&gt;Graphic design&lt;/span&gt; Agency.&lt;/h1&gt;
+                              &lt;p class="text-gray-100 leading-relaxed font-light text-xl mx-auto pb-2 mb-12"&gt;We work with brands to help them connect to their audience with the use of a visual identity, marketing collateral, print & publication design.&lt;/p&gt;
+                              &lt;a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-transparent border border-gray-100 hover:text-gray-900 hover:bg-gray-200 hover:ring-0 hover:border-gray-200 focus:text-gray-900 focus:bg-gray-200 focus:border-gray-200 focus:outline-none focus:ring-0 mb-4 sm:mb-0 me-6" href="#portfolio"&gt;
+                                Portfolio
+                              &lt;/a&gt;
+                              &lt;a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-transparent border border-gray-100 hover:text-gray-900 hover:bg-gray-200 hover:ring-0 hover:border-gray-200 focus:text-gray-900 focus:bg-gray-200 focus:border-gray-200 focus:outline-none focus:ring-0 mb-4 sm:mb-0" href="#services"&gt;
+                                Services
+                              &lt;/a&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;&lt;!-- end content --&gt;
+                        &lt;/div&gt;
+                        &lt;!-- masthead --&gt;
+                        &lt;div class="text-center absolute bottom-8 w-full start-0 animate-bounce hidden md:block"&gt;
+                          &lt;a href="#portfolio"&gt;
+                            &lt;div class="mx-auto py-5 px-3 w-6 h-8 rounded-xl opacity-80 border-2 border-white"&gt;
+                              &lt;div class="h-2 w-0.5 bg-white"&gt;&lt;span class="invisible"&gt;Scroll button&lt;/span&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/a&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- end hero --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Hero Sections style 7
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- hero start -->
+                <div id="hero" class="relative overflow-hidden bg-primary-700 z-0">
+                  <!-- bg wrapper -->
+                  <div class="absolute inset-y-0 start-auto end-0 w-1/2 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20" style="background-image: url({{ 'images/img-min/marketing.jpg' | asset_url }});background-repeat: no-repeat;background-size: cover;z-index: -1;"></div>
+                  <div class="absolute inset-y-0 end-auto start-0 block lg:hidden h-full w-1/2 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20" style="z-index:-1"></div>
+
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <div class="flex flex-wrap flex-row">
+                      <!-- img block -->
+                      <div class="flex-shrink max-w-full px-4 w-full lg:w-5/12 lg:order-2">
+                        <svg class="hidden lg:block lg:ms-2 xl:ms-3 h-full w-1/4 transform ltr:-translate-x-3/4 rtl:translate-x-3/4 text-primary-700" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                          <polygon points="50,0 100,0 50,100 0,100"></polygon>
+                        </svg>
+                      </div>
+
+                      <!-- content block -->
+                      <div class="flex-shrink max-w-full px-4 w-full lg:w-1/2 lg:order-1 my-auto">
+                        <div class="pt-8 pb-12 md:pb-24">
+                          <div class="bg-primary-700 rounded p-6 lg:p-12 lg:px-0 lg:py-6 mt-8 md:mt-12 md:pt-16 text-center lg:text-start wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
+                            <h1 class="text-4xl lg:text-5xl leading-normal lg:leading-tight font-semibold text-gray-100  mb-4">The next level <span class="text-yellow-300">Digital Marketing</span> Agency</h1>
+                            <p class="leading-relaxed font-light text-xl mx-auto pb-2 mb-12 text-gray-50">If you have a great product or service but are confused about marketing plans, we are the right solution for you.</p>
+                            <img src="{{ 'images/img-min/google-suite.jpg' | asset_url }}" class="inline-block mb-3 md:mb-0 max-w-full rounded max-h-16 me-3" alt="Partnership">
+                            <img src="{{ 'images/img-min/bing.jpg' | asset_url }}" class="inline-block mb-3 md:mb-0 max-w-full rounded max-h-16" alt="Partnership">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- end hero -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- hero start --&gt;
+                    &lt;div id="hero" class="relative overflow-hidden bg-primary-700 z-0"&gt;
+                      &lt;!-- bg wrapper --&gt;
+                      &lt;div class="absolute inset-y-0 start-auto end-0 w-1/2 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20" style="background-image: url('src/img-min/human/marketing.jpg');background-repeat: no-repeat;background-size: cover;z-index: -1;"&gt;&lt;/div&gt;
+                      &lt;div class="absolute inset-y-0 end-auto start-0 block lg:hidden h-full w-1/2 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20" style="z-index:-1"&gt;&lt;/div&gt;
+
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;div class="flex flex-wrap flex-row"&gt;
+                          &lt;!-- img block --&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-full lg:w-5/12 lg:order-2"&gt;
+                            &lt;svg class="hidden lg:block lg:ms-2 xl:ms-3 h-full w-1/4 transform ltr:-translate-x-3/4 rtl:translate-x-3/4 text-primary-700" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"&gt;
+                              &lt;polygon points="50,0 100,0 50,100 0,100"&gt;&lt;/polygon&gt;
+                            &lt;/svg&gt;
+                          &lt;/div&gt;
+
+                          &lt;!-- content block --&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-full lg:w-1/2 lg:order-1 my-auto"&gt;
+                            &lt;div class="pt-8 pb-12 md:pb-24"&gt;
+                              &lt;div class="bg-primary-700 rounded p-6 lg:p-12 lg:px-0 lg:py-6 mt-8 md:mt-12 md:pt-16 text-center lg:text-start wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s"&gt;
+                                &lt;h1 class="text-4xl lg:text-5xl leading-normal lg:leading-tight font-semibold text-gray-100  mb-4"&gt;The next level &lt;span class="text-yellow-300"&gt;Digital Marketing&lt;/span&gt; Agency&lt;/h1&gt;
+                                &lt;p class="leading-relaxed font-light text-xl mx-auto pb-2 mb-12 text-gray-50"&gt;If you have a great product or service but are confused about marketing plans, we are the right solution for you.&lt;/p&gt;
+                                &lt;img src="{{ 'images/img-min/google-suite.jpg' | asset_url }}" class="inline-block mb-3 md:mb-0 max-w-full rounded max-h-16 me-3" alt="Partnership"&gt;
+                                &lt;img src="{{ 'images/img-min/bing.jpg' | asset_url }}" class="inline-block mb-3 md:mb-0 max-w-full rounded max-h-16" alt="Partnership"&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- end hero --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Hero Sections style 8
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- hero start -->
+                <div id="hero" class="relative pt-20 pb-24 md:pt-24 bg-gray-900 text-gray-100 z-0">
+                  <!-- particle moving animation -->
+                  <div class="particle">
+                    <div class="scroll-rotate absolute opacity-60 text-primary-700" style="right:9%;bottom: 72%;">
+                      <svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                    <div class="scroll-rotate absolute opacity-60 text-yellow-300" style="right:12%;bottom: 30%;">
+                      <svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                    <div class="scroll-rotate absolute opacity-60 text-red-700 hidden lg:block" style="right:22%;bottom: 55%;">
+                      <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                    <div class="scroll-rotate absolute opacity-60 text-red-700 hidden lg:block" style="left:40%;top: 20%;">
+                      <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                    <div class="scroll-rotate absolute opacity-60 text-primary-700" style="left:60%;bottom: 20%;">
+                      <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                    <div class="scroll-rotate absolute opacity-60 text-yellow-300" style="left:20%;bottom: 60%;">
+                      <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                    <div class="scroll-rotate absolute opacity-60 text-primary-700" style="left:12%;bottom: 30%;">
+                      <svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                    <div class="scroll-rotate absolute opacity-60 text-green-600" style="left:6%;bottom:75%;">
+                      <svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                  </div>
+
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <div class="flex flex-wrap flex-row -mx-4 items-center justify-center">
+                      <!-- content -->
+                      <div class="flex-shrink max-w-full px-4 w-full lg:w-1/2 xl:me-auto z-10">
+                        <div class="text-center lg:text-start">
+                          <h1 class="text-4xl leading-normal font-bold text-white capitalize mb-4">We <span class="text-primary-500" data-toggle="typed" data-options='{"strings": ["design", "develop", "maintain"]}'></span> mobile app<br> for your business.</h1>
+                          <p class="text-gray-100 leading-relaxed font-light text-xl mx-auto pb-2 mb-12">We provide app design and app development services for every stage of your mobile project.</p>
+                          <div class="mb-16 lg:mb-0">
+                            <a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-800 bg-gray-100 border border-gray-100 hover:text-gray-900 hover:ring-0 hover:border-gray-200 focus:bg-gray-200 focus:border-gray-200 focus:outline-none focus:ring-0 me-6" href="#services">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="inline-block me-1" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"><rect x="64" y="176" width="384" height="256" rx="28.87" ry="28.87" style="fill:none;stroke:currentColor;stroke-linejoin:round;stroke-width:32px"></rect><line x1="144" y1="80" x2="368" y2="80" style="stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"></line><line x1="112" y1="128" x2="400" y2="128" style="stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"></line></svg>
+                               Our Service
+                            </a>
+                            <a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-800 bg-gray-100 border border-gray-100 hover:text-gray-900 hover:ring-0 hover:border-gray-200 focus:bg-gray-200 focus:border-gray-200 focus:outline-none focus:ring-0" href="#project">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="inline-block me-1" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"><path d="M304,384V360c0-29,31.54-56.43,52-76,28.84-27.57,44-64.61,44-108,0-80-63.73-144-144-144A143.6,143.6,0,0,0,112,176c0,41.84,15.81,81.39,44,108,20.35,19.21,52,46.7,52,76v24" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path><line x1="224" y1="480" x2="288" y2="480" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line><line x1="208" y1="432" x2="304" y2="432" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line><line x1="256" y1="384" x2="256" y2="256" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line><path d="M294,240s-21.51,16-38,16-38-16-38-16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg>
+                               Latest Project
+                            </a>
+                          </div>
+                        </div>
+                      </div><!-- end content -->
+
+                      <!-- intro images -->
+                      <div class="flex-shrink max-w-full px-24 w-full lg:w-1/2 xl:w-5/12">
+                        <div class="relative md:-mt-2 mb-16" style="padding-bottom: 120%">
+                          <!-- Android potrait -->
+                          <figure class="absolute start-0 top-0 w-3/4">
+                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.000000 906.000000">
+                              <!-- Clip path image -->
+                              <defs>
+                                <clipPath id="svgf">
+                                  <rect x="50" y="16.5" width="480" height="1066"/>
+                                </clipPath>
+                              </defs>
+                              <!-- Phone screen -->
+                              <image clip-path="url(#svgf)" xlink:href="../{{ 'images/img-min/app1-android.jpg' | asset_url }}" height="94%" width="100%" style="transform:translateY(15px);"></image>
+                              <!-- Phone cover -->
+                              <image xlink:href="{{ 'images/img-min/android-dark.png' | asset_url }}"height="100%" width="100%"></image>
+                            </svg>
+                          </figure>
+
+                          <figure class="absolute end-0 w-3/4" style="top:12%">
+                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.000000 906.000000">
+                              <!-- Clip path image -->
+                              <defs>
+                                <clipPath id="svgf1">
+                                  <rect x="52" y="10" width="380" height="818"/>
+                                </clipPath>
+                              </defs>
+                              <!-- Phone screen -->
+                              <image clip-path="url(#svgf1)" xlink:href="../{{ 'images/img-min/app1.jpg' | asset_url }}" height="92%" width="100%" style="transform:translateY(30px);"></image>
+                              <!-- Phone cover -->
+                              <image xlink:href="../{{ 'images/img-min/iphone-dark.png' | asset_url }}" height="100%" width="100%"></image>
+                            </svg>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- end hero -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- hero start --&gt;
+                    &lt;div id="hero" class="relative pt-20 pb-24 md:pt-24 bg-gray-900 text-gray-100 z-0"&gt;
+                      &lt;!-- particle moving animation --&gt;
+                      &lt;div class="particle"&gt;
+                        &lt;div class="scroll-rotate absolute opacity-60 text-primary-700" style="right:9%;bottom: 72%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                        &lt;div class="scroll-rotate absolute opacity-60 text-yellow-300" style="right:12%;bottom: 30%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                        &lt;div class="scroll-rotate absolute opacity-60 text-red-700 hidden lg:block" style="right:22%;bottom: 55%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                        &lt;div class="scroll-rotate absolute opacity-60 text-red-700 hidden lg:block" style="left:40%;top: 20%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                        &lt;div class="scroll-rotate absolute opacity-60 text-primary-700" style="left:60%;bottom: 20%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                        &lt;div class="scroll-rotate absolute opacity-60 text-yellow-300" style="left:20%;bottom: 60%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                        &lt;div class="scroll-rotate absolute opacity-60 text-primary-700" style="left:12%;bottom: 30%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                        &lt;div class="scroll-rotate absolute opacity-60 text-green-600" style="left:6%;bottom:75%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                      &lt;/div&gt;
+
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4 items-center justify-center"&gt;
+                          &lt;!-- content --&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-full lg:w-1/2 xl:me-auto z-10"&gt;
+                            &lt;div class="text-center lg:text-start"&gt;
+                              &lt;h1 class="text-4xl leading-normal font-bold text-white capitalize mb-4"&gt;We &lt;span class="text-primary-500" data-toggle="typed" data-options='{"strings": ["design", "develop", "maintain"]}'&gt;&lt;/span&gt; mobile app&lt;br&gt; for your business.&lt;/h1&gt;
+                              &lt;p class="text-gray-100 leading-relaxed font-light text-xl mx-auto pb-2 mb-12"&gt;We provide app design and app development services for every stage of your mobile project.&lt;/p&gt;
+                              &lt;div class="mb-16 lg:mb-0"&gt;
+                                &lt;a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-800 bg-gray-100 border border-gray-100 hover:text-gray-900 hover:ring-0 hover:border-gray-200 focus:bg-gray-200 focus:border-gray-200 focus:outline-none focus:ring-0 me-6" href="#services"&gt;
+                                  &lt;svg xmlns="http://www.w3.org/2000/svg" class="inline-block me-1" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;rect x="64" y="176" width="384" height="256" rx="28.87" ry="28.87" style="fill:none;stroke:currentColor;stroke-linejoin:round;stroke-width:32px"&gt;&lt;/rect&gt;&lt;line x1="144" y1="80" x2="368" y2="80" style="stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"&gt;&lt;/line&gt;&lt;line x1="112" y1="128" x2="400" y2="128" style="stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"&gt;&lt;/line&gt;&lt;/svg&gt;
+                                   Our Service
+                                &lt;/a&gt;
+                                &lt;a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-800 bg-gray-100 border border-gray-100 hover:text-gray-900 hover:ring-0 hover:border-gray-200 focus:bg-gray-200 focus:border-gray-200 focus:outline-none focus:ring-0" href="#project"&gt;
+                                  &lt;svg xmlns="http://www.w3.org/2000/svg" class="inline-block me-1" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;path d="M304,384V360c0-29,31.54-56.43,52-76,28.84-27.57,44-64.61,44-108,0-80-63.73-144-144-144A143.6,143.6,0,0,0,112,176c0,41.84,15.81,81.39,44,108,20.35,19.21,52,46.7,52,76v24" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"&gt;&lt;/path&gt;&lt;line x1="224" y1="480" x2="288" y2="480" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"&gt;&lt;/line&gt;&lt;line x1="208" y1="432" x2="304" y2="432" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"&gt;&lt;/line&gt;&lt;line x1="256" y1="384" x2="256" y2="256" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"&gt;&lt;/line&gt;&lt;path d="M294,240s-21.51,16-38,16-38-16-38-16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"&gt;&lt;/path&gt;&lt;/svg&gt;
+                                   Latest Project
+                                &lt;/a&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;&lt;!-- end content --&gt;
+
+                          &lt;!-- intro images --&gt;
+                          &lt;div class="flex-shrink max-w-full px-24 w-full lg:w-1/2 xl:w-5/12"&gt;
+                            &lt;div class="relative md:-mt-2 mb-16" style="padding-bottom: 120%"&gt;
+                              &lt;!-- Android potrait --&gt;
+                              &lt;figure class="absolute start-0 top-0 w-3/4"&gt;
+                                &lt;svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.000000 906.000000"&gt;
+                                  &lt;!-- Clip path image --&gt;
+                                  &lt;defs&gt;
+                                    &lt;clipPath id="svgf"&gt;
+                                      &lt;rect x="50" y="16.5" width="480" height="1066"/&gt;
+                                    &lt;/clipPath&gt;
+                                  &lt;/defs&gt;
+                                  &lt;!-- Phone screen --&gt;
+                                  &lt;image clip-path="url(#svgf)" xlink:href="{{ 'images/img-min/app1-android.jpg' | asset_url }}" height="94%" width="100%" style="transform:translateY(15px);"&gt;&lt;/image&gt;
+                                  &lt;!-- Phone cover --&gt;
+                                  &lt;image xlink:href="{{ 'images/img-min/android-dark.png' | asset_url }}"height="100%" width="100%"&gt;&lt;/image&gt;
+                                &lt;/svg&gt;
+                              &lt;/figure&gt;
+
+                              &lt;figure class="absolute end-0 w-3/4" style="top:12%"&gt;
+                                &lt;svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.000000 906.000000"&gt;
+                                  &lt;!-- Clip path image --&gt;
+                                  &lt;defs&gt;
+                                    &lt;clipPath id="svgf1"&gt;
+                                      &lt;rect x="52" y="10" width="380" height="818"/&gt;
+                                    &lt;/clipPath&gt;
+                                  &lt;/defs&gt;
+                                  &lt;!-- Phone screen --&gt;
+                                  &lt;image clip-path="url(#svgf1)" xlink:href="{{ 'images/img-min/app1.jpg' | asset_url }}" height="92%" width="100%" style="transform:translateY(30px);"&gt;&lt;/image&gt;
+                                  &lt;!-- Phone cover --&gt;
+                                  &lt;image xlink:href="{{ 'images/img-min/iphone-dark.png' | asset_url }}" height="100%" width="100%"&gt;&lt;/image&gt;
+                                &lt;/svg&gt;
+                              &lt;/figure&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- end hero --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Hero Sections style 9
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- hero start -->
+                <div id="hero" class="relative bg-primary-700 py-20 md:py-24 overflow-hidden z-0">
+                  <div class="absolute inset-y-0 end-auto start-0 h-full w-1/2 bg-black" style="z-index: -1;"></div>
+
+                  <!-- background overlay -->
+                  <div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"></div>
+
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <!-- row -->
+                    <div class="flex flex-wrap flex-row -mx-4 justify-center">
+                      <!-- hero image -->
+                      <div class="flex-shrink max-w-full px-4 w-full md:w-9/12 lg:w-1/2 self-center lg:order-2 hidden lg:block lg:ps-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
+                        <img src="{{ 'images/img-min/performance.png' | asset_url }}" class="img-fluid rounded shadow-end-bottom" alt="seo service">
+                      </div>
+
+                      <!-- hero content -->
+                      <div class="flex-shrink max-w-full px-4 w-10/12 md:w-9/12 lg:w-1/2 self-center lg:order-1 xl:pe-12">
+                        <div class="text-center lg:text-start lg:me-16 lg:py-12 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".1s">
+                          <div class="mb-4">
+                            <h1 class="text-4xl leading-normal mb-2 font-semibold text-white">We are Professional <span class="text-yellow-300">SEO Agency</span> in NYC</h1>
+                          </div>
+                          <p class="text-gray-100 leading-relaxed font-light text-xl mx-auto pb-2 mb-12">To reach potential customers on the internet, your website must be on the first page of search engines. It all requires professional and consistent SEO services. Because SEO takes time, it can't be instant.</p>
+                          <a class="py-3 px-5 -ms-1 rounded-md leading-5 text-gray-800 bg-gray-100 border border-gray-100 hover:text-gray-900 hover:ring-0 hover:border-gray-200 focus:bg-gray-200 focus:border-gray-200 focus:outline-none focus:ring-0" href="#service">
+                            Our SEO Service
+                          </a>
+                        </div>
+                      </div>
+                    </div><!-- end row -->
+                  </div>
+                </div><!-- end hero -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- hero start --&gt;
+                    &lt;div id="hero" class="relative bg-primary-700 py-20 md:py-24 overflow-hidden z-0"&gt;
+                      &lt;div class="absolute inset-y-0 end-auto start-0 h-full w-1/2 bg-black" style="z-index: -1;"&gt;&lt;/div&gt;
+
+                      &lt;!-- background overlay --&gt;
+                      &lt;div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"&gt;&lt;/div&gt;
+
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;!-- row --&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4 justify-center"&gt;
+                          &lt;!-- hero image --&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-full md:w-9/12 lg:w-1/2 self-center lg:order-2 hidden lg:block lg:ps-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s"&gt;
+                            &lt;img src="{{ 'images/img-min/performance.png' | asset_url }}" class="img-fluid rounded shadow-end-bottom" alt="seo service"&gt;
+                          &lt;/div&gt;
+
+                          &lt;!-- hero content --&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-10/12 md:w-9/12 lg:w-1/2 self-center lg:order-1 xl:pe-12"&gt;
+                            &lt;div class="text-center lg:text-start lg:me-16 lg:py-12 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".1s"&gt;
+                              &lt;div class="mb-4"&gt;
+                                &lt;h1 class="text-4xl leading-normal mb-2 font-semibold text-white"&gt;We are Professional &lt;span class="text-yellow-300"&gt;SEO Agency&lt;/span&gt; in NYC&lt;/h1&gt;
+                              &lt;/div&gt;
+                              &lt;p class="text-gray-100 leading-relaxed font-light text-xl mx-auto pb-2 mb-12"&gt;To reach potential customers on the internet, your website must be on the first page of search engines. It all requires professional and consistent SEO services. Because SEO takes time, it can't be instant.&lt;/p&gt;
+                              &lt;a class="py-3 px-5 -ms-1 rounded-md leading-5 text-gray-800 bg-gray-100 border border-gray-100 hover:text-gray-900 hover:ring-0 hover:border-gray-200 focus:bg-gray-200 focus:border-gray-200 focus:outline-none focus:ring-0" href="#service"&gt;
+                                Our SEO Service
+                              &lt;/a&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;&lt;!-- end row --&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- end hero --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Hero Sections style 10
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- hero start -->
+                <div id="hero" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20 z-0">
+                  <!-- bg wrapper -->
+                  <div class="absolute inset-y-0 start-auto end-0 hidden lg:block w-1/3 h-full bg-white dark:bg-gray-800"></div>
+                  <div class="absolute inset-y-0 start-auto end-0 block lg:hidden w-1/2 h-2/5 top-auto bg-white dark:bg-gray-800"></div>
+
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <div class="flex flex-wrap flex-row -mx-4 justify-center">
+                      <!-- content -->
+                      <div class="flex-shrink max-w-full px-4 w-11/12 sm:w-10/12 lg:w-1/2 self-center wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
+                        <div class="text-center lg:text-start mb-12 lg:mb-0 pe-12 lg:pe-24">
+                          <h1 class="text-4xl leading-normal font-semibold text-gray-800 dark:text-gray-100 mb-4"><span class="text-primary-700">Social Media</span> Marketing Agency</h1>
+                          <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mb-12">We are one stop business solution, good place & affordable price. Our offices features convenient spaces for modern profesional.</p>
+                          <!-- button -->
+                          <a href="#get-started" class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0">
+                            Getting Started
+                          </a>
+                        </div>
+                      </div><!-- end content -->
+
+                      <!-- video -->
+                      <div class="flex-shrink max-w-full px-4 w-11/12 lg:w-1/2 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".1s">
+                        <div class="relative rounded-md overflow-hidden">
+                          <img src="{{ 'images/img-min/social.svg' | asset_url }}" class="max-w-full w-full h-auto" alt="background images">
+                          <div class="absolute start-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2 lightgallery-thumbnail">
+                            <a id="preview-video2" aria-label="Introcluding Upgency" href="https://www.youtube.com/watch?v=nOsKM0cb0qE" class="p-5 rounded-full leading-5 text-gray-800 bg-gray-100 border border-gray-100 hover:text-gray-900 hover:ring-0 hover:border-gray-200 focus:bg-gray-200 focus:border-gray-200 focus:outline-none focus:ring-0 relative">
+                              <svg class="bi bi-play-fill inline-block" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div><!-- end video -->
+                    </div>
+                  </div>
+                </div><!-- end hero -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- hero start --&gt;
+                    &lt;div id="hero" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20 z-0"&gt;
+                      &lt;!-- bg wrapper --&gt;
+                      &lt;div class="absolute inset-y-0 start-auto end-0 hidden lg:block w-1/3 h-full bg-white dark:bg-gray-800"&gt;&lt;/div&gt;
+                      &lt;div class="absolute inset-y-0 start-auto end-0 block lg:hidden w-1/2 h-2/5 top-auto bg-white dark:bg-gray-800"&gt;&lt;/div&gt;
+
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4 justify-center"&gt;
+                          &lt;!-- content --&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-11/12 sm:w-10/12 lg:w-1/2 self-center wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s"&gt;
+                            &lt;div class="text-center lg:text-start mb-12 lg:mb-0 pe-12 lg:pe-24"&gt;
+                              &lt;h1 class="text-4xl leading-normal font-semibold text-gray-800 dark:text-gray-100 mb-4"&gt;&lt;span class="text-primary-700"&gt;Social Media&lt;/span&gt; Marketing Agency&lt;/h1&gt;
+                              &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mb-12"&gt;We are one stop business solution, good place & affordable price. Our offices features convenient spaces for modern profesional.&lt;/p&gt;
+                              &lt;!-- button --&gt;
+                              &lt;a href="#get-started" class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0"&gt;
+                                Getting Started
+                              &lt;/a&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;&lt;!-- end content --&gt;
+
+                          &lt;!-- video --&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-11/12 lg:w-1/2 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".1s"&gt;
+                            &lt;div class="relative rounded-md overflow-hidden"&gt;
+                              &lt;img src="{{ 'images/img-min/social.svg' | asset_url }}" class="max-w-full w-full h-auto" alt="background images"&gt;
+                              &lt;div class="absolute start-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2 lightgallery-thumbnail"&gt;
+                                &lt;a id="preview-video2" aria-label="Introcluding Upgency" href="https://www.youtube.com/watch?v=nOsKM0cb0qE" class="p-5 rounded-full leading-5 text-gray-800 bg-gray-100 border border-gray-100 hover:text-gray-900 hover:ring-0 hover:border-gray-200 focus:bg-gray-200 focus:border-gray-200 focus:outline-none focus:ring-0 relative"&gt;
+                                  &lt;svg class="bi bi-play-fill inline-block" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                                    &lt;path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 010 1.393z"&gt;&lt;/path&gt;
+                                  &lt;/svg&gt;
+                                &lt;/a&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;&lt;!-- end video --&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- end hero --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end row -->
+      </div>
+    </div><!-- End snippets -->
+  </main>

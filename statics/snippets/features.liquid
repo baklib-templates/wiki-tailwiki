@@ -1,0 +1,612 @@
+
+  <main id="content">
+    <!-- =========={ HERO }==========  -->
+    <div id="hero" class="relative py-12 jarallax">
+      <!-- background parallax -->
+      <img class="jarallax-img" src="{{ 'images/img-min/bg-planet.jpg' | asset_url }}" alt="title">
+      <!-- background overlay -->
+      <div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"></div>
+
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <div class="flex flex-wrap flex-row -mx-4 items-center justify-center">
+          <!-- content -->
+          <div class="max-w-full w-full lg:w-7/12 px-4">
+            <nav aria-label="breadcrumb">
+              <ol class="flex flex-wrap justify-center bg-transparent text-sm mb-0 space-x-1">
+                <li>
+                  <a href="#" class="text-gray-200 hover:text-white">
+                    Home
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="/s/index" class="text-gray-200 hover:text-white">
+                    Snippets
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                  </a>
+                </li>
+                <li class="hidden md:block text-white" aria-current="page">Feature Sections</li>
+              </ol>
+            </nav>
+
+            <div class="mt-0 pt-6 text-center">
+              <h1 class="text-2xl md:text-3xl leading-normal mb-2 font-semibold text-white">Feature Sections</h1>    
+              <hr class="block w-12 h-0.5 mx-auto my-5 bg-yellow-300 border-yellow-300">       
+            </div>
+          </div><!-- end content -->
+        </div>
+      </div>
+    </div><!-- End hero -->
+
+    <!-- =========={ SNIPPETS }==========  -->
+    <div id="snippets" class="relative pt-12 bg-white dark:bg-gray-800">
+      <div class="container mx-auto px-6 lg:px-4">
+        <!-- row -->
+        <div class="flex flex-wrap flex-row -mx-4">
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Feature Sections style 1
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- Features start -->
+                <div id="features" class="relative py-20 md:py-24 bg-white dark:bg-gray-800">
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <!-- row -->
+                    <div class="flex flex-wrap flex-row -mx-4">
+                      <!-- features images -->
+                      <div class="flex-shrink max-w-full px-4 w-full lg:w-1/3 text-center lg:order-2">
+                        <div class="px-16 md:px-24 lg:px-4 xl:px-16 mb-12 lg:mb-0">
+                          <!-- Android potrait -->
+                          <figure class="relative">
+                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.000000 906.000000">
+                              <!-- Clip path image -->
+                              <defs>
+                                <clipPath id="svgf">
+                                  <rect x="50" y="16.5" width="480" height="1066"/>
+                                </clipPath>
+                              </defs>
+                              <!-- Phone screen -->
+                              <image clip-path="url(#svgf)" xlink:href="{{ 'images/img-min/android-potrait.jpg' | asset_url }}"height="94%" width="100%" style="transform:translateY(15px);"></image>
+                              <!-- Phone cover -->
+                              <image xlink:href="{{ 'images/img-min/android-dark.png' | asset_url }}"height="100%" width="100%"></image>
+                            </svg>
+                          </figure>
+                        </div>
+                      </div>
+
+                      <!-- features align left -->
+                      <div class="flex-shrink max-w-full px-4 w-full lg:w-1/3 lg:order-1">
+                        <div class="pb-6 relative pe-20 ps-0 mb-8 text-start lg:text-end">
+                          <!-- icon -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="absolute end-0 start-auto text-primary-700" width="3.5rem" height="3.5rem" viewBox="0 0 512 512"><rect stroke="currentColor" x="48" y="48" width="176" height="176" rx="20" ry="20" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><rect stroke="currentColor" x="288" y="48" width="176" height="176" rx="20" ry="20" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><rect stroke="currentColor" x="48" y="288" width="176" height="176" rx="20" ry="20" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><rect stroke="currentColor" x="288" y="288" width="176" height="176" rx="20" ry="20" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                          <!-- <i class="fas fa-shipping-fast absolute end-0 start-auto text-primary-700"></i> -->
+
+                          <h3 class="text-xl leading-normal mb-2 font-semibold">Portfolio Lightgallery</h3>
+                          <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="pb-6 relative pe-20 ps-0 mb-8 text-start lg:text-end">
+                          <!-- icon -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="absolute end-0 start-auto text-primary-700" width="3.5rem" height="3.5rem" viewBox="0 0 512 512"><path stroke="currentColor" d="M432,112V96a48.14,48.14,0,0,0-48-48H64A48.14,48.14,0,0,0,16,96V352a48.14,48.14,0,0,0,48,48H80" style="fill:none;stroke-linejoin:round;stroke-width:32px"/><rect stroke="currentColor" x="96" y="128" width="400" height="336" rx="45.99" ry="45.99" style="fill:none;stroke-linejoin:round;stroke-width:32px"/><ellipse stroke="currentColor" cx="372.92" cy="219.64" rx="30.77" ry="30.55" style="fill:none;stroke-miterlimit:10;stroke-width:32px"/><path stroke="currentColor" d="M342.15,372.17,255,285.78a30.93,30.93,0,0,0-42.18-1.21L96,387.64" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><path stroke="currentColor" d="M265.23,464,383.82,346.27a31,31,0,0,1,41.46-1.87L496,402.91" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                          <!-- <i class="fas fa-chart-pie absolute end-0 start-auto text-primary-700"></i> -->
+
+                          <h3 class="text-xl leading-normal mb-2 font-semibold">Flickity Slider</h3>
+                          <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="pb-6 relative pe-20 ps-0 mb-8 text-start lg:text-end">
+                          <!-- icon -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="absolute end-0 start-auto text-primary-700" width="3.5rem" height="3.5rem" viewBox="0 0 512 512"><rect stroke="currentColor" x="64" y="176" width="384" height="256" rx="28.87" ry="28.87" style="fill:none;stroke-linejoin:round;stroke-width:32px"/><line stroke="currentColor" x1="144" y1="80" x2="368" y2="80" style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/><line stroke="currentColor" x1="112" y1="128" x2="400" y2="128" style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/></svg>
+                          <!-- <i class="fas fa-credit-card absolute end-0 start-auto text-primary-700"></i> -->
+
+                          <h3 class="text-xl leading-normal mb-2 font-semibold">Isotope Magic Filter</h3>
+                          <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                      </div>
+
+                      <!-- features align right -->
+                      <div class="flex-shrink max-w-full px-4 w-full lg:w-1/3 lg:order-3">
+                        <div class="pb-6 relative ps-20 pe-0 mb-8 text-start md:text-end lg:text-start">
+                          <!-- icon -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="absolute start-0 end-auto text-primary-700" width="3.5rem" height="3.5rem" fill="currentColor" viewBox="0 0 512 512"><line x1="48" y1="112" x2="336" y2="112" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="192" y1="64" x2="192" y2="112" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><polyline points="272 448 368 224 464 448" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="301.5" y1="384" x2="434.5" y2="384" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><path d="M281.3,112S257,206,199,277,80,384,80,384" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><path d="M256,336s-35-27-72-75-56-85-56-85" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                          <!-- <i class="fas fa-desktop absolute end-0 start-auto text-primary-700"></i> -->
+
+                          <h3 class="text-xl leading-normal mb-2 font-semibold">Supported RTL</h3>
+                          <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="pb-6 relative ps-20 pe-0 mb-8 text-start md:text-end lg:text-start">
+                          <!-- icon -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="absolute start-0 end-auto text-primary-700 rtl-270" width="3.5rem" height="3.5rem" viewBox="0 0 512 512"><path stroke="currentColor" d="M461.81,53.81a4.4,4.4,0,0,0-3.3-3.39c-54.38-13.3-180,34.09-248.13,102.17a294.9,294.9,0,0,0-33.09,39.08c-21-1.9-42-.3-59.88,7.5-50.49,22.2-65.18,80.18-69.28,105.07a9,9,0,0,0,9.8,10.4l81.07-8.9a180.29,180.29,0,0,0,1.1,18.3,18.15,18.15,0,0,0,5.3,11.09l31.39,31.39a18.15,18.15,0,0,0,11.1,5.3,179.91,179.91,0,0,0,18.19,1.1l-8.89,81a9,9,0,0,0,10.39,9.79c24.9-4,83-18.69,105.07-69.17,7.8-17.9,9.4-38.79,7.6-59.69a293.91,293.91,0,0,0,39.19-33.09C427.82,233.76,474.91,110.9,461.81,53.81ZM298.66,213.67a42.7,42.7,0,1,1,60.38,0A42.65,42.65,0,0,1,298.66,213.67Z" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><path stroke="currentColor" d="M109.64,352a45.06,45.06,0,0,0-26.35,12.84C65.67,382.52,64,448,64,448s65.52-1.67,83.15-19.31A44.73,44.73,0,0,0,160,402.32" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                          <!-- <i class="fas fa-shopping-bag absolute start-0 end-auto text-primary-700"></i> -->
+
+                          <h3 class="text-xl leading-normal mb-2 font-semibold">Animated Particles</h3>
+                          <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="pb-6 relative ps-20 pe-0 mb-8 text-start md:text-end lg:text-start">
+                          <!-- icon -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="absolute start-0 end-auto text-primary-700" width="3.5rem" height="3.5rem" fill="currentColor" viewBox="0 0 512 512"><path d="M330.7,352l77.72-192H356.9L303.74,284.07,265.93,160H226.32L185.74,284.07l-28.63-56.53L131.21,307l26.3,45h50.7l36.68-111.27,35,111.27Z"></path><path d="M48.79,286.09H80.44a93.39,93.39,0,0,0,25.62-3.21l8.18-25.19,22.88-70.39a55.75,55.75,0,0,0-6-7.82Q113.54,160,79.59,160H0V352H48.79Zm41.9-81.92q6.89,6.92,6.88,18.52t-6,18.53q-6.64,7.62-24.44,7.61H48.79V197.25H67.21q16.59,0,23.48,6.92ZM376.85,317.61l14.79-37.25h42.69l-20.26-56.51L439.41,160,512,352H458.47l-12.4-34.39Z"></path></svg>
+                          <!-- <i class="fas fa-file-invoice absolute start-0 end-auto text-primary-700"></i> -->
+
+                          <h3 class="text-xl leading-normal mb-2 font-semibold">Progressive Web App</h3>
+                          <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                      </div>
+                    </div><!-- end row -->
+                  </div>
+                </div><!-- End Features-->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- Features start --&gt;
+                    &lt;div id="features" class="relative py-20 md:py-24 bg-white dark:bg-gray-800"&gt;
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;!-- row --&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4"&gt;
+                          &lt;!-- features images --&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-full lg:w-1/3 text-center lg:order-2"&gt;
+                            &lt;div class="px-16 md:px-24 lg:px-4 xl:px-16 mb-12 lg:mb-0"&gt;
+                              &lt;!-- Android potrait --&gt;
+                              &lt;figure class="relative"&gt;
+                                &lt;svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.000000 906.000000"&gt;
+                                  &lt;!-- Clip path image --&gt;
+                                  &lt;defs&gt;
+                                    &lt;clipPath id="svgf"&gt;
+                                      &lt;rect x="50" y="16.5" width="480" height="1066"/&gt;
+                                    &lt;/clipPath&gt;
+                                  &lt;/defs&gt;
+                                  &lt;!-- Phone screen --&gt;
+                                  &lt;image clip-path="url(#svgf)" xlink:href="{{ 'images/img-min/android-potrait.jpg' | asset_url }}"height="94%" width="100%" style="transform:translateY(15px);"&gt;&lt;/image&gt;
+                                  &lt;!-- Phone cover --&gt;
+                                  &lt;image xlink:href="{{ 'images/img-min/android-dark.png' | asset_url }}"height="100%" width="100%"&gt;&lt;/image&gt;
+                                &lt;/svg&gt;
+                              &lt;/figure&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+
+                          &lt;!-- features align left --&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-full lg:w-1/3 lg:order-1"&gt;
+                            &lt;div class="pb-6 relative pe-20 ps-0 mb-8 text-start lg:text-end"&gt;
+                              &lt;!-- icon --&gt;
+                              &lt;svg xmlns="http://www.w3.org/2000/svg" class="absolute end-0 start-auto text-primary-700" width="3.5rem" height="3.5rem" viewBox="0 0 512 512"&gt;&lt;rect stroke="currentColor" x="48" y="48" width="176" height="176" rx="20" ry="20" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;rect stroke="currentColor" x="288" y="48" width="176" height="176" rx="20" ry="20" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;rect stroke="currentColor" x="48" y="288" width="176" height="176" rx="20" ry="20" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;rect stroke="currentColor" x="288" y="288" width="176" height="176" rx="20" ry="20" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;/svg&gt;
+                              &lt;!-- &lt;i class="fas fa-shipping-fast absolute end-0 start-auto text-primary-700"&gt;&lt;/i&gt; --&gt;
+
+                              &lt;h3 class="text-xl leading-normal mb-2 font-semibold"&gt;Portfolio Lightgallery&lt;/h3&gt;
+                              &lt;p class="text-gray-500"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="pb-6 relative pe-20 ps-0 mb-8 text-start lg:text-end"&gt;
+                              &lt;!-- icon --&gt;
+                              &lt;svg xmlns="http://www.w3.org/2000/svg" class="absolute end-0 start-auto text-primary-700" width="3.5rem" height="3.5rem" viewBox="0 0 512 512"&gt;&lt;path stroke="currentColor" d="M432,112V96a48.14,48.14,0,0,0-48-48H64A48.14,48.14,0,0,0,16,96V352a48.14,48.14,0,0,0,48,48H80" style="fill:none;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;rect stroke="currentColor" x="96" y="128" width="400" height="336" rx="45.99" ry="45.99" style="fill:none;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;ellipse stroke="currentColor" cx="372.92" cy="219.64" rx="30.77" ry="30.55" style="fill:none;stroke-miterlimit:10;stroke-width:32px"/&gt;&lt;path stroke="currentColor" d="M342.15,372.17,255,285.78a30.93,30.93,0,0,0-42.18-1.21L96,387.64" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;path stroke="currentColor" d="M265.23,464,383.82,346.27a31,31,0,0,1,41.46-1.87L496,402.91" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;/svg&gt;
+                              &lt;!-- &lt;i class="fas fa-chart-pie absolute end-0 start-auto text-primary-700"&gt;&lt;/i&gt; --&gt;
+
+                              &lt;h3 class="text-xl leading-normal mb-2 font-semibold"&gt;Flickity Slider&lt;/h3&gt;
+                              &lt;p class="text-gray-500"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="pb-6 relative pe-20 ps-0 mb-8 text-start lg:text-end"&gt;
+                              &lt;!-- icon --&gt;
+                              &lt;svg xmlns="http://www.w3.org/2000/svg" class="absolute end-0 start-auto text-primary-700" width="3.5rem" height="3.5rem" viewBox="0 0 512 512"&gt;&lt;rect stroke="currentColor" x="64" y="176" width="384" height="256" rx="28.87" ry="28.87" style="fill:none;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;line stroke="currentColor" x1="144" y1="80" x2="368" y2="80" style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/&gt;&lt;line stroke="currentColor" x1="112" y1="128" x2="400" y2="128" style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/&gt;&lt;/svg&gt;
+                              &lt;!-- &lt;i class="fas fa-credit-card absolute end-0 start-auto text-primary-700"&gt;&lt;/i&gt; --&gt;
+
+                              &lt;h3 class="text-xl leading-normal mb-2 font-semibold"&gt;Isotope Magic Filter&lt;/h3&gt;
+                              &lt;p class="text-gray-500"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+
+                          &lt;!-- features align right --&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-full lg:w-1/3 lg:order-3"&gt;
+                            &lt;div class="pb-6 relative ps-20 pe-0 mb-8 text-start md:text-end lg:text-start"&gt;
+                              &lt;!-- icon --&gt;
+                              &lt;svg xmlns="http://www.w3.org/2000/svg" class="absolute start-0 end-auto text-primary-700" width="3.5rem" height="3.5rem" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;line x1="48" y1="112" x2="336" y2="112" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;line x1="192" y1="64" x2="192" y2="112" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;polyline points="272 448 368 224 464 448" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;line x1="301.5" y1="384" x2="434.5" y2="384" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;path d="M281.3,112S257,206,199,277,80,384,80,384" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;path d="M256,336s-35-27-72-75-56-85-56-85" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;/svg&gt;
+                              &lt;!-- &lt;i class="fas fa-desktop absolute end-0 start-auto text-primary-700"&gt;&lt;/i&gt; --&gt;
+
+                              &lt;h3 class="text-xl leading-normal mb-2 font-semibold"&gt;Supported RTL&lt;/h3&gt;
+                              &lt;p class="text-gray-500"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="pb-6 relative ps-20 pe-0 mb-8 text-start md:text-end lg:text-start"&gt;
+                              &lt;!-- icon --&gt;
+                              &lt;svg xmlns="http://www.w3.org/2000/svg" class="absolute start-0 end-auto text-primary-700 rtl-270" width="3.5rem" height="3.5rem" viewBox="0 0 512 512"&gt;&lt;path stroke="currentColor" d="M461.81,53.81a4.4,4.4,0,0,0-3.3-3.39c-54.38-13.3-180,34.09-248.13,102.17a294.9,294.9,0,0,0-33.09,39.08c-21-1.9-42-.3-59.88,7.5-50.49,22.2-65.18,80.18-69.28,105.07a9,9,0,0,0,9.8,10.4l81.07-8.9a180.29,180.29,0,0,0,1.1,18.3,18.15,18.15,0,0,0,5.3,11.09l31.39,31.39a18.15,18.15,0,0,0,11.1,5.3,179.91,179.91,0,0,0,18.19,1.1l-8.89,81a9,9,0,0,0,10.39,9.79c24.9-4,83-18.69,105.07-69.17,7.8-17.9,9.4-38.79,7.6-59.69a293.91,293.91,0,0,0,39.19-33.09C427.82,233.76,474.91,110.9,461.81,53.81ZM298.66,213.67a42.7,42.7,0,1,1,60.38,0A42.65,42.65,0,0,1,298.66,213.67Z" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;path stroke="currentColor" d="M109.64,352a45.06,45.06,0,0,0-26.35,12.84C65.67,382.52,64,448,64,448s65.52-1.67,83.15-19.31A44.73,44.73,0,0,0,160,402.32" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;/svg&gt;
+                              &lt;!-- &lt;i class="fas fa-shopping-bag absolute start-0 end-auto text-primary-700"&gt;&lt;/i&gt; --&gt;
+
+                              &lt;h3 class="text-xl leading-normal mb-2 font-semibold"&gt;Animated Particles&lt;/h3&gt;
+                              &lt;p class="text-gray-500"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="pb-6 relative ps-20 pe-0 mb-8 text-start md:text-end lg:text-start"&gt;
+                              &lt;!-- icon --&gt;
+                              &lt;svg xmlns="http://www.w3.org/2000/svg" class="absolute start-0 end-auto text-primary-700" width="3.5rem" height="3.5rem" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;path d="M330.7,352l77.72-192H356.9L303.74,284.07,265.93,160H226.32L185.74,284.07l-28.63-56.53L131.21,307l26.3,45h50.7l36.68-111.27,35,111.27Z"&gt;&lt;/path&gt;&lt;path d="M48.79,286.09H80.44a93.39,93.39,0,0,0,25.62-3.21l8.18-25.19,22.88-70.39a55.75,55.75,0,0,0-6-7.82Q113.54,160,79.59,160H0V352H48.79Zm41.9-81.92q6.89,6.92,6.88,18.52t-6,18.53q-6.64,7.62-24.44,7.61H48.79V197.25H67.21q16.59,0,23.48,6.92ZM376.85,317.61l14.79-37.25h42.69l-20.26-56.51L439.41,160,512,352H458.47l-12.4-34.39Z"&gt;&lt;/path&gt;&lt;/svg&gt;
+                              &lt;!-- &lt;i class="fas fa-file-invoice absolute start-0 end-auto text-primary-700"&gt;&lt;/i&gt; --&gt;
+
+                              &lt;h3 class="text-xl leading-normal mb-2 font-semibold"&gt;Progressive Web App&lt;/h3&gt;
+                              &lt;p class="text-gray-500"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;&lt;!-- end row --&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- End Features--&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Feature Sections style 2
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- Features start -->
+                <div id="features" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20">
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <!-- row -->
+                    <div class="flex flex-wrap flex-row -mx-4 items-center justify-around">
+                      <div class="flex-shrink max-w-full px-4 w-full lg:w-1/2">
+                        <div class="p-6 bg-white dark:bg-gray-800 mx-4 mb-12 rounded shadow">
+                          <div class="flex rounded items-center ps-4 pe-1 md:ps-1 md:pe-1 py-2 bg-white dark:bg-gray-800">
+                            <!-- <i class="far fa-user me-3 fa-2x text-primary"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" class="text-primary-700 me-4 inline-block" fill="currentColor" viewBox="0 0 512 512"><path d="M344,144c-3.92,52.87-44,96-88,96s-84.15-43.12-88-96c-4-55,35-96,88-96S348,90,344,144Z" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><path d="M256,304c-87,0-175.3,48-191.64,138.6C62.39,453.52,68.57,464,80,464H432c11.44,0,17.62-10.48,15.65-21.4C431.3,352,343,304,256,304Z" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/></svg>
+                            <h3 class="text-xl leading-normal font-semibold mb-0">Permanently active account</h3>
+                          </div>
+                          <p class="text-gray-500">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
+                        </div>
+                      </div>
+
+                      <div class="flex-shrink max-w-full px-4 w-full lg:w-1/2">
+                        <div class="p-6 bg-white dark:bg-gray-800 mx-4 mb-12 rounded shadow">
+                          <div class="flex rounded items-center ps-4 pe-1 md:ps-1 md:pe-1 py-2 bg-white dark:bg-gray-800">
+                            <!-- <i class="far fa-thumbs-up me-3 fa-2x text-primary"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" class="text-primary-700 me-4 inline-block" fill="currentColor" viewBox="0 0 512 512"><path d="M320,458.16S304,464,256,464s-74-16-96-32H96a64,64,0,0,1-64-64V320a64,64,0,0,1,64-64h30a32.34,32.34,0,0,0,27.37-15.4S162,221.81,188,176.78,264,64,272,48c29,0,43,22,34,47.71-10.28,29.39-23.71,54.38-27.46,87.09-.54,4.78,3.14,12,7.95,12L416,205" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><path d="M416,271l-80-2c-20-1.84-32-12.4-32-30h0c0-17.6,14-28.84,32-30l80-4c17.6,0,32,16.4,32,34v.17A32,32,0,0,1,416,271Z" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/><path d="M448,336l-112-2c-18-.84-32-12.41-32-30h0c0-17.61,14-28.86,32-30l112-2a32.1,32.1,0,0,1,32,32h0A32.1,32.1,0,0,1,448,336Z" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/><path d="M400,464l-64-3c-21-1.84-32-11.4-32-29h0c0-17.6,14.4-30,32-30l64-2a32.09,32.09,0,0,1,32,32h0A32.09,32.09,0,0,1,400,464Z" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/><path d="M432,400l-96-2c-19-.84-32-12.4-32-30h0c0-17.6,13-28.84,32-30l96-2a32.09,32.09,0,0,1,32,32h0A32.09,32.09,0,0,1,432,400Z" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/></svg>
+                            <h3 class="text-xl leading-normal font-semibold mb-0">Guaranteed update of new material</h3>
+                          </div>
+                          <p class="text-gray-500">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
+                        </div>
+                      </div>
+
+                      <div class="flex-shrink max-w-full px-4 w-full lg:w-1/2">
+                        <div class="p-6 bg-white dark:bg-gray-800 mx-4 mb-12 rounded shadow">
+                          <div class="flex rounded items-center ps-4 pe-1 md:ps-1 md:pe-1 py-2 bg-white dark:bg-gray-800">
+                            <!-- <i class="far fa-file-archive me-3 fa-2x text-primary"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" class="text-primary-700 me-4 inline-block" fill="currentColor" viewBox="0 0 512 512"><line x1="160" y1="144" x2="448" y2="144" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="160" y1="256" x2="448" y2="256" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="160" y1="368" x2="448" y2="368" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><circle cx="80" cy="144" r="16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><circle cx="80" cy="256" r="16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><circle cx="80" cy="368" r="16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                            <h3 class="text-xl leading-normal font-semibold mb-0">More than 1000 material lists available</h3>
+                          </div>
+                          <p class="text-gray-500">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
+                        </div>
+                      </div>
+
+                      <div class="flex-shrink max-w-full px-4 w-full lg:w-1/2">
+                        <div class="p-6 bg-white dark:bg-gray-800 mx-4 mb-12 rounded shadow">
+                          <div class="flex rounded items-center ps-4 pe-1 md:ps-1 md:pe-1 py-2 bg-white dark:bg-gray-800">
+                            <!-- <i class="far fa-grin-stars me-3 fa-2x text-primary"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" class="text-primary-700 me-4 inline-block" fill="currentColor" viewBox="0 0 512 512"><circle cx="184" cy="232" r="24"/><path d="M256.05,384c-45.42,0-83.62-29.53-95.71-69.83A8,8,0,0,1,168.16,304H343.85a8,8,0,0,1,7.82,10.17C339.68,354.47,301.47,384,256.05,384Z"/><circle cx="328" cy="232" r="24"/><circle cx="256" cy="256" r="208" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/></svg>
+                            <h3 class="text-xl leading-normal font-semibold mb-0">Be cooled during the learning process</h3>
+                          </div>
+                          <p class="text-gray-500">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
+                        </div>
+                      </div>
+
+                      <div class="flex-shrink max-w-full px-4 w-full lg:w-1/2">
+                        <div class="p-6 bg-white dark:bg-gray-800 mx-4 mb-12 rounded shadow">
+                          <div class="flex rounded items-center ps-4 pe-1 md:ps-1 md:pe-1 py-2 bg-white dark:bg-gray-800">
+                            <!-- <i class="far fa-folder-open me-3 fa-2x text-primary"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" class="text-primary-700 me-4 inline-block" fill="currentColor" viewBox="0 0 512 512"><path d="M440,432H72a40,40,0,0,1-40-40V120A40,40,0,0,1,72,80h75.89a40,40,0,0,1,22.19,6.72l27.84,18.56A40,40,0,0,0,220.11,112H440a40,40,0,0,1,40,40V392A40,40,0,0,1,440,432Z" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="32" y1="192" x2="480" y2="192" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                            <h3 class="text-xl leading-normal font-semibold mb-0">Unlimited material access, forever</h3>
+                          </div>
+                          <p class="text-gray-500">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
+                        </div>
+                      </div>
+
+                      <div class="flex-shrink max-w-full px-4 w-full lg:w-1/2">
+                        <div class="p-6 bg-white dark:bg-gray-800 mx-4 mb-12 rounded shadow">
+                          <div class="flex rounded items-center ps-4 pe-1 md:ps-1 md:pe-1 py-2 bg-white dark:bg-gray-800">
+                            <!-- <i class="far fa-lightbulb me-3 fa-2x text-primary"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" class="text-primary-700 me-4 inline-block" fill="currentColor" viewBox="0 0 512 512"><path d="M304,384V360c0-29,31.54-56.43,52-76,28.84-27.57,44-64.61,44-108,0-80-63.73-144-144-144A143.6,143.6,0,0,0,112,176c0,41.84,15.81,81.39,44,108,20.35,19.21,52,46.7,52,76v24" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="224" y1="480" x2="288" y2="480" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="208" y1="432" x2="304" y2="432" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="256" y1="384" x2="256" y2="256" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><path d="M294,240s-21.51,16-38,16-38-16-38-16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                            <h3 class="text-xl leading-normal font-semibold mb-0">Guarantee can & understand</h3>
+                          </div>
+                          <p class="text-gray-500">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end row -->
+                  </div>
+                </div><!-- End features -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- Features start --&gt;
+                    &lt;div id="features" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20"&gt;
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;!-- row --&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4 items-center justify-around"&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-full lg:w-1/2"&gt;
+                            &lt;div class="p-6 bg-white dark:bg-gray-800 mx-4 mb-12 rounded shadow"&gt;
+                              &lt;div class="flex rounded items-center ps-4 pe-1 md:ps-1 md:pe-1 py-2 bg-white dark:bg-gray-800"&gt;
+                                &lt;!-- &lt;i class="far fa-user me-3 fa-2x text-primary"&gt;&lt;/i&gt; --&gt;
+                                &lt;svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" class="text-primary-700 me-4 inline-block" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;path d="M344,144c-3.92,52.87-44,96-88,96s-84.15-43.12-88-96c-4-55,35-96,88-96S348,90,344,144Z" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;path d="M256,304c-87,0-175.3,48-191.64,138.6C62.39,453.52,68.57,464,80,464H432c11.44,0,17.62-10.48,15.65-21.4C431.3,352,343,304,256,304Z" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/&gt;&lt;/svg&gt;
+                                &lt;h3 class="text-xl leading-normal font-semibold mb-0"&gt;Permanently active account&lt;/h3&gt;
+                              &lt;/div&gt;
+                              &lt;p class="text-gray-500"&gt;Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.&lt;/p&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+
+                          &lt;div class="flex-shrink max-w-full px-4 w-full lg:w-1/2"&gt;
+                            &lt;div class="p-6 bg-white dark:bg-gray-800 mx-4 mb-12 rounded shadow"&gt;
+                              &lt;div class="flex rounded items-center ps-4 pe-1 md:ps-1 md:pe-1 py-2 bg-white dark:bg-gray-800"&gt;
+                                &lt;!-- &lt;i class="far fa-thumbs-up me-3 fa-2x text-primary"&gt;&lt;/i&gt; --&gt;
+                                &lt;svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" class="text-primary-700 me-4 inline-block" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;path d="M320,458.16S304,464,256,464s-74-16-96-32H96a64,64,0,0,1-64-64V320a64,64,0,0,1,64-64h30a32.34,32.34,0,0,0,27.37-15.4S162,221.81,188,176.78,264,64,272,48c29,0,43,22,34,47.71-10.28,29.39-23.71,54.38-27.46,87.09-.54,4.78,3.14,12,7.95,12L416,205" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;path d="M416,271l-80-2c-20-1.84-32-12.4-32-30h0c0-17.6,14-28.84,32-30l80-4c17.6,0,32,16.4,32,34v.17A32,32,0,0,1,416,271Z" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/&gt;&lt;path d="M448,336l-112-2c-18-.84-32-12.41-32-30h0c0-17.61,14-28.86,32-30l112-2a32.1,32.1,0,0,1,32,32h0A32.1,32.1,0,0,1,448,336Z" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/&gt;&lt;path d="M400,464l-64-3c-21-1.84-32-11.4-32-29h0c0-17.6,14.4-30,32-30l64-2a32.09,32.09,0,0,1,32,32h0A32.09,32.09,0,0,1,400,464Z" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/&gt;&lt;path d="M432,400l-96-2c-19-.84-32-12.4-32-30h0c0-17.6,13-28.84,32-30l96-2a32.09,32.09,0,0,1,32,32h0A32.09,32.09,0,0,1,432,400Z" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/&gt;&lt;/svg&gt;
+                                &lt;h3 class="text-xl leading-normal font-semibold mb-0"&gt;Guaranteed update of new material&lt;/h3&gt;
+                              &lt;/div&gt;
+                              &lt;p class="text-gray-500"&gt;Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.&lt;/p&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+
+                          &lt;div class="flex-shrink max-w-full px-4 w-full lg:w-1/2"&gt;
+                            &lt;div class="p-6 bg-white dark:bg-gray-800 mx-4 mb-12 rounded shadow"&gt;
+                              &lt;div class="flex rounded items-center ps-4 pe-1 md:ps-1 md:pe-1 py-2 bg-white dark:bg-gray-800"&gt;
+                                &lt;!-- &lt;i class="far fa-file-archive me-3 fa-2x text-primary"&gt;&lt;/i&gt; --&gt;
+                                &lt;svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" class="text-primary-700 me-4 inline-block" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;line x1="160" y1="144" x2="448" y2="144" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;line x1="160" y1="256" x2="448" y2="256" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;line x1="160" y1="368" x2="448" y2="368" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;circle cx="80" cy="144" r="16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;circle cx="80" cy="256" r="16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;circle cx="80" cy="368" r="16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;/svg&gt;
+                                &lt;h3 class="text-xl leading-normal font-semibold mb-0"&gt;More than 1000 material lists available&lt;/h3&gt;
+                              &lt;/div&gt;
+                              &lt;p class="text-gray-500"&gt;Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.&lt;/p&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+
+                          &lt;div class="flex-shrink max-w-full px-4 w-full lg:w-1/2"&gt;
+                            &lt;div class="p-6 bg-white dark:bg-gray-800 mx-4 mb-12 rounded shadow"&gt;
+                              &lt;div class="flex rounded items-center ps-4 pe-1 md:ps-1 md:pe-1 py-2 bg-white dark:bg-gray-800"&gt;
+                                &lt;!-- &lt;i class="far fa-grin-stars me-3 fa-2x text-primary"&gt;&lt;/i&gt; --&gt;
+                                &lt;svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" class="text-primary-700 me-4 inline-block" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;circle cx="184" cy="232" r="24"/&gt;&lt;path d="M256.05,384c-45.42,0-83.62-29.53-95.71-69.83A8,8,0,0,1,168.16,304H343.85a8,8,0,0,1,7.82,10.17C339.68,354.47,301.47,384,256.05,384Z"/&gt;&lt;circle cx="328" cy="232" r="24"/&gt;&lt;circle cx="256" cy="256" r="208" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/&gt;&lt;/svg&gt;
+                                &lt;h3 class="text-xl leading-normal font-semibold mb-0"&gt;Be cooled during the learning process&lt;/h3&gt;
+                              &lt;/div&gt;
+                              &lt;p class="text-gray-500"&gt;Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.&lt;/p&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+
+                          &lt;div class="flex-shrink max-w-full px-4 w-full lg:w-1/2"&gt;
+                            &lt;div class="p-6 bg-white dark:bg-gray-800 mx-4 mb-12 rounded shadow"&gt;
+                              &lt;div class="flex rounded items-center ps-4 pe-1 md:ps-1 md:pe-1 py-2 bg-white dark:bg-gray-800"&gt;
+                                &lt;!-- &lt;i class="far fa-folder-open me-3 fa-2x text-primary"&gt;&lt;/i&gt; --&gt;
+                                &lt;svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" class="text-primary-700 me-4 inline-block" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;path d="M440,432H72a40,40,0,0,1-40-40V120A40,40,0,0,1,72,80h75.89a40,40,0,0,1,22.19,6.72l27.84,18.56A40,40,0,0,0,220.11,112H440a40,40,0,0,1,40,40V392A40,40,0,0,1,440,432Z" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;line x1="32" y1="192" x2="480" y2="192" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;/svg&gt;
+                                &lt;h3 class="text-xl leading-normal font-semibold mb-0"&gt;Unlimited material access, forever&lt;/h3&gt;
+                              &lt;/div&gt;
+                              &lt;p class="text-gray-500"&gt;Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.&lt;/p&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+
+                          &lt;div class="flex-shrink max-w-full px-4 w-full lg:w-1/2"&gt;
+                            &lt;div class="p-6 bg-white dark:bg-gray-800 mx-4 mb-12 rounded shadow"&gt;
+                              &lt;div class="flex rounded items-center ps-4 pe-1 md:ps-1 md:pe-1 py-2 bg-white dark:bg-gray-800"&gt;
+                                &lt;!-- &lt;i class="far fa-lightbulb me-3 fa-2x text-primary"&gt;&lt;/i&gt; --&gt;
+                                &lt;svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" class="text-primary-700 me-4 inline-block" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;path d="M304,384V360c0-29,31.54-56.43,52-76,28.84-27.57,44-64.61,44-108,0-80-63.73-144-144-144A143.6,143.6,0,0,0,112,176c0,41.84,15.81,81.39,44,108,20.35,19.21,52,46.7,52,76v24" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;line x1="224" y1="480" x2="288" y2="480" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;line x1="208" y1="432" x2="304" y2="432" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;line x1="256" y1="384" x2="256" y2="256" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;path d="M294,240s-21.51,16-38,16-38-16-38-16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;/svg&gt;
+                                &lt;h3 class="text-xl leading-normal font-semibold mb-0"&gt;Guarantee can & understand&lt;/h3&gt;
+                              &lt;/div&gt;
+                              &lt;p class="text-gray-500"&gt;Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.&lt;/p&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;!-- end row --&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- End features --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Feature Sections style 3
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- Features start -->
+                <div id="features" class="relative bg-primary-700">
+                  <div class="container mx-auto px-4">
+                    <div class="flex flex-wrap flex-row -mx-4">
+                      <div class="flex-shrink max-w-full px-4 w-full md:w-1/2 bg-white dark:bg-gray-800">
+                        <div class="px-6 py-12 md:px-12 lg:p-24">
+                          <h2 class="text-3xl leading-normal font-semibold mb-4">We are Solution for <br> Your Business.</h2>
+                          <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mb-12">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
+                          <a href="#" class="py-3 px-5 rounded-md leading-5 text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0">
+                            Read More
+                            <svg class="bi bi-chevron-double-right ms-2 inline-block transform ltr:rotate-0 rtl:rotate-180" width=".8rem" height=".8rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L9.293 8 3.646 2.354a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+                              <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L13.293 8 7.646 2.354a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="flex-shrink max-w-full px-4 w-full md:w-1/2 text-gray-100 relative overflow-hidden">
+                        <div class="py-12 px-2 lg:px-12">
+                          <!-- row -->
+                          <div class="flex flex-wrap flex-row -mx-4 items-center justify-around">
+                            <div class="flex-shrink max-w-full px-4 w-full">
+                              <div class="my-4">
+                                <div class="flex rounded ps-4 pe-1 md:ps-1 md:pe-1 py-2">
+                                  <div class="flex items-center text-center me-6">
+                                    <!-- <i class="far fa-user me-3 fa-2x text-primary"></i> -->
+                                    <svg class="bi bi-graph-up text-yellow-300 inline-block"  width="4rem" height="4rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M0 0h1v16H0V0zm1 15h15v1H1v-1z"></path>
+                                      <path fill-rule="evenodd" d="M14.39 4.312L10.041 9.75 7 6.707l-3.646 3.647-.708-.708L7 5.293 9.959 8.25l3.65-4.563.781.624z" clip-rule="evenodd"></path>
+                                      <path fill-rule="evenodd" d="M10 3.5a.5.5 0 01.5-.5h4a.5.5 0 01.5.5v4a.5.5 0 01-1 0V4h-3.5a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path>
+                                    </svg>
+                                  </div>
+                                  <div class="text-start">
+                                    <h3 class="h5 text-white">Business Plan Guide</h3>
+                                    <p class="text-light">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="flex-shrink max-w-full px-4 w-full">
+                              <div class="my-4">
+                                <div class="flex rounded ps-4 pe-1 md:ps-1 md:pe-1 py-2">
+                                  <div class="flex items-center text-center me-6">
+                                    <!-- <i class="far fa-thumbs-up me-3 fa-2x text-primary"></i> -->
+                                    <svg class="bi bi-pie-chart text-yellow-300 inline-block" width="4rem" height="4rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"></path>
+                                      <path fill-rule="evenodd" d="M7.5 7.793V1h1v6.5H15v1H8.207l-4.853 4.854-.708-.708L7.5 7.793z" clip-rule="evenodd"></path>
+                                    </svg>
+                                  </div>
+                                  <div class="text-start">
+                                    <h3 class="h5 text-white">Budgeting and Financial</h3>
+                                    <p class="text-light">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="flex-shrink max-w-full px-4 w-full">
+                              <div class="my-4">
+                                <div class="flex rounded ps-4 pe-1 md:ps-1 md:pe-1 py-2">
+                                  <div class="flex items-center text-center me-6">
+                                    <!-- <i class="far fa-file-archive me-3 fa-2x text-primary"></i> -->
+                                    <svg class="bi bi-file-richtext text-yellow-300 inline-block" width="4rem" height="4rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" d="M4 1h8a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V3a2 2 0 012-2zm0 1a1 1 0 00-1 1v10a1 1 0 001 1h8a1 1 0 001-1V3a1 1 0 00-1-1H4z" clip-rule="evenodd"></path>
+                                      <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 015 11h3a.5.5 0 010 1H5a.5.5 0 01-.5-.5zm0-2A.5.5 0 015 9h6a.5.5 0 010 1H5a.5.5 0 01-.5-.5zm1.639-3.708l1.33.886 1.854-1.855a.25.25 0 01.289-.047l1.888.974V7.5a.5.5 0 01-.5.5H5a.5.5 0 01-.5-.5V7s1.54-1.274 1.639-1.208zM6.25 5a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd"></path>
+                                    </svg>
+                                  </div>
+                                  <div class="text-start">
+                                    <h3 class="h5 text-white">Professional Documents</h3>
+                                    <p class="text-light">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- end features -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- Features start --&gt;
+                    &lt;div id="features" class="relative bg-primary-700"&gt;
+                      &lt;div class="container mx-auto px-4"&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4"&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-full md:w-1/2 bg-white dark:bg-gray-800"&gt;
+                            &lt;div class="px-6 py-12 md:px-12 lg:p-24"&gt;
+                              &lt;h2 class="text-3xl leading-normal font-semibold mb-4"&gt;We are Solution for &lt;br&gt; Your Business.&lt;/h2&gt;
+                              &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mb-12"&gt;Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.&lt;/p&gt;
+                              &lt;a href="#" class="py-3 px-5 rounded-md leading-5 text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0"&gt;
+                                Read More
+                                &lt;svg class="bi bi-chevron-double-right ms-2 inline-block transform ltr:rotate-0 rtl:rotate-180" width=".8rem" height=".8rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                                  &lt;path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L9.293 8 3.646 2.354a.5.5 0 010-.708z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                  &lt;path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L13.293 8 7.646 2.354a.5.5 0 010-.708z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                &lt;/svg&gt;
+                              &lt;/a&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+
+                          &lt;div class="flex-shrink max-w-full px-4 w-full md:w-1/2 text-gray-100 relative overflow-hidden"&gt;
+                            &lt;div class="py-12 px-2 lg:px-12"&gt;
+                              &lt;!-- row --&gt;
+                              &lt;div class="flex flex-wrap flex-row -mx-4 items-center justify-around"&gt;
+                                &lt;div class="flex-shrink max-w-full px-4 w-full"&gt;
+                                  &lt;div class="my-4"&gt;
+                                    &lt;div class="flex rounded ps-4 pe-1 md:ps-1 md:pe-1 py-2"&gt;
+                                      &lt;div class="flex items-center text-center me-6"&gt;
+                                        &lt;!-- &lt;i class="far fa-user me-3 fa-2x text-primary"&gt;&lt;/i&gt; --&gt;
+                                        &lt;svg class="bi bi-graph-up text-yellow-300 inline-block"  width="4rem" height="4rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                                          &lt;path d="M0 0h1v16H0V0zm1 15h15v1H1v-1z"&gt;&lt;/path&gt;
+                                          &lt;path fill-rule="evenodd" d="M14.39 4.312L10.041 9.75 7 6.707l-3.646 3.647-.708-.708L7 5.293 9.959 8.25l3.65-4.563.781.624z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                          &lt;path fill-rule="evenodd" d="M10 3.5a.5.5 0 01.5-.5h4a.5.5 0 01.5.5v4a.5.5 0 01-1 0V4h-3.5a.5.5 0 01-.5-.5z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                        &lt;/svg&gt;
+                                      &lt;/div&gt;
+                                      &lt;div class="text-start"&gt;
+                                        &lt;h3 class="h5 text-white"&gt;Business Plan Guide&lt;/h3&gt;
+                                        &lt;p class="text-light"&gt;Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.&lt;/p&gt;
+                                      &lt;/div&gt;
+                                    &lt;/div&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class="flex-shrink max-w-full px-4 w-full"&gt;
+                                  &lt;div class="my-4"&gt;
+                                    &lt;div class="flex rounded ps-4 pe-1 md:ps-1 md:pe-1 py-2"&gt;
+                                      &lt;div class="flex items-center text-center me-6"&gt;
+                                        &lt;!-- &lt;i class="far fa-thumbs-up me-3 fa-2x text-primary"&gt;&lt;/i&gt; --&gt;
+                                        &lt;svg class="bi bi-pie-chart text-yellow-300 inline-block" width="4rem" height="4rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                                          &lt;path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                          &lt;path fill-rule="evenodd" d="M7.5 7.793V1h1v6.5H15v1H8.207l-4.853 4.854-.708-.708L7.5 7.793z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                        &lt;/svg&gt;
+                                      &lt;/div&gt;
+                                      &lt;div class="text-start"&gt;
+                                        &lt;h3 class="h5 text-white"&gt;Budgeting and Financial&lt;/h3&gt;
+                                        &lt;p class="text-light"&gt;Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.&lt;/p&gt;
+                                      &lt;/div&gt;
+                                    &lt;/div&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class="flex-shrink max-w-full px-4 w-full"&gt;
+                                  &lt;div class="my-4"&gt;
+                                    &lt;div class="flex rounded ps-4 pe-1 md:ps-1 md:pe-1 py-2"&gt;
+                                      &lt;div class="flex items-center text-center me-6"&gt;
+                                        &lt;!-- &lt;i class="far fa-file-archive me-3 fa-2x text-primary"&gt;&lt;/i&gt; --&gt;
+                                        &lt;svg class="bi bi-file-richtext text-yellow-300 inline-block" width="4rem" height="4rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                                          &lt;path fill-rule="evenodd" d="M4 1h8a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V3a2 2 0 012-2zm0 1a1 1 0 00-1 1v10a1 1 0 001 1h8a1 1 0 001-1V3a1 1 0 00-1-1H4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                          &lt;path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 015 11h3a.5.5 0 010 1H5a.5.5 0 01-.5-.5zm0-2A.5.5 0 015 9h6a.5.5 0 010 1H5a.5.5 0 01-.5-.5zm1.639-3.708l1.33.886 1.854-1.855a.25.25 0 01.289-.047l1.888.974V7.5a.5.5 0 01-.5.5H5a.5.5 0 01-.5-.5V7s1.54-1.274 1.639-1.208zM6.25 5a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                        &lt;/svg&gt;
+                                      &lt;/div&gt;
+                                      &lt;div class="text-start"&gt;
+                                        &lt;h3 class="h5 text-white"&gt;Professional Documents&lt;/h3&gt;
+                                        &lt;p class="text-light"&gt;Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.&lt;/p&gt;
+                                      &lt;/div&gt;
+                                    &lt;/div&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- end features --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+        </div><!-- end row -->
+      </div>
+    </div><!-- End snippets -->
+  </main>

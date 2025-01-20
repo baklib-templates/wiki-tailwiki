@@ -1,0 +1,38 @@
+
+  <main id="content">
+    <!-- =========={ HERO }==========  -->
+    <div id="hero" class="relative pb-16 pt-20 md:py-24 jarallax overflow-hidden">
+      <!-- background parallax -->
+      <img class="jarallax-img" src="{{ 'images/img-min/bg-planet.jpg' | asset_url }}" alt="title">
+      <!-- background overlay -->
+      <div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"></div>
+    </div><!-- End hero -->
+
+    <!-- =========={ forgot }==========  -->
+    <div id="forgot-area" class="relative pb-16 md:pb-24 border-t border-gray-200 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800">
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <div class="flex flex-wrap flex-row -mx-4 justify-center">
+          <!-- forgot form -->
+          <div class="max-w-full w-full md:w-2/3 lg:w-7/12 px-6 sm:px-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+            <div class="relative -mt-24">
+              <div class="p-6 sm:p-12 rounded-lg bg-white dark:bg-gray-800 shadow-xl">
+                <form id="forgot-form">
+                  <h1 class="text-2xl leading-normal mb-6 font-bold text-gray-800 dark:text-gray-100 text-center">Recover Password</h1>
+                  <hr class="block w-12 h-0.5 mx-auto my-5 bg-yellow-300 border-yellow-300">
+                  <div class="mb-6">
+                    <input name="email" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" placeholder="Email address" value="" aria-label="email" type="email" required="">
+                  </div>
+                  <div class="grid">
+                    <button type="submit" class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0">Reset password<svg xmlns="http://www.w3.org/2000/svg" class="ms-1 inline-block" width="1.2rem" height="1.2rem" fill="currentColor" viewBox="0 0 512 512"><path d="M192,176V136a40,40,0,0,1,40-40H392a40,40,0,0,1,40,40V376a40,40,0,0,1-40,40H240c-22.09,0-48-17.91-48-40V336" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><polyline points="288 336 368 256 288 176" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="80" y1="256" x2="352" y2="256" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg></button>
+                  </div>
+                </form>
+                <div class="mt-6">
+                  <p class="text-center mb-4">Don't have an account? <a class="hover:text-primary-700" href="/s/user-register">Register</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End forgot -->
+  </main>

@@ -1,0 +1,541 @@
+
+  <main id="content">
+    <!-- =========={ HERO }==========  -->
+    <div id="hero" class="relative py-12 jarallax">
+      <!-- background parallax -->
+      <img class="jarallax-img" src="{{ 'images/img-min/bg-planet.jpg' | asset_url }}" alt="title">
+      <!-- background overlay -->
+      <div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"></div>
+
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <div class="flex flex-wrap flex-row -mx-4 items-center justify-center">
+          <!-- content -->
+          <div class="max-w-full w-full lg:w-7/12 px-4">
+            <nav aria-label="breadcrumb">
+              <ol class="flex flex-wrap justify-center bg-transparent text-sm mb-0 space-x-1">
+                <li>
+                  <a href="#" class="text-gray-200 hover:text-white">
+                    Home
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="/s/index" class="text-gray-200 hover:text-white">
+                    Snippets
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                  </a>
+                </li>
+                <li class="hidden md:block text-white" aria-current="page">Download Sections</li>
+              </ol>
+            </nav>
+
+            <div class="mt-0 pt-6 text-center">
+              <h1 class="text-2xl md:text-3xl leading-normal mb-2 font-semibold text-white">Download Sections</h1>    
+              <hr class="block w-12 h-0.5 mx-auto my-5 bg-yellow-300 border-yellow-300">       
+            </div>
+          </div><!-- end content -->
+        </div>
+      </div>
+    </div><!-- End hero -->
+
+    <!-- =========={ SNIPPETS }==========  -->
+    <div id="snippets" class="relative pt-12 bg-white dark:bg-gray-800">
+      <div class="container mx-auto px-6 lg:px-4">
+        <!-- row -->
+        <div class="flex flex-wrap flex-row -mx-4">
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Download Sections style 1
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- downloads start -->
+                <div id="downloads" class="relative py-20 md:py-24 bg-white dark:bg-gray-800">
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <div class="flex flex-wrap flex-row -mx-4 items-center justify-center">
+                      <!-- intro images -->
+                      <div class="flex-shrink max-w-full w-full md:w-1/2 lg:w-1/3 px-12">
+                        <div class="relative -mt-6 mb-16 lg:mb-12" style="padding-bottom: 120%">
+                          <figure class="absolute start-0 top-0 w-3/4">
+                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.000000 906.000000">
+                              <!-- Clip path image -->
+                              <defs>
+                                <clipPath id="svgf">
+                                  <rect x="52" y="10" width="380" height="818"/>
+                                </clipPath>
+                              </defs>
+                              <!-- Phone screen -->
+                              <image clip-path="url(#svgf)" xlink:href="../{{ 'images/img-min/app3.jpg' | asset_url }}" height="92%" width="100%" style="transform:translateY(24px);"></image>
+                              <!-- Phone cover -->
+                              <image xlink:href="../{{ 'images/img-min/iphone-dark.png' | asset_url }}" height="100%" width="100%"></image>
+                            </svg>
+                          </figure>
+
+                          <figure class="absolute end-0 w-3/4" style="top:12%">
+                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.000000 906.000000">
+                              <!-- Clip path image -->
+                              <defs>
+                                <clipPath id="svgf1">
+                                  <rect x="52" y="10" width="380" height="818"/>
+                                </clipPath>
+                              </defs>
+                              <!-- Phone screen -->
+                              <image clip-path="url(#svgf1)" xlink:href="../{{ 'images/img-min/app1.jpg' | asset_url }}" height="92%" width="100%" style="transform:translateY(30px);"></image>
+                              <!-- Phone cover -->
+                              <image xlink:href="../{{ 'images/img-min/iphone-dark.png' | asset_url }}" height="100%" width="100%"></image>
+                            </svg>
+                          </figure>
+                        </div>
+                      </div>
+
+                      <!-- content -->
+                      <div class="flex-shrink max-w-full px-4 w-full lg:w-1/2">
+                        <div class="mt-32 md:mt-0 py-0 lg:py-12 text-center lg:text-start">
+                          <h1 class="text-4xl leading-normal font-bold mb-4 dark:text-gray-100">Download Tailpro App</h1>
+                          <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mb-12">The Tailpro concept is simple design, fast loading, and optimized Baklib CMS. The Tailpro concept is simple design, fast loading, and optimized Baklib CMS.</p>
+
+                          <!--App store button-->
+                          <a class="py-3 px-5 block sm:inline-block text-center mb-3 rounded-md leading-normal text-gray-100 bg-gray-900 border border-gray-900 hover:text-white hover:bg-black hover:ring-0 hover:border-black focus:bg-black focus:border-black focus:outline-none focus:ring-0 sm:me-6" href="https://itunes.apple.com/">
+                            <span class="flex items-center">
+                              <!--icon-->
+                              <span class="me-3">
+                                <!-- <span class="fab fa-apple font-size-2"></span> -->
+                                 <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="2rem" height="2rem" fill="currentColor" viewBox="0 0 512 512"><path d="M256,32C132.26,32,32,132.26,32,256S132.26,480,256,480,480,379.74,480,256,379.74,32,256,32ZM171,353.89a15.48,15.48,0,0,1-13.46,7.65,14.91,14.91,0,0,1-7.86-2.16,15.48,15.48,0,0,1-5.6-21.21l15.29-25.42a8.73,8.73,0,0,1,7.54-4.3h2.26c11.09,0,18.85,6.67,21.11,13.13Zm129.45-50L200.32,304H133.77a15.46,15.46,0,0,1-15.51-16.15c.32-8.4,7.65-14.76,16-14.76h48.24l57.19-97.35h0l-18.52-31.55C217,137,218.85,127.52,226,123a15.57,15.57,0,0,1,21.87,5.17l9.9,16.91h.11l9.91-16.91A15.58,15.58,0,0,1,289.6,123c7.11,4.52,8.94,14,4.74,21.22l-18.52,31.55-18,30.69-39.09,66.66v.11h57.61c7.22,0,16.27,3.88,19.93,10.12l.32.65c3.23,5.49,5.06,9.26,5.06,14.75A13.82,13.82,0,0,1,300.48,303.92Zm77.75.11H351.09v.11l19.82,33.71a15.8,15.8,0,0,1-5.17,21.53,15.53,15.53,0,0,1-8.08,2.27A15.71,15.71,0,0,1,344.2,354l-29.29-49.86-18.2-31L273.23,233a38.35,38.35,0,0,1-.65-38c4.64-8.19,8.19-10.34,8.19-10.34L333,273h44.91c8.4,0,15.61,6.46,16,14.75A15.65,15.65,0,0,1,378.23,304Z"/></svg>
+                              </span>
+                              <!--text-->
+                              <span class="text-start">
+                                <span class="block">Download on the</span>
+                                <strong>App Store</strong>
+                              </span><!--end text-->
+                            </span>
+                          </a>
+
+                          <!--google play-->
+                          <a class="py-3 px-5 block sm:inline-block text-center mb-3 rounded-md leading-normal text-gray-800 bg-gray-200 border border-gray-200 hover:text-gray-900 hover:bg-gray-300 hover:ring-0 hover:border-gray-300 focus:bg-gray-300 focus:border-gray-300 focus:outline-none focus:ring-0" href="https://play.google.com/">
+                            <span class="flex items-center">
+                              <!--icon-->
+                              <span class="me-3">
+                                <!-- <span class="fab fa-google-play font-size-2"></span> -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="2rem" height="2rem" fill="currentColor" viewBox="0 0 512 512"><path d="M48,59.49v393a4.33,4.33,0,0,0,7.37,3.07L260,256,55.37,56.42A4.33,4.33,0,0,0,48,59.49Z"/><path d="M345.8,174,89.22,32.64l-.16-.09c-4.42-2.4-8.62,3.58-5,7.06L285.19,231.93Z"/><path d="M84.08,472.39c-3.64,3.48.56,9.46,5,7.06l.16-.09L345.8,338l-60.61-57.95Z"/><path d="M449.38,231l-71.65-39.46L310.36,256l67.37,64.43L449.38,281C468.87,270.23,468.87,241.77,449.38,231Z"/></svg>
+                              </span>
+                              <!--text-->
+                              <span class="text-start">
+                                <span class="block">Get it on</span>
+                                <strong>Google Play</strong>
+                              </span><!--end text-->
+                            </span>
+                          </a>
+                          <!--end google play-->
+                        </div>
+                      </div><!-- end content -->
+                    </div>
+                  </div>
+                </div><!-- End download -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- downloads start --&gt;
+                    &lt;div id="downloads" class="relative py-20 md:py-24 bg-white dark:bg-gray-800"&gt;
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4 items-center justify-center"&gt;
+                          &lt;!-- intro images --&gt;
+                          &lt;div class="flex-shrink max-w-full w-full md:w-1/2 lg:w-1/3 px-12"&gt;
+                            &lt;div class="relative -mt-6 mb-16 lg:mb-12" style="padding-bottom: 120%"&gt;
+                              &lt;figure class="absolute start-0 top-0 w-3/4"&gt;
+                                &lt;svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.000000 906.000000"&gt;
+                                  &lt;!-- Clip path image --&gt;
+                                  &lt;defs&gt;
+                                    &lt;clipPath id="svgf"&gt;
+                                      &lt;rect x="52" y="10" width="380" height="818"/&gt;
+                                    &lt;/clipPath&gt;
+                                  &lt;/defs&gt;
+                                  &lt;!-- Phone screen --&gt;
+                                  &lt;image clip-path="url(#svgf)" xlink:href="{{ 'images/img-min/app3.jpg' | asset_url }}" height="92%" width="100%" style="transform:translateY(24px);"&gt;&lt;/image&gt;
+                                  &lt;!-- Phone cover --&gt;
+                                  &lt;image xlink:href="{{ 'images/img-min/iphone-dark.png' | asset_url }}" height="100%" width="100%"&gt;&lt;/image&gt;
+                                &lt;/svg&gt;
+                              &lt;/figure&gt;
+
+                              &lt;figure class="absolute end-0 w-3/4" style="top:12%"&gt;
+                                &lt;svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.000000 906.000000"&gt;
+                                  &lt;!-- Clip path image --&gt;
+                                  &lt;defs&gt;
+                                    &lt;clipPath id="svgf1"&gt;
+                                      &lt;rect x="52" y="10" width="380" height="818"/&gt;
+                                    &lt;/clipPath&gt;
+                                  &lt;/defs&gt;
+                                  &lt;!-- Phone screen --&gt;
+                                  &lt;image clip-path="url(#svgf1)" xlink:href="{{ 'images/img-min/app1.jpg' | asset_url }}" height="92%" width="100%" style="transform:translateY(30px);"&gt;&lt;/image&gt;
+                                  &lt;!-- Phone cover --&gt;
+                                  &lt;image xlink:href="{{ 'images/img-min/iphone-dark.png' | asset_url }}" height="100%" width="100%"&gt;&lt;/image&gt;
+                                &lt;/svg&gt;
+                              &lt;/figure&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+
+                          &lt;!-- content --&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-full lg:w-1/2"&gt;
+                            &lt;div class="mt-32 md:mt-0 py-0 lg:py-12 text-center lg:text-start"&gt;
+                              &lt;h1 class="text-4xl leading-normal font-bold mb-4 dark:text-gray-100"&gt;Download Tailpro App&lt;/h1&gt;
+                              &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mb-12"&gt;The Tailpro concept is simple design, fast loading, and optimized Baklib CMS. The Tailpro concept is simple design, fast loading, and optimized Baklib CMS.&lt;/p&gt;
+
+                              &lt;!--App store button--&gt;
+                              &lt;a class="py-3 px-5 block sm:inline-block text-center mb-3 rounded-md leading-normal text-gray-100 bg-gray-900 border border-gray-900 hover:text-white hover:bg-black hover:ring-0 hover:border-black focus:bg-black focus:border-black focus:outline-none focus:ring-0 sm:me-6" href="https://itunes.apple.com"&gt;
+                                &lt;span class="flex items-center"&gt;
+                                  &lt;!--icon--&gt;
+                                  &lt;span class="me-3"&gt;
+                                    &lt;!-- &lt;span class="fab fa-apple font-size-2"&gt;&lt;/span&gt; --&gt;
+                                     &lt;svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="2rem" height="2rem" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;path d="M256,32C132.26,32,32,132.26,32,256S132.26,480,256,480,480,379.74,480,256,379.74,32,256,32ZM171,353.89a15.48,15.48,0,0,1-13.46,7.65,14.91,14.91,0,0,1-7.86-2.16,15.48,15.48,0,0,1-5.6-21.21l15.29-25.42a8.73,8.73,0,0,1,7.54-4.3h2.26c11.09,0,18.85,6.67,21.11,13.13Zm129.45-50L200.32,304H133.77a15.46,15.46,0,0,1-15.51-16.15c.32-8.4,7.65-14.76,16-14.76h48.24l57.19-97.35h0l-18.52-31.55C217,137,218.85,127.52,226,123a15.57,15.57,0,0,1,21.87,5.17l9.9,16.91h.11l9.91-16.91A15.58,15.58,0,0,1,289.6,123c7.11,4.52,8.94,14,4.74,21.22l-18.52,31.55-18,30.69-39.09,66.66v.11h57.61c7.22,0,16.27,3.88,19.93,10.12l.32.65c3.23,5.49,5.06,9.26,5.06,14.75A13.82,13.82,0,0,1,300.48,303.92Zm77.75.11H351.09v.11l19.82,33.71a15.8,15.8,0,0,1-5.17,21.53,15.53,15.53,0,0,1-8.08,2.27A15.71,15.71,0,0,1,344.2,354l-29.29-49.86-18.2-31L273.23,233a38.35,38.35,0,0,1-.65-38c4.64-8.19,8.19-10.34,8.19-10.34L333,273h44.91c8.4,0,15.61,6.46,16,14.75A15.65,15.65,0,0,1,378.23,304Z"/&gt;&lt;/svg&gt;
+                                  &lt;/span&gt;
+                                  &lt;!--text--&gt;
+                                  &lt;span class="text-start"&gt;
+                                    &lt;span class="block"&gt;Download on the&lt;/span&gt;
+                                    &lt;strong&gt;App Store&lt;/strong&gt;
+                                  &lt;/span&gt;&lt;!--end text--&gt;
+                                &lt;/span&gt;
+                              &lt;/a&gt;
+
+                              &lt;!--google play--&gt;
+                              &lt;a class="py-3 px-5 block sm:inline-block text-center mb-3 rounded-md leading-normal text-gray-800 bg-gray-200 border border-gray-200 hover:text-gray-900 hover:bg-gray-300 hover:ring-0 hover:border-gray-300 focus:bg-gray-300 focus:border-gray-300 focus:outline-none focus:ring-0" href="https://play.google.com"&gt;
+                                &lt;span class="flex items-center"&gt;
+                                  &lt;!--icon--&gt;
+                                  &lt;span class="me-3"&gt;
+                                    &lt;!-- &lt;span class="fab fa-google-play font-size-2"&gt;&lt;/span&gt; --&gt;
+                                    &lt;svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="2rem" height="2rem" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;path d="M48,59.49v393a4.33,4.33,0,0,0,7.37,3.07L260,256,55.37,56.42A4.33,4.33,0,0,0,48,59.49Z"/&gt;&lt;path d="M345.8,174,89.22,32.64l-.16-.09c-4.42-2.4-8.62,3.58-5,7.06L285.19,231.93Z"/&gt;&lt;path d="M84.08,472.39c-3.64,3.48.56,9.46,5,7.06l.16-.09L345.8,338l-60.61-57.95Z"/&gt;&lt;path d="M449.38,231l-71.65-39.46L310.36,256l67.37,64.43L449.38,281C468.87,270.23,468.87,241.77,449.38,231Z"/&gt;&lt;/svg&gt;
+                                  &lt;/span&gt;
+                                  &lt;!--text--&gt;
+                                  &lt;span class="text-start"&gt;
+                                    &lt;span class="block"&gt;Get it on&lt;/span&gt;
+                                    &lt;strong&gt;Google Play&lt;/strong&gt;
+                                  &lt;/span&gt;&lt;!--end text--&gt;
+                                &lt;/span&gt;
+                              &lt;/a&gt;
+                              &lt;!--end google play--&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;&lt;!-- end content --&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- End download --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Download Sections style 2
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- downloads start -->
+                <div id="downloads" class="relative py-20 md:py-24 bg-white jarallax z-0">
+                  <!-- background parallax -->
+                  <img class="jarallax-img" src="{{ 'images/img-min/bg3.jpg' | asset_url }}" alt="title">
+
+                  <!-- background overlay -->
+                  <div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"></div>
+
+                  <!-- hero content -->
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <div class="flex flex-wrap flex-row -mx-4 items-center text-center">
+                      <!-- content text -->
+                      <div class="max-w-full px-4 w-full md:w-2/3 mx-auto z-0">
+                        <h1 class="text-4xl leading-normal font-bold mb-4 text-white">App for Android and OS X</h1>
+                        <p class="text-gray-200 leading-relaxed font-light text-xl mx-auto pb-2 mb-8">Download Tailpro App from your desktop and Mobile device</p>
+                        <!--App store button-->
+                        <a class="py-3 px-5 block sm:inline-block text-center rounded-md leading-normal text-gray-100 bg-gray-900 border border-gray-900 hover:text-white hover:bg-black hover:ring-0 hover:border-black focus:bg-black focus:border-black focus:outline-none focus:ring-0 sm:me-6 mb-3" href="https://itunes.apple.com/">
+                          <span class="flex items-center">
+                            <!--icon-->
+                            <span class="me-3">
+                              <!-- <span class="fab fa-apple font-size-2"></span> -->
+                               <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="2rem" height="2rem" fill="currentColor" viewBox="0 0 512 512"><path d="M256,32C132.26,32,32,132.26,32,256S132.26,480,256,480,480,379.74,480,256,379.74,32,256,32ZM171,353.89a15.48,15.48,0,0,1-13.46,7.65,14.91,14.91,0,0,1-7.86-2.16,15.48,15.48,0,0,1-5.6-21.21l15.29-25.42a8.73,8.73,0,0,1,7.54-4.3h2.26c11.09,0,18.85,6.67,21.11,13.13Zm129.45-50L200.32,304H133.77a15.46,15.46,0,0,1-15.51-16.15c.32-8.4,7.65-14.76,16-14.76h48.24l57.19-97.35h0l-18.52-31.55C217,137,218.85,127.52,226,123a15.57,15.57,0,0,1,21.87,5.17l9.9,16.91h.11l9.91-16.91A15.58,15.58,0,0,1,289.6,123c7.11,4.52,8.94,14,4.74,21.22l-18.52,31.55-18,30.69-39.09,66.66v.11h57.61c7.22,0,16.27,3.88,19.93,10.12l.32.65c3.23,5.49,5.06,9.26,5.06,14.75A13.82,13.82,0,0,1,300.48,303.92Zm77.75.11H351.09v.11l19.82,33.71a15.8,15.8,0,0,1-5.17,21.53,15.53,15.53,0,0,1-8.08,2.27A15.71,15.71,0,0,1,344.2,354l-29.29-49.86-18.2-31L273.23,233a38.35,38.35,0,0,1-.65-38c4.64-8.19,8.19-10.34,8.19-10.34L333,273h44.91c8.4,0,15.61,6.46,16,14.75A15.65,15.65,0,0,1,378.23,304Z"/></svg>
+                            </span>
+                            <!--text-->
+                            <span class="text-start">
+                              <span class="block">Download on the</span>
+                              <strong>App Store</strong>
+                            </span><!--end text-->
+                          </span>
+                        </a>
+
+                        <!--google play-->
+                        <a class="py-3 px-5 block sm:inline-block text-center rounded-md leading-normal text-gray-800 bg-gray-200 border border-gray-200 hover:text-gray-900 hover:bg-gray-300 hover:ring-0 hover:border-gray-300 focus:bg-gray-300 focus:border-gray-300 focus:outline-none focus:ring-0 sm:me-6 mb-3" href="https://play.google.com/">
+                          <span class="flex items-center">
+                            <!--icon-->
+                            <span class="me-3">
+                              <!-- <span class="fab fa-google-play font-size-2"></span> -->
+                              <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="2rem" height="2rem" fill="currentColor" viewBox="0 0 512 512"><path d="M48,59.49v393a4.33,4.33,0,0,0,7.37,3.07L260,256,55.37,56.42A4.33,4.33,0,0,0,48,59.49Z"/><path d="M345.8,174,89.22,32.64l-.16-.09c-4.42-2.4-8.62,3.58-5,7.06L285.19,231.93Z"/><path d="M84.08,472.39c-3.64,3.48.56,9.46,5,7.06l.16-.09L345.8,338l-60.61-57.95Z"/><path d="M449.38,231l-71.65-39.46L310.36,256l67.37,64.43L449.38,281C468.87,270.23,468.87,241.77,449.38,231Z"/></svg>
+                            </span>
+                            <!--text-->
+                            <span class="text-start">
+                              <span class="block">Get it on</span>
+                              <strong>Google Play</strong>
+                            </span><!--end text-->
+                          </span>
+                        </a>
+                        <!--end google play-->
+                      </div><!-- end content text -->
+                    </div>
+                  </div>
+                </div><!-- End download -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- downloads start --&gt;
+                    &lt;div id="downloads" class="relative py-20 md:py-24 bg-white jarallax z-0"&gt;
+                      &lt;!-- background parallax --&gt;
+                      &lt;img class="jarallax-img" src="{{ 'images/img-min/bg3.jpg' | asset_url }}" alt="title"&gt;
+
+                      &lt;!-- background overlay --&gt;
+                      &lt;div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"&gt;&lt;/div&gt;
+
+                      &lt;!-- hero content --&gt;
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4 items-center text-center"&gt;
+                          &lt;!-- content text --&gt;
+                          &lt;div class="max-w-full px-4 w-full md:w-2/3 mx-auto z-0"&gt;
+                            &lt;h1 class="text-4xl leading-normal font-bold mb-4 text-white"&gt;App for Android and OS X&lt;/h1&gt;
+                            &lt;p class="text-gray-200 leading-relaxed font-light text-xl mx-auto pb-2 mb-8"&gt;Download Tailpro App from your desktop and Mobile device&lt;/p&gt;
+                            &lt;!--App store button--&gt;
+                            &lt;a class="py-3 px-5 block sm:inline-block text-center rounded-md leading-normal text-gray-100 bg-gray-900 border border-gray-900 hover:text-white hover:bg-black hover:ring-0 hover:border-black focus:bg-black focus:border-black focus:outline-none focus:ring-0 sm:me-6 mb-3" href="https://itunes.apple.com"&gt;
+                              &lt;span class="flex items-center"&gt;
+                                &lt;!--icon--&gt;
+                                &lt;span class="me-3"&gt;
+                                  &lt;!-- &lt;span class="fab fa-apple font-size-2"&gt;&lt;/span&gt; --&gt;
+                                   &lt;svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="2rem" height="2rem" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;path d="M256,32C132.26,32,32,132.26,32,256S132.26,480,256,480,480,379.74,480,256,379.74,32,256,32ZM171,353.89a15.48,15.48,0,0,1-13.46,7.65,14.91,14.91,0,0,1-7.86-2.16,15.48,15.48,0,0,1-5.6-21.21l15.29-25.42a8.73,8.73,0,0,1,7.54-4.3h2.26c11.09,0,18.85,6.67,21.11,13.13Zm129.45-50L200.32,304H133.77a15.46,15.46,0,0,1-15.51-16.15c.32-8.4,7.65-14.76,16-14.76h48.24l57.19-97.35h0l-18.52-31.55C217,137,218.85,127.52,226,123a15.57,15.57,0,0,1,21.87,5.17l9.9,16.91h.11l9.91-16.91A15.58,15.58,0,0,1,289.6,123c7.11,4.52,8.94,14,4.74,21.22l-18.52,31.55-18,30.69-39.09,66.66v.11h57.61c7.22,0,16.27,3.88,19.93,10.12l.32.65c3.23,5.49,5.06,9.26,5.06,14.75A13.82,13.82,0,0,1,300.48,303.92Zm77.75.11H351.09v.11l19.82,33.71a15.8,15.8,0,0,1-5.17,21.53,15.53,15.53,0,0,1-8.08,2.27A15.71,15.71,0,0,1,344.2,354l-29.29-49.86-18.2-31L273.23,233a38.35,38.35,0,0,1-.65-38c4.64-8.19,8.19-10.34,8.19-10.34L333,273h44.91c8.4,0,15.61,6.46,16,14.75A15.65,15.65,0,0,1,378.23,304Z"/&gt;&lt;/svg&gt;
+                                &lt;/span&gt;
+                                &lt;!--text--&gt;
+                                &lt;span class="text-start"&gt;
+                                  &lt;span class="block"&gt;Download on the&lt;/span&gt;
+                                  &lt;strong&gt;App Store&lt;/strong&gt;
+                                &lt;/span&gt;&lt;!--end text--&gt;
+                              &lt;/span&gt;
+                            &lt;/a&gt;
+
+                            &lt;!--google play--&gt;
+                            &lt;a class="py-3 px-5 block sm:inline-block text-center rounded-md leading-normal text-gray-800 bg-gray-200 border border-gray-200 hover:text-gray-900 hover:bg-gray-300 hover:ring-0 hover:border-gray-300 focus:bg-gray-300 focus:border-gray-300 focus:outline-none focus:ring-0 sm:me-6 mb-3" href="https://play.google.com"&gt;
+                              &lt;span class="flex items-center"&gt;
+                                &lt;!--icon--&gt;
+                                &lt;span class="me-3"&gt;
+                                  &lt;!-- &lt;span class="fab fa-google-play font-size-2"&gt;&lt;/span&gt; --&gt;
+                                  &lt;svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="2rem" height="2rem" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;path d="M48,59.49v393a4.33,4.33,0,0,0,7.37,3.07L260,256,55.37,56.42A4.33,4.33,0,0,0,48,59.49Z"/&gt;&lt;path d="M345.8,174,89.22,32.64l-.16-.09c-4.42-2.4-8.62,3.58-5,7.06L285.19,231.93Z"/&gt;&lt;path d="M84.08,472.39c-3.64,3.48.56,9.46,5,7.06l.16-.09L345.8,338l-60.61-57.95Z"/&gt;&lt;path d="M449.38,231l-71.65-39.46L310.36,256l67.37,64.43L449.38,281C468.87,270.23,468.87,241.77,449.38,231Z"/&gt;&lt;/svg&gt;
+                                &lt;/span&gt;
+                                &lt;!--text--&gt;
+                                &lt;span class="text-start"&gt;
+                                  &lt;span class="block"&gt;Get it on&lt;/span&gt;
+                                  &lt;strong&gt;Google Play&lt;/strong&gt;
+                                &lt;/span&gt;&lt;!--end text--&gt;
+                              &lt;/span&gt;
+                            &lt;/a&gt;
+                            &lt;!--end google play--&gt;
+                          &lt;/div&gt;&lt;!-- end content text --&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- End download --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Download Sections style 3
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- downloads start -->
+                <div id="downloads" class="relative py-20 md:py-24 bg-white dark:bg-gray-800">
+                  <!-- particle moving animation -->
+                  <div class="particle">
+                    <div class="scroll-rotate absolute opacity-50 text-primary-700" style="right:9%;bottom: 72%;">
+                      <svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                    <div class="scroll-rotate absolute opacity-50 text-yellow-300" style="right:12%;bottom: 30%;">
+                      <svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                    <div class="scroll-rotate absolute opacity-50 text-red-700 hidden lg:block" style="right:22%;bottom: 55%;">
+                      <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                    <div class="scroll-rotate absolute opacity-50 text-red-700 hidden lg:block" style="left:40%;top: 15%;">
+                      <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                    <div class="scroll-rotate absolute opacity-50 text-primary-700" style="left:60%;bottom: 20%;">
+                      <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                    <div class="scroll-rotate absolute opacity-50 text-yellow-300" style="left:20%;bottom: 60%;">
+                      <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                    <div class="scroll-rotate absolute opacity-50 text-primary-700" style="left:12%;bottom: 30%;">
+                      <svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                    <div class="scroll-rotate absolute opacity-50 text-green-600" style="left:6%;bottom:75%;">
+                      <svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                      </svg>
+                    </div> 
+                  </div>
+
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <div class="flex flex-wrap flex-row -mx-4 justify-center">
+                      <div class="max-w-full w-8/12 md:w-1/2 px-4" data-aos="fade-up">
+                        <!-- Title -->
+                        <div class="text-center mx-auto mb-16">
+                          <h2 class="text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100">Ready to grow your business?</h2>
+                          <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
+                          <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mb-12">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
+                          <a class="py-3 px-5 -ms-1 rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0" href="#">
+                            Download App
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block ms-2" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"><path d="M336,176h40a40,40,0,0,1,40,40V424a40,40,0,0,1-40,40H136a40,40,0,0,1-40-40V216a40,40,0,0,1,40-40h40" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><polyline points="176 272 256 352 336 272" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="256" y1="48" x2="256" y2="336" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+                          </a>
+                        </div><!-- End Title -->
+                      </div>
+                    </div>
+                  </div><!-- end subcribe -->
+                </div><!-- End downloads -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- downloads start --&gt;
+                    &lt;div id="downloads" class="relative py-20 md:py-24 bg-white dark:bg-gray-800"&gt;
+                      &lt;!-- particle moving animation --&gt;
+                      &lt;div class="particle"&gt;
+                        &lt;div class="scroll-rotate absolute opacity-50 text-primary-700" style="right:9%;bottom: 72%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                        &lt;div class="scroll-rotate absolute opacity-50 text-yellow-300" style="right:12%;bottom: 30%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                        &lt;div class="scroll-rotate absolute opacity-50 text-red-700 hidden lg:block" style="right:22%;bottom: 55%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                        &lt;div class="scroll-rotate absolute opacity-50 text-red-700 hidden lg:block" style="left:40%;top: 15%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                        &lt;div class="scroll-rotate absolute opacity-50 text-primary-700" style="left:60%;bottom: 20%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                        &lt;div class="scroll-rotate absolute opacity-50 text-yellow-300" style="left:20%;bottom: 60%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                        &lt;div class="scroll-rotate absolute opacity-50 text-primary-700" style="left:12%;bottom: 30%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                        &lt;div class="scroll-rotate absolute opacity-50 text-green-600" style="left:6%;bottom:75%;"&gt;
+                          &lt;svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                            &lt;path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                            &lt;path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                          &lt;/svg&gt;
+                        &lt;/div&gt; 
+                      &lt;/div&gt;
+
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4 justify-center"&gt;
+                          &lt;div class="max-w-full w-8/12 md:w-1/2 px-4" data-aos="fade-up"&gt;
+                            &lt;!-- Title --&gt;
+                            &lt;div class="text-center mx-auto mb-16"&gt;
+                              &lt;h2 class="text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"&gt;Ready to grow your business?&lt;/h2&gt;
+                              &lt;hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700"&gt;
+                              &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mb-12"&gt;Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.&lt;/p&gt;
+                              &lt;a class="py-3 px-5 -ms-1 rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0" href="#"&gt;
+                                Download App
+                                &lt;svg xmlns="http://www.w3.org/2000/svg" class="inline-block ms-2" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;path d="M336,176h40a40,40,0,0,1,40,40V424a40,40,0,0,1-40,40H136a40,40,0,0,1-40-40V216a40,40,0,0,1,40-40h40" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;polyline points="176 272 256 352 336 272" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;line x1="256" y1="48" x2="256" y2="336" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;/svg&gt;
+                              &lt;/a&gt;
+                            &lt;/div&gt;&lt;!-- End Title --&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- End downloads --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end row -->
+      </div>
+    </div><!-- End snippets -->
+  </main>

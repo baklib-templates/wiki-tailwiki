@@ -1,0 +1,483 @@
+
+  <main id="content">
+    <!-- =========={ HERO }==========  -->
+    <div id="hero" class="relative py-12 jarallax">
+      <!-- background parallax -->
+      <img class="jarallax-img" src="{{ 'images/img-min/bg-planet.jpg' | asset_url }}" alt="title">
+      <!-- background overlay -->
+      <div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"></div>
+
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <div class="flex flex-wrap flex-row -mx-4 items-center justify-center">
+          <!-- content -->
+          <div class="max-w-full w-full lg:w-7/12 px-4">
+            <nav aria-label="breadcrumb">
+              <ol class="flex flex-wrap justify-center bg-transparent text-sm mb-0 space-x-1">
+                <li>
+                  <a href="#" class="text-gray-200 hover:text-white">
+                    Home
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="/s/index" class="text-gray-200 hover:text-white">
+                    Snippets
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                  </a>
+                </li>
+                <li class="hidden md:block text-white" aria-current="page">Fax Sections</li>
+              </ol>
+            </nav>
+
+            <div class="mt-0 pt-6 text-center">
+              <h1 class="text-2xl md:text-3xl leading-normal mb-2 font-semibold text-white">Fax Sections</h1>    
+              <hr class="block w-12 h-0.5 mx-auto my-5 bg-yellow-300 border-yellow-300">       
+            </div>
+          </div><!-- end content -->
+        </div>
+      </div>
+    </div><!-- End hero -->
+
+    <!-- =========={ SNIPPETS }==========  -->
+    <div id="snippets" class="relative pt-12 bg-white dark:bg-gray-800">
+      <div class="container mx-auto px-6 lg:px-4">
+        <!-- row -->
+        <div class="flex flex-wrap flex-row -mx-4">
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Fax Sections style 1
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- Start FAQ -->
+                <div id="faq" class="relative py-20 md:py-24 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20">
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <!-- section header -->
+                    <header class="text-center mx-auto mb-12">
+                      <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100">Questions</h2>
+                      <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
+                      <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">Most Popular Question from New Client!</p>
+                    </header><!-- end section header -->
+
+                    <div class="flex flex-wrap flex-row -mx-4 justify-center">
+                      <div class="max-w-full w-11/12 lg:w-8/12 px-4">
+                        <div id="Accordione" x-data="{selected:0}">
+                          <!-- faq list -->
+                          <div class="relative flex flex-wrap flex-col shadow mb-4 bg-white dark:bg-gray-800 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                            <div class="py-2.5 px-5 border-b border-gray-200 dark:border-gray-700 mb-0" id="HeadingOnee">
+                              <div class="d-grid mb-0">
+                                <button class="py-3 px-0 w-full rounded-md leading-5 font-medium flex justify-between focus:outline-none focus:ring-0"  @click="selected !== 0 ? selected = 0 : selected = null">
+                                  How is the SEO services system at TailPro?
+                                  <span>
+                                    <svg class="transform transition duration-500" :class="{ '-rotate-180': selected == 0 }" width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+                                    </svg>
+                                  </span>
+                                </button>
+                              </div>
+                            </div>
+                            <div id="CollapseOnee" x-show="selected == 0">
+                              <div class="flex-1 p-5">
+                                <p class="text-gray-500">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- faq list -->
+                          <div class="relative flex flex-wrap flex-col shadow mb-4 bg-white dark:bg-gray-800 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                            <div class="py-2.5 px-5 border-b border-gray-200 dark:border-gray-700 mb-0" id="HeadingTwoe">
+                              <div class="d-grid mb-0">
+                                <button class="py-3 px-0 w-full rounded-md leading-5 font-medium flex justify-between focus:outline-none focus:ring-0" @click="selected !== 1 ? selected = 1 : selected = null">
+                                  How many keywords are optimized?
+                                  <span>
+                                    <svg class="transform transition duration-500" :class="{ '-rotate-180': selected == 1 }" width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+                                    </svg>
+                                  </span>
+                                </button>
+                              </div>
+                            </div>
+                            <div id="CollapseTwoe" x-show="selected == 1">
+                              <div class="flex-1 p-5">
+                                <p class="text-gray-500">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- faq list -->
+                          <div class="relative flex flex-wrap flex-col shadow mb-4 bg-white dark:bg-gray-800 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                            <div class="py-2.5 px-5 border-b border-gray-200 dark:border-gray-700 mb-0" id="HeadingThreee">
+                              <div class="d-grid mb-0">
+                                <button class="py-3 px-0 w-full rounded-md leading-5 font-medium flex justify-between focus:outline-none focus:ring-0" @click="selected !== 2 ? selected = 2 : selected = null">
+                                  Do you offer any discounted plans?
+                                  <span>
+                                    <svg class="transform transition duration-500" :class="{ '-rotate-180': selected == 2 }" width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+                                    </svg>
+                                  </span>
+                                </button>
+                              </div>
+                            </div>
+                            <div id="CollapseThreee" x-show="selected == 2">
+                              <div class="flex-1 p-5">
+                                <p class="text-gray-500">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- faq list -->
+                          <div class="relative flex flex-wrap flex-col shadow mb-4 bg-white dark:bg-gray-800 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
+                            <div class="py-2.5 px-5 border-b border-gray-200 dark:border-gray-700 mb-0" id="HeadingFoure">
+                              <div class="d-grid mb-0">
+                                <button class="py-3 px-0 w-full rounded-md leading-5 font-medium flex justify-between focus:outline-none focus:ring-0" @click="selected !== 3 ? selected = 3 : selected = null">
+                                  Can I cancel my account at any time?
+                                  <span>
+                                    <svg class="transform transition duration-500" :class="{ '-rotate-180': selected == 3 }" width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"></path>
+                                    </svg>
+                                  </span>
+                                </button>
+                              </div>
+                            </div>
+                            <div id="CollapseFoure" x-show="selected == 3">
+                              <div class="flex-1 p-5">
+                                <p class="text-gray-500">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End FAQ -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- Start FAQ --&gt;
+                    &lt;div id="faq" class="relative py-20 md:py-24 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20"&gt;
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;!-- section header --&gt;
+                        &lt;header class="text-center mx-auto mb-12"&gt;
+                          &lt;h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"&gt;Questions&lt;/h2&gt;
+                          &lt;hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700"&gt;
+                          &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2"&gt;Most Popular Question from New Client!&lt;/p&gt;
+                        &lt;/header&gt;&lt;!-- end section header --&gt;
+                      
+                        &lt;div class="flex flex-wrap flex-row -mx-4 justify-center"&gt;
+                          &lt;div class="max-w-full w-11/12 lg:w-8/12 px-4"&gt;
+                            &lt;div id="Accordione" x-data="{selected:0}"&gt;
+                              &lt;!-- faq list --&gt;
+                              &lt;div class="relative flex flex-wrap flex-col shadow mb-4 bg-white dark:bg-gray-800 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"&gt;
+                                &lt;div class="py-2.5 px-5 border-b border-gray-200 dark:border-gray-700 mb-0" id="HeadingOnee"&gt;
+                                  &lt;div class="d-grid mb-0"&gt;
+                                    &lt;button class="py-3 px-0 w-full rounded-md leading-5 font-medium flex justify-between focus:outline-none focus:ring-0"  @click="selected !== 0 ? selected = 0 : selected = null"&gt;
+                                      How is the SEO services system at TailPro?
+                                      &lt;span&gt;
+                                        &lt;svg class="transform transition duration-500" :class="{ '-rotate-180': selected == 0 }" width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                                          &lt;path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                        &lt;/svg&gt;
+                                      &lt;/span&gt;
+                                    &lt;/button&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div id="CollapseOnee" x-show="selected == 0"&gt;
+                                  &lt;div class="flex-1 p-5"&gt;
+                                    &lt;p class="text-gray-500"&gt;The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.&lt;/p&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+
+                              &lt;!-- faq list --&gt;
+                              &lt;div class="relative flex flex-wrap flex-col shadow mb-4 bg-white dark:bg-gray-800 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s"&gt;
+                                &lt;div class="py-2.5 px-5 border-b border-gray-200 dark:border-gray-700 mb-0" id="HeadingTwoe"&gt;
+                                  &lt;div class="d-grid mb-0"&gt;
+                                    &lt;button class="py-3 px-0 w-full rounded-md leading-5 font-medium flex justify-between focus:outline-none focus:ring-0" @click="selected !== 1 ? selected = 1 : selected = null"&gt;
+                                      How many keywords are optimized?
+                                      &lt;span&gt;
+                                        &lt;svg class="transform transition duration-500" :class="{ '-rotate-180': selected == 1 }" width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                                          &lt;path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                        &lt;/svg&gt;
+                                      &lt;/span&gt;
+                                    &lt;/button&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div id="CollapseTwoe" x-show="selected == 1"&gt;
+                                  &lt;div class="flex-1 p-5"&gt;
+                                    &lt;p class="text-gray-500"&gt;The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.&lt;/p&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+
+                              &lt;!-- faq list --&gt;
+                              &lt;div class="relative flex flex-wrap flex-col shadow mb-4 bg-white dark:bg-gray-800 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s"&gt;
+                                &lt;div class="py-2.5 px-5 border-b border-gray-200 dark:border-gray-700 mb-0" id="HeadingThreee"&gt;
+                                  &lt;div class="d-grid mb-0"&gt;
+                                    &lt;button class="py-3 px-0 w-full rounded-md leading-5 font-medium flex justify-between focus:outline-none focus:ring-0" @click="selected !== 2 ? selected = 2 : selected = null"&gt;
+                                      Do you offer any discounted plans?
+                                      &lt;span&gt;
+                                        &lt;svg class="transform transition duration-500" :class="{ '-rotate-180': selected == 2 }" width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                                          &lt;path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                        &lt;/svg&gt;
+                                      &lt;/span&gt;
+                                    &lt;/button&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div id="CollapseThreee" x-show="selected == 2"&gt;
+                                  &lt;div class="flex-1 p-5"&gt;
+                                    &lt;p class="text-gray-500"&gt;The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.&lt;/p&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+
+                              &lt;!-- faq list --&gt;
+                              &lt;div class="relative flex flex-wrap flex-col shadow mb-4 bg-white dark:bg-gray-800 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s"&gt;
+                                &lt;div class="py-2.5 px-5 border-b border-gray-200 dark:border-gray-700 mb-0" id="HeadingFoure"&gt;
+                                  &lt;div class="d-grid mb-0"&gt;
+                                    &lt;button class="py-3 px-0 w-full rounded-md leading-5 font-medium flex justify-between focus:outline-none focus:ring-0" @click="selected !== 3 ? selected = 3 : selected = null"&gt;
+                                      Can I cancel my account at any time?
+                                      &lt;span&gt;
+                                        &lt;svg class="transform transition duration-500" :class="{ '-rotate-180': selected == 3 }" width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                                          &lt;path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                        &lt;/svg&gt;
+                                      &lt;/span&gt;
+                                    &lt;/button&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div id="CollapseFoure" x-show="selected == 3"&gt;
+                                  &lt;div class="flex-1 p-5"&gt;
+                                    &lt;p class="text-gray-500"&gt;The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.&lt;/p&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- End FAQ --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Fax Sections style 2
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- Start FAQ  -->
+                <div id="faq" class="relative py-20 md:py-24 bg-white dark:bg-gray-800">
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <!-- section header -->
+                    <header class="text-center mx-auto mb-12 lg:px-20">
+                      <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"><span class="font-light">Ask</span> Questions</h2>
+                      <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
+                      <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">This is most popular general question!</p>
+                    </header><!-- end section header -->
+
+                    <div class="flex flex-wrap flex-row -mx-4">
+                      <div class="flex-shrink max-w-full px-4 w-full md:w-1/2">
+                        <div class="p-6 border-b border-gray-200 mb-6 bg-white dark:bg-gray-800 dark:border-gray-700">
+                          <h3 class="text-lg leading-normal font-semibold mb-4">
+                            <!-- <i class="fas fa-question-circle text-primary-700 me-2 inline-block"></i> -->
+                            <svg class="bi bi-question-circle text-primary-700 me-2 inline-block" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"></path>
+                              <path d="M5.25 6.033h1.32c0-.781.458-1.384 1.36-1.384.685 0 1.313.343 1.313 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.007.463h1.307v-.355c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.326 0-2.786.647-2.754 2.533zm1.562 5.516c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"></path>
+                            </svg>
+                            How is the SEO services system at Upgency?
+                          </h3>
+                          <p class="text-gray-500">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                        </div>
+
+                        <div class="p-6 border-b border-gray-200 mb-6 bg-white dark:bg-gray-800 dark:border-gray-700">
+                          <h3 class="text-lg leading-normal font-semibold mb-4">
+                            <!-- <i class="fas fa-question-circle text-primary-700 me-2 inline-block"></i> -->
+                            <svg class="bi bi-question-circle text-primary-700 me-2 inline-block" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"></path>
+                              <path d="M5.25 6.033h1.32c0-.781.458-1.384 1.36-1.384.685 0 1.313.343 1.313 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.007.463h1.307v-.355c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.326 0-2.786.647-2.754 2.533zm1.562 5.516c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"></path>
+                            </svg>
+                            Can I change my plan later on?
+                          </h3>
+                          <p class="text-gray-500">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                        </div>
+
+                        <div class="p-6 border-b border-gray-200 mb-6 bg-white dark:bg-gray-800 dark:border-gray-700">
+                          <h3 class="text-lg leading-normal font-semibold mb-4">
+                            <!-- <i class="fas fa-question-circle text-primary-700 me-2 inline-block"></i> -->
+                            <svg class="bi bi-question-circle text-primary-700 me-2 inline-block" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"></path>
+                              <path d="M5.25 6.033h1.32c0-.781.458-1.384 1.36-1.384.685 0 1.313.343 1.313 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.007.463h1.307v-.355c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.326 0-2.786.647-2.754 2.533zm1.562 5.516c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"></path>
+                            </svg>
+                            Can I cancel my account at any time?
+                          </h3>
+                          <p class="text-gray-500">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                        </div>
+                      </div>
+                      <div class="flex-shrink max-w-full px-4 w-full md:w-1/2">
+                        <div class="p-6 border-b border-gray-200 mb-6 bg-white dark:bg-gray-800 dark:border-gray-700">
+                          <h3 class="text-lg leading-normal font-semibold mb-4">
+                            <!-- <i class="fas fa-question-circle text-primary-700 me-2 inline-block"></i> -->
+                            <svg class="bi bi-question-circle text-primary-700 me-2 inline-block" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"></path>
+                              <path d="M5.25 6.033h1.32c0-.781.458-1.384 1.36-1.384.685 0 1.313.343 1.313 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.007.463h1.307v-.355c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.326 0-2.786.647-2.754 2.533zm1.562 5.516c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"></path>
+                            </svg>
+                            How many keywords are optimized?
+                          </h3>
+                          <p class="text-gray-500">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                        </div>
+
+                        <div class="p-6 border-b border-gray-200 mb-6 bg-white dark:bg-gray-800 dark:border-gray-700">
+                          <h3 class="text-lg leading-normal font-semibold mb-4">
+                            <!-- <i class="fas fa-question-circle text-primary-700 me-2 inline-block"></i> -->
+                            <svg class="bi bi-question-circle text-primary-700 me-2 inline-block" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"></path>
+                              <path d="M5.25 6.033h1.32c0-.781.458-1.384 1.36-1.384.685 0 1.313.343 1.313 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.007.463h1.307v-.355c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.326 0-2.786.647-2.754 2.533zm1.562 5.516c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"></path>
+                            </svg>
+                            Do you offer any discounted plans?
+                          </h3>
+                          <p class="text-gray-500">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                        </div>
+
+                        <div class="p-6 border-b border-gray-200 mb-6 bg-white dark:bg-gray-800 dark:border-gray-700">
+                          <h3 class="text-lg leading-normal font-semibold mb-4">
+                            <!-- <i class="fas fa-question-circle text-primary-700 me-2 inline-block"></i> -->
+                            <svg class="bi bi-question-circle text-primary-700 me-2 inline-block" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"></path>
+                              <path d="M5.25 6.033h1.32c0-.781.458-1.384 1.36-1.384.685 0 1.313.343 1.313 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.007.463h1.307v-.355c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.326 0-2.786.647-2.754 2.533zm1.562 5.516c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"></path>
+                            </svg>
+                            What is the rate if I type in a credit card?
+                          </h3>
+                          <p class="text-gray-500">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End faq -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- Start FAQ  --&gt;
+                    &lt;div id="faq" class="relative py-20 md:py-24 bg-white dark:bg-gray-800"&gt;
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;!-- section header --&gt;
+                        &lt;header class="text-center mx-auto mb-12 lg:px-20"&gt;
+                          &lt;h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"&gt;&lt;span class="font-light"&gt;Ask&lt;/span&gt; Questions&lt;/h2&gt;
+                          &lt;hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700"&gt;
+                          &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2"&gt;This is most popular general question!&lt;/p&gt;
+                        &lt;/header&gt;&lt;!-- end section header --&gt;
+
+                        &lt;div class="flex flex-wrap flex-row -mx-4"&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-full md:w-1/2"&gt;
+                            &lt;div class="p-6 border-b border-gray-200 mb-6 bg-white dark:bg-gray-800 dark:border-gray-700"&gt;
+                              &lt;h3 class="text-lg leading-normal font-semibold mb-4"&gt;
+                                &lt;!-- &lt;i class="fas fa-question-circle text-primary-700 me-2 inline-block"&gt;&lt;/i&gt; --&gt;
+                                &lt;svg class="bi bi-question-circle text-primary-700 me-2 inline-block" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                                  &lt;path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                  &lt;path d="M5.25 6.033h1.32c0-.781.458-1.384 1.36-1.384.685 0 1.313.343 1.313 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.007.463h1.307v-.355c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.326 0-2.786.647-2.754 2.533zm1.562 5.516c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"&gt;&lt;/path&gt;
+                                &lt;/svg&gt;
+                                How is the SEO services system at Upgency?
+                              &lt;/h3&gt;
+                              &lt;p class="text-gray-500"&gt;Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.&lt;/p&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class="p-6 border-b border-gray-200 mb-6 bg-white dark:bg-gray-800 dark:border-gray-700"&gt;
+                              &lt;h3 class="text-lg leading-normal font-semibold mb-4"&gt;
+                                &lt;!-- &lt;i class="fas fa-question-circle text-primary-700 me-2 inline-block"&gt;&lt;/i&gt; --&gt;
+                                &lt;svg class="bi bi-question-circle text-primary-700 me-2 inline-block" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                                  &lt;path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                  &lt;path d="M5.25 6.033h1.32c0-.781.458-1.384 1.36-1.384.685 0 1.313.343 1.313 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.007.463h1.307v-.355c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.326 0-2.786.647-2.754 2.533zm1.562 5.516c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"&gt;&lt;/path&gt;
+                                &lt;/svg&gt;
+                                Can I change my plan later on?
+                              &lt;/h3&gt;
+                              &lt;p class="text-gray-500"&gt;Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.&lt;/p&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class="p-6 border-b border-gray-200 mb-6 bg-white dark:bg-gray-800 dark:border-gray-700"&gt;
+                              &lt;h3 class="text-lg leading-normal font-semibold mb-4"&gt;
+                                &lt;!-- &lt;i class="fas fa-question-circle text-primary-700 me-2 inline-block"&gt;&lt;/i&gt; --&gt;
+                                &lt;svg class="bi bi-question-circle text-primary-700 me-2 inline-block" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                                  &lt;path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                  &lt;path d="M5.25 6.033h1.32c0-.781.458-1.384 1.36-1.384.685 0 1.313.343 1.313 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.007.463h1.307v-.355c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.326 0-2.786.647-2.754 2.533zm1.562 5.516c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"&gt;&lt;/path&gt;
+                                &lt;/svg&gt;
+                                Can I cancel my account at any time?
+                              &lt;/h3&gt;
+                              &lt;p class="text-gray-500"&gt;Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.&lt;/p&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-full md:w-1/2"&gt;
+                            &lt;div class="p-6 border-b border-gray-200 mb-6 bg-white dark:bg-gray-800 dark:border-gray-700"&gt;
+                              &lt;h3 class="text-lg leading-normal font-semibold mb-4"&gt;
+                                &lt;!-- &lt;i class="fas fa-question-circle text-primary-700 me-2 inline-block"&gt;&lt;/i&gt; --&gt;
+                                &lt;svg class="bi bi-question-circle text-primary-700 me-2 inline-block" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                                  &lt;path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                  &lt;path d="M5.25 6.033h1.32c0-.781.458-1.384 1.36-1.384.685 0 1.313.343 1.313 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.007.463h1.307v-.355c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.326 0-2.786.647-2.754 2.533zm1.562 5.516c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"&gt;&lt;/path&gt;
+                                &lt;/svg&gt;
+                                How many keywords are optimized?
+                              &lt;/h3&gt;
+                              &lt;p class="text-gray-500"&gt;Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.&lt;/p&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class="p-6 border-b border-gray-200 mb-6 bg-white dark:bg-gray-800 dark:border-gray-700"&gt;
+                              &lt;h3 class="text-lg leading-normal font-semibold mb-4"&gt;
+                                &lt;!-- &lt;i class="fas fa-question-circle text-primary-700 me-2 inline-block"&gt;&lt;/i&gt; --&gt;
+                                &lt;svg class="bi bi-question-circle text-primary-700 me-2 inline-block" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                                  &lt;path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                  &lt;path d="M5.25 6.033h1.32c0-.781.458-1.384 1.36-1.384.685 0 1.313.343 1.313 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.007.463h1.307v-.355c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.326 0-2.786.647-2.754 2.533zm1.562 5.516c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"&gt;&lt;/path&gt;
+                                &lt;/svg&gt;
+                                Do you offer any discounted plans?
+                              &lt;/h3&gt;
+                              &lt;p class="text-gray-500"&gt;Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.&lt;/p&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class="p-6 border-b border-gray-200 mb-6 bg-white dark:bg-gray-800 dark:border-gray-700"&gt;
+                              &lt;h3 class="text-lg leading-normal font-semibold mb-4"&gt;
+                                &lt;!-- &lt;i class="fas fa-question-circle text-primary-700 me-2 inline-block"&gt;&lt;/i&gt; --&gt;
+                                &lt;svg class="bi bi-question-circle text-primary-700 me-2 inline-block" width="1.2rem" height="1.2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+                                  &lt;path fill-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd"&gt;&lt;/path&gt;
+                                  &lt;path d="M5.25 6.033h1.32c0-.781.458-1.384 1.36-1.384.685 0 1.313.343 1.313 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.007.463h1.307v-.355c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.326 0-2.786.647-2.754 2.533zm1.562 5.516c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"&gt;&lt;/path&gt;
+                                &lt;/svg&gt;
+                                What is the rate if I type in a credit card?
+                              &lt;/h3&gt;
+                              &lt;p class="text-gray-500"&gt;Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.&lt;/p&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- End faq --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end row -->
+      </div>
+    </div><!-- End snippets -->
+  </main>

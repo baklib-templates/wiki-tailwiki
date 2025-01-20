@@ -1,0 +1,696 @@
+
+  <main id="content">
+    <!-- =========={ HERO }==========  -->
+    <div id="hero" class="relative py-12 jarallax">
+      <!-- background parallax -->
+      <img class="jarallax-img" src="{{ 'images/img-min/bg-planet.jpg' | asset_url }}" alt="title">
+      <!-- background overlay -->
+      <div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"></div>
+
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <div class="flex flex-wrap flex-row -mx-4 items-center justify-center">
+          <!-- content -->
+          <div class="max-w-full w-full lg:w-7/12 px-4">
+            <nav aria-label="breadcrumb">
+              <ol class="flex flex-wrap justify-center bg-transparent text-sm mb-0 space-x-1">
+                <li>
+                  <a href="#" class="text-gray-200 hover:text-white">
+                    Home
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="/s/index" class="text-gray-200 hover:text-white">
+                    Snippets
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                  </a>
+                </li>
+                <li class="hidden md:block text-white" aria-current="page">Review Sections</li>
+              </ol>
+            </nav>
+
+            <div class="mt-0 pt-6 text-center">
+              <h1 class="text-2xl md:text-3xl leading-normal mb-2 font-semibold text-white">Review Sections</h1>    
+              <hr class="block w-12 h-0.5 mx-auto my-5 bg-yellow-300 border-yellow-300">       
+            </div>
+          </div><!-- end content -->
+        </div>
+      </div>
+    </div><!-- End hero -->
+
+    <!-- =========={ SNIPPETS }==========  -->
+    <div id="snippets" class="relative pt-12 bg-white dark:bg-gray-800">
+      <div class="container mx-auto px-6 lg:px-4">
+        <!-- row -->
+        <div class="flex flex-wrap flex-row -mx-4">
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Review Sections style 1
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- Reviews start -->
+                <div id="reviews" class="relative py-16 md:py-24 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20">
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <!-- section header -->
+                    <header class="text-center mx-auto mb-12">
+                      <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"><span class="font-light">Clients</span> Review</h2>
+                      <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
+                      <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">Do not take our words, check out what people says.!</p>
+                    </header><!-- end section header -->
+
+                    <!-- row -->
+                    <div class="flex flex-wrap flex-row -mx-4 justify-center">
+                      <div class="max-w-full px-4 w-11/12 md:w-full">
+                        <!-- review slider -->
+                        <div class="nav-dark-button" data-flickity='{ "cellAlign": "left", "wrapAround": true, "adaptiveHeight": true, "pageDots": false }'>
+                          <!-- item -->
+                          <div class="flex-shrink max-w-full px-4 w-full md:w-1/2 lg:px-12">
+                            <!-- Reviews -->
+                            <div class="mb-12 md:mb-2">
+                              <div class="w-full text-center">
+                                <div class="relative -mb-6 z-10">
+                                  <img class="w-14 h-14 bg-white border border-gray-200 rounded-full mx-auto" src="{{ 'images/img-min/img1-small.jpg' | asset_url }}" alt="Image description">
+                                </div>
+                              </div>
+                              <div class="relative p-10 bg-white dark:bg-gray-800 shadow text-center rounded pt-12">
+                                <p class="mb-0">
+                                  <span class="text-base font-semibold">Rafael Ezo</span>
+                                </p>
+                                <p class="mb-0"><span class="text-sm text-gray-500 ms-2">CEO One Company</span></p>
+                                <blockquote>
+                                  <ul class="flex my-2 mx-auto justify-center">
+                                    <li class="me-3 text-yellow-300">
+                                      <!-- icon -->
+                                      <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                      <!-- <i class="fa fa-star"></i> -->
+                                    </li>
+                                    <li class="me-3 text-yellow-300">
+                                      <!-- icon -->
+                                      <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                      <!-- <i class="fa fa-star"></i> -->
+                                    </li>
+                                    <li class="me-3 text-yellow-300">
+                                      <!-- icon -->
+                                      <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                      <!-- <i class="fa fa-star"></i> -->
+                                    </li>
+                                    <li class="me-3 text-yellow-300">
+                                      <!-- icon -->
+                                      <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                      <!-- <i class="fa fa-star"></i> -->
+                                    </li>
+                                    <li class="me-3 text-yellow-300">
+                                      <!-- icon -->
+                                      <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                      <!-- <i class="fa fa-star"></i> -->
+                                    </li>
+                                  </ul>
+                                  <p class="text-gray-500">Tailpro have developed some fantastic service. They support our brand, reduce production time of written work and look great.</p>
+                                </blockquote>
+                              </div>
+                            </div><!-- End Reviews -->
+                          </div>
+
+                          <!-- item -->
+                          <div class="flex-shrink max-w-full px-4 w-full md:w-1/2 lg:px-12">
+                            <!-- Reviews -->
+                            <div class="mb-12 md:mb-2">
+                              <div class="w-full text-center">
+                                <div class="relative -mb-6 z-10">
+                                  <img class="w-14 h-14 bg-white border border-gray-200 rounded-full mx-auto" src="{{ 'images/img-min/img2-small.jpg' | asset_url }}" alt="Image description">
+                                </div>
+                              </div>
+                              <div class="relative p-10 bg-white dark:bg-gray-800 shadow text-center rounded pt-12">
+                                <p class="mb-0">
+                                  <span class="text-base font-semibold">Jessica Ramos</span>
+                                </p>
+                                <p class="mb-0"><span class="text-sm text-gray-500 ms-2">CEO One Company</span></p>
+                                <blockquote>
+                                  <ul class="flex my-2 mx-auto justify-center">
+                                    <li class="me-3 text-yellow-300">
+                                      <!-- icon -->
+                                      <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                      <!-- <i class="fa fa-star"></i> -->
+                                    </li>
+                                    <li class="me-3 text-yellow-300">
+                                      <!-- icon -->
+                                      <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                      <!-- <i class="fa fa-star"></i> -->
+                                    </li>
+                                    <li class="me-3 text-yellow-300">
+                                      <!-- icon -->
+                                      <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                      <!-- <i class="fa fa-star"></i> -->
+                                    </li>
+                                    <li class="me-3 text-yellow-300">
+                                      <!-- icon -->
+                                      <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                      <!-- <i class="fa fa-star"></i> -->
+                                    </li>
+                                    <li class="me-3 text-yellow-300">
+                                      <!-- icon -->
+                                      <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                      <!-- <i class="fa fa-star"></i> -->
+                                    </li>
+                                  </ul>
+                                  <p class="text-gray-500">Great team to work with, very approachable and are able to answer any questions we may have regarding project work.</p>
+                                </blockquote>
+                              </div>
+                            </div><!-- End Reviews -->
+                          </div>
+
+                           <!-- item -->
+                          <div class="flex-shrink max-w-full px-4 w-full md:w-1/2 lg:px-12">
+                            <!-- Reviews -->
+                            <div class="mb-12 md:mb-2">
+                              <div class="w-full text-center">
+                                <div class="relative -mb-6 z-10">
+                                  <img class="w-14 h-14 bg-white border border-gray-200 rounded-full mx-auto" src="{{ 'images/img-min/img3-small.jpg' | asset_url }}" alt="Image description">
+                                </div>
+                              </div>
+                              <div class="relative p-10 bg-white dark:bg-gray-800 shadow text-center rounded pt-12">
+                                <p class="mb-0">
+                                  <span class="text-base font-semibold">Demian Berbaza</span>
+                                </p>
+                                <p class="mb-0"><span class="text-sm text-gray-500 ms-2">CEO One Company</span></p>
+                                <blockquote>
+                                  <ul class="flex my-2 mx-auto justify-center">
+                                    <li class="me-3 text-yellow-300">
+                                      <!-- icon -->
+                                      <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                      <!-- <i class="fa fa-star"></i> -->
+                                    </li>
+                                    <li class="me-3 text-yellow-300">
+                                      <!-- icon -->
+                                      <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                      <!-- <i class="fa fa-star"></i> -->
+                                    </li>
+                                    <li class="me-3 text-yellow-300">
+                                      <!-- icon -->
+                                      <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                      <!-- <i class="fa fa-star"></i> -->
+                                    </li>
+                                    <li class="me-3 text-yellow-300">
+                                      <!-- icon -->
+                                      <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                      <!-- <i class="fa fa-star"></i> -->
+                                    </li>
+                                    <li class="me-3 text-yellow-300">
+                                      <!-- icon -->
+                                      <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                      <!-- <i class="fa fa-star"></i> -->
+                                    </li>
+                                  </ul>
+                                  <p class="text-gray-500">Thank you so much for your work on the Logo design and Web development. They really helped us get to where we needed.</p>
+                                </blockquote>
+                              </div>
+                            </div><!-- End Reviews -->
+                          </div>
+                        </div><!-- end review slider -->
+                      </div>
+                    </div><!-- end row -->
+                  </div>
+                </div><!-- End Reviews -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- Reviews start --&gt;
+                    &lt;div id="reviews" class="relative py-16 md:py-24 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20"&gt;
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;!-- section header --&gt;
+                        &lt;header class="text-center mx-auto mb-12"&gt;
+                          &lt;h2 class="text-2xl md:text-3xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100"&gt;&lt;span class="font-light"&gt;Clients&lt;/span&gt; Review&lt;/h2&gt;
+                          &lt;hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700"&gt;
+                          &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2"&gt;Do not take our words, check out what people says.!&lt;/p&gt;
+                        &lt;/header&gt;&lt;!-- end section header --&gt;
+
+                        &lt;!-- row --&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4 justify-center"&gt;
+                          &lt;div class="max-w-full px-4 w-11/12 md:w-full"&gt;
+                            &lt;!-- review slider --&gt;
+                            &lt;div class="nav-dark-button" data-flickity='{ "cellAlign": "left", "wrapAround": true, "adaptiveHeight": true, "pageDots": false }'&gt;
+                              &lt;!-- item --&gt;
+                              &lt;div class="flex-shrink max-w-full px-4 w-full md:w-1/2 lg:px-12"&gt;
+                                &lt;!-- Reviews --&gt;
+                                &lt;div class="mb-12 md:mb-2"&gt;
+                                  &lt;div class="w-full text-center"&gt;
+                                    &lt;div class="relative -mb-6 z-10"&gt;
+                                      &lt;img class="w-14 h-14 bg-white border border-gray-200 rounded-full mx-auto" src="{{ 'images/img-min/img1-small.jpg' | asset_url }}" alt="Image description"&gt;
+                                    &lt;/div&gt;
+                                  &lt;/div&gt;
+                                  &lt;div class="relative p-10 bg-white dark:bg-gray-800 shadow text-center rounded pt-12"&gt;
+                                    &lt;p class="mb-0"&gt;
+                                      &lt;span class="text-base font-semibold"&gt;Rafael Ezo&lt;/span&gt;
+                                    &lt;/p&gt;
+                                    &lt;p class="mb-0"&gt;&lt;span class="text-sm text-gray-500 ms-2"&gt;CEO One Company&lt;/span&gt;&lt;/p&gt;
+                                    &lt;blockquote&gt;
+                                      &lt;ul class="flex my-2 mx-auto justify-center"&gt;
+                                        &lt;li class="me-3 text-yellow-300"&gt;
+                                          &lt;!-- icon --&gt;
+                                          &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                          &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                        &lt;/li&gt;
+                                        &lt;li class="me-3 text-yellow-300"&gt;
+                                          &lt;!-- icon --&gt;
+                                          &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                          &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                        &lt;/li&gt;
+                                        &lt;li class="me-3 text-yellow-300"&gt;
+                                          &lt;!-- icon --&gt;
+                                          &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                          &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                        &lt;/li&gt;
+                                        &lt;li class="me-3 text-yellow-300"&gt;
+                                          &lt;!-- icon --&gt;
+                                          &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                          &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                        &lt;/li&gt;
+                                        &lt;li class="me-3 text-yellow-300"&gt;
+                                          &lt;!-- icon --&gt;
+                                          &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                          &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                        &lt;/li&gt;
+                                      &lt;/ul&gt;
+                                      &lt;p class="text-gray-500"&gt;Tailpro have developed some fantastic service. They support our brand, reduce production time of written work and look great.&lt;/p&gt;
+                                    &lt;/blockquote&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;&lt;!-- End Reviews --&gt;
+                              &lt;/div&gt;
+
+                              &lt;!-- item --&gt;
+                              &lt;div class="flex-shrink max-w-full px-4 w-full md:w-1/2 lg:px-12"&gt;
+                                &lt;!-- Reviews --&gt;
+                                &lt;div class="mb-12 md:mb-2"&gt;
+                                  &lt;div class="w-full text-center"&gt;
+                                    &lt;div class="relative -mb-6 z-10"&gt;
+                                      &lt;img class="w-14 h-14 bg-white border border-gray-200 rounded-full mx-auto" src="{{ 'images/img-min/img2-small.jpg' | asset_url }}" alt="Image description"&gt;
+                                    &lt;/div&gt;
+                                  &lt;/div&gt;
+                                  &lt;div class="relative p-10 bg-white dark:bg-gray-800 shadow text-center rounded pt-12"&gt;
+                                    &lt;p class="mb-0"&gt;
+                                      &lt;span class="text-base font-semibold"&gt;Jessica Ramos&lt;/span&gt;
+                                    &lt;/p&gt;
+                                    &lt;p class="mb-0"&gt;&lt;span class="text-sm text-gray-500 ms-2"&gt;CEO One Company&lt;/span&gt;&lt;/p&gt;
+                                    &lt;blockquote&gt;
+                                      &lt;ul class="flex my-2 mx-auto justify-center"&gt;
+                                        &lt;li class="me-3 text-yellow-300"&gt;
+                                          &lt;!-- icon --&gt;
+                                          &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                          &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                        &lt;/li&gt;
+                                        &lt;li class="me-3 text-yellow-300"&gt;
+                                          &lt;!-- icon --&gt;
+                                          &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                          &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                        &lt;/li&gt;
+                                        &lt;li class="me-3 text-yellow-300"&gt;
+                                          &lt;!-- icon --&gt;
+                                          &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                          &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                        &lt;/li&gt;
+                                        &lt;li class="me-3 text-yellow-300"&gt;
+                                          &lt;!-- icon --&gt;
+                                          &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                          &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                        &lt;/li&gt;
+                                        &lt;li class="me-3 text-yellow-300"&gt;
+                                          &lt;!-- icon --&gt;
+                                          &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                          &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                        &lt;/li&gt;
+                                      &lt;/ul&gt;
+                                      &lt;p class="text-gray-500"&gt;Great team to work with, very approachable and are able to answer any questions we may have regarding project work.&lt;/p&gt;
+                                    &lt;/blockquote&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;&lt;!-- End Reviews --&gt;
+                              &lt;/div&gt;
+
+                               &lt;!-- item --&gt;
+                              &lt;div class="flex-shrink max-w-full px-4 w-full md:w-1/2 lg:px-12"&gt;
+                                &lt;!-- Reviews --&gt;
+                                &lt;div class="mb-12 md:mb-2"&gt;
+                                  &lt;div class="w-full text-center"&gt;
+                                    &lt;div class="relative -mb-6 z-10"&gt;
+                                      &lt;img class="w-14 h-14 bg-white border border-gray-200 rounded-full mx-auto" src="{{ 'images/img-min/img3-small.jpg' | asset_url }}" alt="Image description"&gt;
+                                    &lt;/div&gt;
+                                  &lt;/div&gt;
+                                  &lt;div class="relative p-10 bg-white dark:bg-gray-800 shadow text-center rounded pt-12"&gt;
+                                    &lt;p class="mb-0"&gt;
+                                      &lt;span class="text-base font-semibold"&gt;Demian Berbaza&lt;/span&gt;
+                                    &lt;/p&gt;
+                                    &lt;p class="mb-0"&gt;&lt;span class="text-sm text-gray-500 ms-2"&gt;CEO One Company&lt;/span&gt;&lt;/p&gt;
+                                    &lt;blockquote&gt;
+                                      &lt;ul class="flex my-2 mx-auto justify-center"&gt;
+                                        &lt;li class="me-3 text-yellow-300"&gt;
+                                          &lt;!-- icon --&gt;
+                                          &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                          &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                        &lt;/li&gt;
+                                        &lt;li class="me-3 text-yellow-300"&gt;
+                                          &lt;!-- icon --&gt;
+                                          &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                          &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                        &lt;/li&gt;
+                                        &lt;li class="me-3 text-yellow-300"&gt;
+                                          &lt;!-- icon --&gt;
+                                          &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                          &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                        &lt;/li&gt;
+                                        &lt;li class="me-3 text-yellow-300"&gt;
+                                          &lt;!-- icon --&gt;
+                                          &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                          &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                        &lt;/li&gt;
+                                        &lt;li class="me-3 text-yellow-300"&gt;
+                                          &lt;!-- icon --&gt;
+                                          &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                          &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                        &lt;/li&gt;
+                                      &lt;/ul&gt;
+                                      &lt;p class="text-gray-500"&gt;Thank you so much for your work on the Logo design and Web development. They really helped us get to where we needed.&lt;/p&gt;
+                                    &lt;/blockquote&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;&lt;!-- End Reviews --&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;&lt;!-- end review slider --&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;&lt;!-- end row --&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- End Reviews --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Review Sections style 2
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- Reviews start -->
+                <div id="reviews" class="relative py-20 md:py-24 bg-white dark:bg-gray-800">
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <!-- section header -->
+                    <header class="text-center mx-auto mb-12">
+                      <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"><span class="font-light">Clients</span> Review</h2>
+                      <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
+                      <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">Do not take our words, check out what people says.!</p>
+                    </header><!-- end section header -->
+
+                    <!-- row -->
+                    <div class="flex flex-wrap flex-row -mx-4 justify-center">
+                      <div class="max-w-full w-full px-4 md:w-10/12">
+                        <!-- review slider -->
+                        <div class="nav-dark-button" data-flickity='{ "cellAlign": "left", "wrapAround": true, "adaptiveHeight": true, "pageDots": false, "imagesLoaded": true }'>
+                          <!-- item -->
+                          <div class="w-full px-12 lg:px-24 text-center">
+                            <div class="mt-2">
+                              <img src="{{ 'images/img-min/avatar.png' | asset_url }}" alt="avatar" class="mx-auto w-24 h-24 max-w-full rounded-full">
+                              <blockquote>
+                                <ul class="flex my-6 mx-auto justify-center">
+                                  <li class="me-3 text-yellow-300">
+                                    <!-- icon -->
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                    <!-- <i class="fa fa-star"></i> -->
+                                  </li>
+                                  <li class="me-3 text-yellow-300">
+                                    <!-- icon -->
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                    <!-- <i class="fa fa-star"></i> -->
+                                  </li>
+                                  <li class="me-3 text-yellow-300">
+                                    <!-- icon -->
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                    <!-- <i class="fa fa-star"></i> -->
+                                  </li>
+                                  <li class="me-3 text-yellow-300">
+                                    <!-- icon -->
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                    <!-- <i class="fa fa-star"></i> -->
+                                  </li>
+                                  <li class="me-3 text-yellow-300">
+                                    <!-- icon -->
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                    <!-- <i class="fa fa-star"></i> -->
+                                  </li>
+                                </ul>
+                                <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">I love the professionalism of this team. They're the best partner for your digital marketing needs.</p>
+                              </blockquote>
+                              <p class="text-center text-gray-500 mb-0 mt-6"><span class="font-bold">John Doe</span>, One Company</p>
+                            </div>
+                          </div>
+
+                          <!-- item -->
+                          <div class="w-full px-12 lg:px-24 text-center">
+                            <div class="mt-2">
+                              <img src="{{ 'images/img-min/img2-small.jpg' | asset_url }}" alt="avatar" class="mx-auto w-24 h-24 max-w-full rounded-full">
+                              <blockquote>
+                                <ul class="flex my-6 mx-auto justify-center">
+                                  <li class="me-3 text-yellow-300">
+                                    <!-- icon -->
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                    <!-- <i class="fa fa-star"></i> -->
+                                  </li>
+                                  <li class="me-3 text-yellow-300">
+                                    <!-- icon -->
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                    <!-- <i class="fa fa-star"></i> -->
+                                  </li>
+                                  <li class="me-3 text-yellow-300">
+                                    <!-- icon -->
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                    <!-- <i class="fa fa-star"></i> -->
+                                  </li>
+                                  <li class="me-3 text-yellow-300">
+                                    <!-- icon -->
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                    <!-- <i class="fa fa-star"></i> -->
+                                  </li>
+                                  <li class="me-3 text-yellow-300">
+                                    <!-- icon -->
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                    <!-- <i class="fa fa-star"></i> -->
+                                  </li>
+                                </ul>
+                                <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">I had my company's App redesigned and we started to get high quality leads and buyer. I highly recommend this team for the growth of your business.</p>
+                              </blockquote>
+                              <p class="text-center text-gray-500 mb-0 mt-6"><span class="font-bold">John Doe</span>, One Company</p>
+                            </div>
+                          </div>
+
+                          <!-- item -->
+                          <div class="w-full px-12 lg:px-24 text-center">
+                            <div class="mt-2">
+                              <img src="{{ 'images/img-min/img3-small.jpg' | asset_url }}" alt="avatar" class="mx-auto w-24 h-24 max-w-full rounded-full">
+                              <blockquote>
+                                <ul class="flex my-6 mx-auto justify-center">
+                                  <li class="me-3 text-yellow-300">
+                                    <!-- icon -->
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                    <!-- <i class="fa fa-star"></i> -->
+                                  </li>
+                                  <li class="me-3 text-yellow-300">
+                                    <!-- icon -->
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                    <!-- <i class="fa fa-star"></i> -->
+                                  </li>
+                                  <li class="me-3 text-yellow-300">
+                                    <!-- icon -->
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                    <!-- <i class="fa fa-star"></i> -->
+                                  </li>
+                                  <li class="me-3 text-yellow-300">
+                                    <!-- icon -->
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                    <!-- <i class="fa fa-star"></i> -->
+                                  </li>
+                                  <li class="me-3 text-yellow-300">
+                                    <!-- icon -->
+                                    <svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'><path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/></svg>
+                                    <!-- <i class="fa fa-star"></i> -->
+                                  </li>
+                                </ul>
+                                <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">Landcore helped us not only for our brand awareness but also the sales conversion. That's what I'm always looking for from an agency.</p>
+                              </blockquote>
+                              <p class="text-center text-gray-500 mb-0 mt-6"><span class="font-bold">John Doe</span>, One Company</p>
+                            </div>
+                          </div>
+                        </div><!-- End Reviews -->
+                      </div>
+                    </div><!-- end row -->
+                  </div>
+                </div><!-- End Reviews -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- Reviews start --&gt;
+                    &lt;div id="reviews" class="relative py-20 md:py-24 bg-white dark:bg-gray-800"&gt;
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;!-- section header --&gt;
+                        &lt;header class="text-center mx-auto mb-12"&gt;
+                          &lt;h2 class="text-2xl md:text-3xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100"&gt;&lt;span class="font-light"&gt;Clients&lt;/span&gt; Review&lt;/h2&gt;
+                          &lt;hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700"&gt;
+                          &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2"&gt;Do not take our words, check out what people says.!&lt;/p&gt;
+                        &lt;/header&gt;&lt;!-- end section header --&gt;
+
+                        &lt;!-- row --&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4 justify-center"&gt;
+                          &lt;div class="max-w-full w-full px-4 md:w-10/12"&gt;
+                            &lt;!-- review slider --&gt;
+                            &lt;div class="nav-dark-button" data-flickity='{ "cellAlign": "left", "wrapAround": true, "adaptiveHeight": true, "pageDots": false, "imagesLoaded": true }'&gt;
+                              &lt;!-- item --&gt;
+                              &lt;div class="w-full px-12 lg:px-24 text-center"&gt;
+                                &lt;div class="mt-2"&gt;
+                                  &lt;img src="{{ 'images/img-min/avatar.png' | asset_url }}" alt="avatar" class="mx-auto w-24 h-24 max-w-full rounded-full"&gt;
+                                  &lt;blockquote&gt;
+                                    &lt;ul class="flex my-6 mx-auto justify-center"&gt;
+                                      &lt;li class="me-3 text-yellow-300"&gt;
+                                        &lt;!-- icon --&gt;
+                                        &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                        &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                      &lt;/li&gt;
+                                      &lt;li class="me-3 text-yellow-300"&gt;
+                                        &lt;!-- icon --&gt;
+                                        &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                        &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                      &lt;/li&gt;
+                                      &lt;li class="me-3 text-yellow-300"&gt;
+                                        &lt;!-- icon --&gt;
+                                        &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                        &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                      &lt;/li&gt;
+                                      &lt;li class="me-3 text-yellow-300"&gt;
+                                        &lt;!-- icon --&gt;
+                                        &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                        &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                      &lt;/li&gt;
+                                      &lt;li class="me-3 text-yellow-300"&gt;
+                                        &lt;!-- icon --&gt;
+                                        &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                        &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                      &lt;/li&gt;
+                                    &lt;/ul&gt;
+                                    &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2"&gt;I love the professionalism of this team. They're the best partner for your digital marketing needs.&lt;/p&gt;
+                                  &lt;/blockquote&gt;
+                                  &lt;p class="text-center text-gray-500 mb-0 mt-6"&gt;&lt;span class="font-bold"&gt;John Doe&lt;/span&gt;, One Company&lt;/p&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+
+                              &lt;!-- item --&gt;
+                              &lt;div class="w-full px-12 lg:px-24 text-center"&gt;
+                                &lt;div class="mt-2"&gt;
+                                  &lt;img src="{{ 'images/img-min/img2-small.jpg' | asset_url }}" alt="avatar" class="mx-auto w-24 h-24 max-w-full rounded-full"&gt;
+                                  &lt;blockquote&gt;
+                                    &lt;ul class="flex my-6 mx-auto justify-center"&gt;
+                                      &lt;li class="me-3 text-yellow-300"&gt;
+                                        &lt;!-- icon --&gt;
+                                        &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                        &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                      &lt;/li&gt;
+                                      &lt;li class="me-3 text-yellow-300"&gt;
+                                        &lt;!-- icon --&gt;
+                                        &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                        &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                      &lt;/li&gt;
+                                      &lt;li class="me-3 text-yellow-300"&gt;
+                                        &lt;!-- icon --&gt;
+                                        &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                        &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                      &lt;/li&gt;
+                                      &lt;li class="me-3 text-yellow-300"&gt;
+                                        &lt;!-- icon --&gt;
+                                        &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                        &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                      &lt;/li&gt;
+                                      &lt;li class="me-3 text-yellow-300"&gt;
+                                        &lt;!-- icon --&gt;
+                                        &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                        &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                      &lt;/li&gt;
+                                    &lt;/ul&gt;
+                                    &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2"&gt;I had my company's App redesigned and we started to get high quality leads and buyer. I highly recommend this team for the growth of your business.&lt;/p&gt;
+                                  &lt;/blockquote&gt;
+                                  &lt;p class="text-center text-gray-500 mb-0 mt-6"&gt;&lt;span class="font-bold"&gt;John Doe&lt;/span&gt;, One Company&lt;/p&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+
+                              &lt;!-- item --&gt;
+                              &lt;div class="w-full px-12 lg:px-24 text-center"&gt;
+                                &lt;div class="mt-2"&gt;
+                                  &lt;img src="{{ 'images/img-min/img3-small.jpg' | asset_url }}" alt="avatar" class="mx-auto w-24 h-24 max-w-full rounded-full"&gt;
+                                  &lt;blockquote&gt;
+                                    &lt;ul class="flex my-6 mx-auto justify-center"&gt;
+                                      &lt;li class="me-3 text-yellow-300"&gt;
+                                        &lt;!-- icon --&gt;
+                                        &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                        &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                      &lt;/li&gt;
+                                      &lt;li class="me-3 text-yellow-300"&gt;
+                                        &lt;!-- icon --&gt;
+                                        &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                        &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                      &lt;/li&gt;
+                                      &lt;li class="me-3 text-yellow-300"&gt;
+                                        &lt;!-- icon --&gt;
+                                        &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                        &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                      &lt;/li&gt;
+                                      &lt;li class="me-3 text-yellow-300"&gt;
+                                        &lt;!-- icon --&gt;
+                                        &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                        &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                      &lt;/li&gt;
+                                      &lt;li class="me-3 text-yellow-300"&gt;
+                                        &lt;!-- icon --&gt;
+                                        &lt;svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill="currentColor" viewBox='0 0 512 512'&gt;&lt;path class="rating-svg" d='M394,480a16,16,0,0,1-9.39-3L256,383.76,127.39,477a16,16,0,0,1-24.55-18.08L153,310.35,23,221.2A16,16,0,0,1,32,192H192.38l48.4-148.95a16,16,0,0,1,30.44,0l48.4,149H480a16,16,0,0,1,9.05,29.2L359,310.35l50.13,148.53A16,16,0,0,1,394,480Z'/&gt;&lt;/svg&gt;
+                                        &lt;!-- &lt;i class="fa fa-star"&gt;&lt;/i&gt; --&gt;
+                                      &lt;/li&gt;
+                                    &lt;/ul&gt;
+                                    &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2"&gt;Landcore helped us not only for our brand awareness but also the sales conversion. That's what I'm always looking for from an agency.&lt;/p&gt;
+                                  &lt;/blockquote&gt;
+                                  &lt;p class="text-center text-gray-500 mb-0 mt-6"&gt;&lt;span class="font-bold"&gt;John Doe&lt;/span&gt;, One Company&lt;/p&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;&lt;!-- End Reviews --&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;&lt;!-- end row --&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- End Reviews --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+        </div><!-- end row -->
+      </div>
+    </div><!-- End snippets -->
+  </main>

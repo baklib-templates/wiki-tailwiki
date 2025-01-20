@@ -1,0 +1,396 @@
+
+  <main id="content">
+    <!-- =========={ HERO }==========  -->
+    <div id="hero" class="relative py-12 jarallax">
+      <!-- background parallax -->
+      <img class="jarallax-img" src="{{ 'images/img-min/bg-planet.jpg' | asset_url }}" alt="title">
+      <!-- background overlay -->
+      <div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"></div>
+
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <div class="flex flex-wrap flex-row -mx-4 items-center justify-center">
+          <!-- content -->
+          <div class="max-w-full w-full lg:w-7/12 px-4">
+            <nav aria-label="breadcrumb">
+              <ol class="flex flex-wrap justify-center bg-transparent text-sm mb-0 space-x-1">
+                <li>
+                  <a href="#" class="text-gray-200 hover:text-white">
+                    Home
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="/s/index" class="text-gray-200 hover:text-white">
+                    Snippets
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                  </a>
+                </li>
+                <li class="hidden md:block text-white" aria-current="page">Process Sections</li>
+              </ol>
+            </nav>
+
+            <div class="mt-0 pt-6 text-center">
+              <h1 class="text-2xl md:text-3xl leading-normal mb-2 font-semibold text-white">Process Sections</h1>    
+              <hr class="block w-12 h-0.5 mx-auto my-5 bg-yellow-300 border-yellow-300">       
+            </div>
+          </div><!-- end content -->
+        </div>
+      </div>
+    </div><!-- End hero -->
+
+    <!-- =========={ SNIPPETS }==========  -->
+    <div id="snippets" class="relative pt-12 bg-white dark:bg-gray-800">
+      <div class="container mx-auto px-6 lg:px-4">
+        <!-- row -->
+        <div class="flex flex-wrap flex-row -mx-4">
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Process Sections style 1
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- Process start -->
+                <div id="process" class="relative py-20 md:py-24 bg-white dark:bg-gray-800">
+                  <div id="progress-line" class="container xl:max-w-6xl mx-auto px-4">
+                    <div class="flex flex-wrap flex-row -mx-4">
+                      <div class="flex-shrink max-w-full px-4 w-full lg:w-1/2">
+                        <!-- processs vertical -->
+                        <ol>
+                          <li class="flex wow fadeInUp" data-wow-duration="1s">
+                            <div class="relative flex-shrink-0 w-16 text-center">
+                              <span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-gray-200 dark:border-gray-700"></span>
+                              <div class="w-12 h-12 me-auto rounded-full p-2 bg-gray-100 border border-gray-200 dark:bg-gray-900 dark:bg-opacity-40 dark:border-gray-700">
+                                <span class="text-primary-700 text-xl">
+                                  1
+                                </span>
+                              </div>
+                            </div>
+
+                            <div class="ms-4 mb-4 lg:ms-6">
+                              <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">Rational Brand</h3>
+                              <p class="text-gray-500">Create attribute in a brand that serves to make a brand a consumer choice.</p>
+                            </div>
+                          </li>
+
+                          <li class="flex wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                            <div class="relative flex-shrink-0 w-16 text-center">
+                              <span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-gray-200 dark:border-gray-700"></span>
+                              <div class="w-12 h-12 me-auto rounded-full p-2 bg-gray-100 border border-gray-200 dark:bg-gray-900 dark:bg-opacity-40 dark:border-gray-700">
+                                <span class="text-primary-700 text-xl">
+                                  2
+                                </span>
+                              </div>
+                            </div>
+
+                            <div class="ms-4 mb-4 lg:ms-6">
+                              <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">Emotional Brand</h3>
+                              <p class="text-gray-500">Create attributes in a brand that serve to create bonds emotions with customers.</p>
+                            </div>
+                          </li>
+
+                          <li class="flex wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                            <div class="relative flex-shrink-0 w-16 text-center">
+                              <span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-gray-200 dark:border-gray-700"></span>
+                              <div class="w-12 h-12 me-auto rounded-full p-2 bg-gray-100 border border-gray-200 dark:bg-gray-900 dark:bg-opacity-40 dark:border-gray-700">
+                                <span class="text-primary-700 text-xl">
+                                  3
+                                </span>
+                              </div>
+                            </div>
+
+                            <div class="ms-4 mb-4 lg:ms-6">
+                              <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">Visual Identity</h3>
+                              <p class="text-gray-500">Create attributes that can be recognized and have a characteristic in the eyes of consumers.</p>
+                            </div>
+                          </li>
+                        </ol><!-- end processs vertical -->
+                      </div>
+
+                      <div class="flex-shrink max-w-full px-4 w-full lg:w-1/2">
+                        <!-- processs vertical -->
+                        <ol>
+                          <li class="flex wow fadeInUp" data-wow-duration="1s">
+                            <div class="relative flex-shrink-0 w-16 text-center">
+                              <span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-gray-200 dark:border-gray-700"></span>
+                              <div class="w-12 h-12 me-auto rounded-full p-2 bg-gray-100 border border-gray-200 dark:bg-gray-900 dark:bg-opacity-40 dark:border-gray-700">
+                                <span class="text-primary-700 text-xl">
+                                  4
+                                </span>
+                              </div>
+                            </div>
+
+                            <div class="ms-4 mb-4 lg:ms-6">
+                              <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">Rational Brand</h3>
+                              <p class="text-gray-500">Create attribute in a brand that serves to make a brand a consumer choice.</p>
+                            </div>
+                          </li>
+
+                          <li class="flex wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                            <div class="relative flex-shrink-0 w-16 text-center">
+                              <span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-gray-200 dark:border-gray-700"></span>
+                              <div class="w-12 h-12 me-auto rounded-full p-2 bg-gray-100 border border-gray-200 dark:bg-gray-900 dark:bg-opacity-40 dark:border-gray-700">
+                                <span class="text-primary-700 text-xl">
+                                  5
+                                </span>
+                              </div>
+                            </div>
+
+                            <div class="ms-4 mb-4 lg:ms-6">
+                              <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">Emotional Brand</h3>
+                              <p class="text-gray-500">Create attributes in a brand that serve to create bonds emotions with customers.</p>
+                            </div>
+                          </li>
+
+                          <li class="flex wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                            <div class="relative flex-shrink-0 w-16 text-center">
+                              <span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-gray-200 dark:border-gray-700"></span>
+                              <div class="w-12 h-12 me-auto rounded-full p-2 bg-gray-100 border border-gray-200 dark:bg-gray-900 dark:bg-opacity-40 dark:border-gray-700">
+                                <span class="text-primary-700 text-xl">
+                                  6
+                                </span>
+                              </div>
+                            </div>
+
+                            <div class="ms-4 mb-4 lg:ms-6">
+                              <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">Visual Identity</h3>
+                              <p class="text-gray-500">Create attributes that can be recognized and have a characteristic in the eyes of consumers.</p>
+                            </div>
+                          </li>
+                        </ol><!-- end processs vertical -->
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End process -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- Process start --&gt;
+                    &lt;div id="process" class="relative py-20 md:py-24 bg-white dark:bg-gray-800"&gt;
+                      &lt;div id="progress-line" class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4"&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-full lg:w-1/2"&gt;
+                            &lt;!-- processs vertical --&gt;
+                            &lt;ol&gt;
+                              &lt;li class="flex wow fadeInUp" data-wow-duration="1s"&gt;
+                                &lt;div class="relative flex-shrink-0 w-16 text-center"&gt;
+                                  &lt;span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-gray-200 dark:border-gray-700"&gt;&lt;/span&gt;
+                                  &lt;div class="w-12 h-12 me-auto rounded-full p-2 bg-gray-100 border border-gray-200 dark:bg-gray-900 dark:bg-opacity-40 dark:border-gray-700"&gt;
+                                    &lt;span class="text-primary-700 text-xl"&gt;
+                                      1
+                                    &lt;/span&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class="ms-4 mb-4 lg:ms-6"&gt;
+                                  &lt;h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100"&gt;Rational Brand&lt;/h3&gt;
+                                  &lt;p class="text-gray-500"&gt;Create attribute in a brand that serves to make a brand a consumer choice.&lt;/p&gt;
+                                &lt;/div&gt;
+                              &lt;/li&gt;
+
+                              &lt;li class="flex wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"&gt;
+                                &lt;div class="relative flex-shrink-0 w-16 text-center"&gt;
+                                  &lt;span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-gray-200 dark:border-gray-700"&gt;&lt;/span&gt;
+                                  &lt;div class="w-12 h-12 me-auto rounded-full p-2 bg-gray-100 border border-gray-200 dark:bg-gray-900 dark:bg-opacity-40 dark:border-gray-700"&gt;
+                                    &lt;span class="text-primary-700 text-xl"&gt;
+                                      2
+                                    &lt;/span&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class="ms-4 mb-4 lg:ms-6"&gt;
+                                  &lt;h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100"&gt;Emotional Brand&lt;/h3&gt;
+                                  &lt;p class="text-gray-500"&gt;Create attributes in a brand that serve to create bonds emotions with customers.&lt;/p&gt;
+                                &lt;/div&gt;
+                              &lt;/li&gt;
+
+                              &lt;li class="flex wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s"&gt;
+                                &lt;div class="relative flex-shrink-0 w-16 text-center"&gt;
+                                  &lt;span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-gray-200 dark:border-gray-700"&gt;&lt;/span&gt;
+                                  &lt;div class="w-12 h-12 me-auto rounded-full p-2 bg-gray-100 border border-gray-200 dark:bg-gray-900 dark:bg-opacity-40 dark:border-gray-700"&gt;
+                                    &lt;span class="text-primary-700 text-xl"&gt;
+                                      3
+                                    &lt;/span&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class="ms-4 mb-4 lg:ms-6"&gt;
+                                  &lt;h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100"&gt;Visual Identity&lt;/h3&gt;
+                                  &lt;p class="text-gray-500"&gt;Create attributes that can be recognized and have a characteristic in the eyes of consumers.&lt;/p&gt;
+                                &lt;/div&gt;
+                              &lt;/li&gt;
+                            &lt;/ol&gt;&lt;!-- end processs vertical --&gt;
+                          &lt;/div&gt;
+
+                          &lt;div class="flex-shrink max-w-full px-4 w-full lg:w-1/2"&gt;
+                            &lt;!-- processs vertical --&gt;
+                            &lt;ol&gt;
+                              &lt;li class="flex wow fadeInUp" data-wow-duration="1s"&gt;
+                                &lt;div class="relative flex-shrink-0 w-16 text-center"&gt;
+                                  &lt;span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-gray-200 dark:border-gray-700"&gt;&lt;/span&gt;
+                                  &lt;div class="w-12 h-12 me-auto rounded-full p-2 bg-gray-100 border border-gray-200 dark:bg-gray-900 dark:bg-opacity-40 dark:border-gray-700"&gt;
+                                    &lt;span class="text-primary-700 text-xl"&gt;
+                                      4
+                                    &lt;/span&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class="ms-4 mb-4 lg:ms-6"&gt;
+                                  &lt;h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100"&gt;Rational Brand&lt;/h3&gt;
+                                  &lt;p class="text-gray-500"&gt;Create attribute in a brand that serves to make a brand a consumer choice.&lt;/p&gt;
+                                &lt;/div&gt;
+                              &lt;/li&gt;
+
+                              &lt;li class="flex wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"&gt;
+                                &lt;div class="relative flex-shrink-0 w-16 text-center"&gt;
+                                  &lt;span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-gray-200 dark:border-gray-700"&gt;&lt;/span&gt;
+                                  &lt;div class="w-12 h-12 me-auto rounded-full p-2 bg-gray-100 border border-gray-200 dark:bg-gray-900 dark:bg-opacity-40 dark:border-gray-700"&gt;
+                                    &lt;span class="text-primary-700 text-xl"&gt;
+                                      5
+                                    &lt;/span&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class="ms-4 mb-4 lg:ms-6"&gt;
+                                  &lt;h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100"&gt;Emotional Brand&lt;/h3&gt;
+                                  &lt;p class="text-gray-500"&gt;Create attributes in a brand that serve to create bonds emotions with customers.&lt;/p&gt;
+                                &lt;/div&gt;
+                              &lt;/li&gt;
+
+                              &lt;li class="flex wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s"&gt;
+                                &lt;div class="relative flex-shrink-0 w-16 text-center"&gt;
+                                  &lt;span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-gray-200 dark:border-gray-700"&gt;&lt;/span&gt;
+                                  &lt;div class="w-12 h-12 me-auto rounded-full p-2 bg-gray-100 border border-gray-200 dark:bg-gray-900 dark:bg-opacity-40 dark:border-gray-700"&gt;
+                                    &lt;span class="text-primary-700 text-xl"&gt;
+                                      6
+                                    &lt;/span&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class="ms-4 mb-4 lg:ms-6"&gt;
+                                  &lt;h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100"&gt;Visual Identity&lt;/h3&gt;
+                                  &lt;p class="text-gray-500"&gt;Create attributes that can be recognized and have a characteristic in the eyes of consumers.&lt;/p&gt;
+                                &lt;/div&gt;
+                              &lt;/li&gt;
+                            &lt;/ol&gt;&lt;!-- end processs vertical --&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- End process --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Process Sections style 2
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- Process start -->
+                <div id="process" class="relative py-20 md:py-24 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20">
+                  <div id="progress-line" class="container xl:max-w-6xl mx-auto px-4">
+                    <div class="flex flex-wrap flex-row -mx-4 justify-center">
+                      <div class="flex-shrink max-w-full px-4 w-full lg:w-2/3">
+                        <div class="relative">
+                          <!-- process horizontal -->
+                          <ul class="ps-0">
+                            <li class="relative float-left text-center w-1/4 ">
+                              <svg class="inline-block rounded-full border bg-white dark:bg-gray-800 dark:border-gray-700 hover:bg-primary-700 hover:text-gray-100 p-2 md:p-4" xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" fill="currentColor" viewBox="0 0 512 512"><path d="M256,48c-79.5,0-144,61.39-144,137,0,87,96,224.87,131.25,272.49a15.77,15.77,0,0,0,25.5,0C304,409.89,400,272.07,400,185,400,109.39,335.5,48,256,48Z" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><circle cx="256" cy="192" r="48" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+
+                              <p class="hidden md:block mt-4">Address</p>
+                            </li>
+                            <li class="relative float-left text-center w-1/4 ">
+                              <svg class="inline-block rounded-full border bg-white dark:bg-gray-800 dark:border-gray-700 hover:bg-primary-700 hover:text-gray-100 p-2 md:p-4" xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" fill="currentColor" viewBox="0 0 512 512"><path d="M80,224l37.78-88.15C123.93,121.5,139.6,112,157.11,112H354.89c17.51,0,33.18,9.5,39.33,23.85L432,224" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><rect x="80" y="224" width="352" height="144" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><polyline points="112 368 112 400 80 400 80 368" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><polyline points="432 368 432 400 400 400 400 368" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><circle cx="144" cy="288" r="16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><circle cx="368" cy="288" r="16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
+
+                                <p class="hidden md:block mt-4">Delivery</p>
+                            </li>
+                            <li class="relative float-left text-center w-1/4 ">
+                              <svg class="inline-block rounded-full border bg-white dark:bg-gray-800 dark:border-gray-700 hover:bg-primary-700 hover:text-gray-100 p-2 md:p-4" xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" fill="currentColor" viewBox="0 0 512 512"><rect x="48" y="96" width="416" height="320" rx="56" ry="56" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="48" y1="192" x2="464" y2="192" style="fill:none;stroke:currentColor;stroke-linejoin:round;stroke-width:60px"/><rect x="128" y="300" width="48" height="20" style="fill:none;stroke:currentColor;stroke-linejoin:round;stroke-width:60px"/></svg>
+
+                              <p class="hidden md:block mt-4">Payment</p>
+                            </li>
+                            <li class="relative float-left text-center w-1/4 ">
+                              <svg class="inline-block rounded-full border bg-white dark:bg-gray-800 dark:border-gray-700 hover:bg-primary-700 hover:text-gray-100 p-2 md:p-4" xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" fill="currentColor" viewBox="0 0 512 512"><path d="M68.4,192A20.38,20.38,0,0,0,48,212.2a17.87,17.87,0,0,0,.8,5.5L100.5,400a40.46,40.46,0,0,0,39.1,29.5H372.4A40.88,40.88,0,0,0,411.7,400l51.7-182.3.6-5.5A20.38,20.38,0,0,0,443.6,192H68.4ZM261.72,352.07A42.07,42.07,0,1,1,304,310,42.27,42.27,0,0,1,261.72,352.07Z" style="fill:none;stroke:currentColor;stroke-linejoin:round;stroke-width:32px"/><polyline points="160 192 256 64 352 192" style="fill:none;stroke:currentColor;stroke-linejoin:round;stroke-width:32px"/></svg>
+
+                              <p class="hidden md:block mt-4">Review</p>
+                            </li>
+                          </ul><!-- end processs horizontal -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End process -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- Process start --&gt;
+                      &lt;div id="process" class="relative py-20 md:py-24 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20"&gt;
+                        &lt;div id="progress-line" class="container xl:max-w-6xl mx-auto px-4"&gt;
+                          &lt;div class="flex flex-wrap flex-row -mx-4 justify-center"&gt;
+                            &lt;div class="flex-shrink max-w-full px-4 w-full lg:w-2/3"&gt;
+                              &lt;div class="relative"&gt;
+                                &lt;!-- process horizontal --&gt;
+                                &lt;ul class="ps-0"&gt;
+                                  &lt;li class="relative float-left text-center w-1/4 "&gt;
+                                    &lt;svg class="inline-block rounded-full border bg-white dark:bg-gray-800 dark:border-gray-700 hover:bg-primary-700 hover:text-gray-100 p-2 md:p-4" xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;path d="M256,48c-79.5,0-144,61.39-144,137,0,87,96,224.87,131.25,272.49a15.77,15.77,0,0,0,25.5,0C304,409.89,400,272.07,400,185,400,109.39,335.5,48,256,48Z" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;circle cx="256" cy="192" r="48" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;/svg&gt;
+
+                                    &lt;p class="hidden md:block mt-4"&gt;Address&lt;/p&gt;
+                                  &lt;/li&gt;
+                                  &lt;li class="relative float-left text-center w-1/4 "&gt;
+                                    &lt;svg class="inline-block rounded-full border bg-white dark:bg-gray-800 dark:border-gray-700 hover:bg-primary-700 hover:text-gray-100 p-2 md:p-4" xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;path d="M80,224l37.78-88.15C123.93,121.5,139.6,112,157.11,112H354.89c17.51,0,33.18,9.5,39.33,23.85L432,224" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;rect x="80" y="224" width="352" height="144" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;polyline points="112 368 112 400 80 400 80 368" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;polyline points="432 368 432 400 400 400 400 368" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;circle cx="144" cy="288" r="16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;circle cx="368" cy="288" r="16" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;/svg&gt;
+
+                                      &lt;p class="hidden md:block mt-4"&gt;Delivery&lt;/p&gt;
+                                  &lt;/li&gt;
+                                  &lt;li class="relative float-left text-center w-1/4 "&gt;
+                                    &lt;svg class="inline-block rounded-full border bg-white dark:bg-gray-800 dark:border-gray-700 hover:bg-primary-700 hover:text-gray-100 p-2 md:p-4" xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;rect x="48" y="96" width="416" height="320" rx="56" ry="56" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;line x1="48" y1="192" x2="464" y2="192" style="fill:none;stroke:currentColor;stroke-linejoin:round;stroke-width:60px"/&gt;&lt;rect x="128" y="300" width="48" height="20" style="fill:none;stroke:currentColor;stroke-linejoin:round;stroke-width:60px"/&gt;&lt;/svg&gt;
+
+                                    &lt;p class="hidden md:block mt-4"&gt;Payment&lt;/p&gt;
+                                  &lt;/li&gt;
+                                  &lt;li class="relative float-left text-center w-1/4 "&gt;
+                                    &lt;svg class="inline-block rounded-full border bg-white dark:bg-gray-800 dark:border-gray-700 hover:bg-primary-700 hover:text-gray-100 p-2 md:p-4" xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" fill="currentColor" viewBox="0 0 512 512"&gt;&lt;path d="M68.4,192A20.38,20.38,0,0,0,48,212.2a17.87,17.87,0,0,0,.8,5.5L100.5,400a40.46,40.46,0,0,0,39.1,29.5H372.4A40.88,40.88,0,0,0,411.7,400l51.7-182.3.6-5.5A20.38,20.38,0,0,0,443.6,192H68.4ZM261.72,352.07A42.07,42.07,0,1,1,304,310,42.27,42.27,0,0,1,261.72,352.07Z" style="fill:none;stroke:currentColor;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;polyline points="160 192 256 64 352 192" style="fill:none;stroke:currentColor;stroke-linejoin:round;stroke-width:32px"/&gt;&lt;/svg&gt;
+
+                                    &lt;p class="hidden md:block mt-4"&gt;Review&lt;/p&gt;
+                                  &lt;/li&gt;
+                                &lt;/ul&gt;&lt;!-- end processs horizontal --&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;&lt;!-- End process --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+        </div><!-- end row -->
+      </div>
+    </div><!-- End snippets -->
+  </main>

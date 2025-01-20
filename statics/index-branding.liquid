@@ -1,0 +1,490 @@
+
+  <main id="content">
+    <!-- =========={ HERO }==========  -->
+    <div id="hero" class="relative py-20 md:py-24 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20 z-0">
+      <!-- bg wrapper -->
+      <div class="absolute inset-y-0 start-auto end-0 hidden lg:block w-1/3 h-full bg-white dark:bg-gray-800"></div>
+      <div class="absolute inset-y-0 start-auto end-0 block lg:hidden w-1/2 h-full top-auto bg-white dark:bg-gray-800" style="z-index:-1"></div>
+
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <div class="flex flex-wrap flex-row -mx-4 items-center justify-center">
+          <!-- content -->
+          <div class="flex-shrink max-w-full px-4 w-11/12 sm:w-10/12 lg:w-1/2">
+            <div class="text-center lg:text-start mb-12 lg:mb-0 lg:pe-12 xl:pe-24">
+              <h1 class="text-4xl md:text-5xl leading-normal md:leading-tight font-medium text-gray-800 dark:text-gray-100 mb-4">Build your <span class="text-primary-700 font-semibold">Brand identity</span> with us</h1>
+              <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mb-12">We believe that Brand and Business are two different sides of a coin. Although different, they complement each other and cannot be separated.</p>
+              <a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0 me-4" href="#about">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-signpost-split inline-block me-1" viewBox="0 0 16 16">
+                  <path d="M7 7V1.414a1 1 0 0 1 2 0V2h5a1 1 0 0 1 .8.4l.975 1.3a.5.5 0 0 1 0 .6L14.8 5.6a1 1 0 0 1-.8.4H9v10H7v-5H2a1 1 0 0 1-.8-.4L.225 9.3a.5.5 0 0 1 0-.6L1.2 7.4A1 1 0 0 1 2 7h5zm1 3V8H2l-.75 1L2 10h6zm0-5h6l.75-1L14 3H8v2z"/>
+                </svg>
+                What we do
+              </a>
+            </div>
+          </div><!-- end content -->
+
+          <!-- slider -->
+          <div class="flex-shrink max-w-full px-4 w-full lg:w-1/2 align-center">
+            <div class="relative">
+              <div id="thumbnail-slider" class="carousel nav-inset-button nav-light-dots nav-primary-button" data-flickity='{ "cellAlign": "left", "wrapAround": true, "draggable": false, "adaptiveHeight": true, "prevNextButtons": true , "imagesLoaded": true }'>
+                <div class="carousel-cell text-center w-full px-2">
+                  <a href="#">
+                    <img alt="title" class="w-full max-w-full h-auto rounded" src="{{ 'images/img-min/content-agency.jpg' | asset_url }}">
+                  </a>
+                </div>
+                <div class="carousel-cell text-center w-full px-2">
+                  <a href="#">
+                    <img alt="title" class="w-full max-w-full h-auto rounded" src="{{ 'images/img-min/hero-agency.jpg' | asset_url }}">
+                  </a>
+                </div>
+                <div class="carousel-cell text-center w-full px-2">
+                  <a href="#">
+                    <img alt="title" class="w-full max-w-full h-auto rounded" src="{{ 'images/img-min/advertising.jpg' | asset_url }}">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- end slider -->
+        </div>
+      </div>
+    </div><!-- end hero -->
+
+    <!-- =========={ about }==========  -->
+    <div id="about" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-white dark:bg-gray-800">
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <!-- section header -->
+        <header class="text-center mx-auto mb-12">
+          <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"><span class="font-light">What</span> We Do</h2>
+          <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
+        </header><!-- end section header -->
+
+        <!-- showcase  -->
+        <div class="flex flex-wrap flex-row -mx-4 mb-5">
+          <div class="flex-shrink max-w-full w-full lg:w-1/2 px-4 self-center">
+            <div class="px-12 lg:px-4 mb-12 lg:my-0">
+              <img src="{{ 'images/img-min/branding.svg' | asset_url }}" class="max-w-full h-auto w-full" alt="landing page">
+            </div>
+          </div>
+
+          <div class="flex-shrink max-w-full w-full lg:w-1/2 px-4 py-6">
+            <!-- processs vertical -->
+            <ol>
+              <li class="flex wow fadeInUp" data-wow-duration="1s">
+                <div class="relative flex-shrink-0 w-16 text-center">
+                  <span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-gray-200 dark:border-gray-700"></span>
+                  <div class="w-12 h-12 me-auto rounded-full p-2 bg-gray-100 border border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:bg-opacity-40">
+                    <span class="text-primary-700 text-xl">
+                      1
+                    </span>
+                  </div>
+                </div>
+
+                <div class="ms-4 mb-4 lg:ms-6">
+                  <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">Rational Brand</h3>
+                  <p>Create attribute in a brand that serves to make a brand a consumer choice.</p>
+                </div>
+              </li>
+
+              <li class="flex wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                <div class="relative flex-shrink-0 w-16 text-center">
+                  <span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-gray-200 dark:border-gray-700"></span>
+                  <div class="w-12 h-12 me-auto rounded-full p-2 bg-gray-100 border border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:bg-opacity-40">
+                    <span class="text-primary-700 text-xl">
+                      2
+                    </span>
+                  </div>
+                </div>
+
+                <div class="ms-4 mb-4 lg:ms-6">
+                  <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">Emotional Brand</h3>
+                  <p>Create attributes in a brand that serve to create bonds emotions with customers.</p>
+                </div>
+              </li>
+
+              <li class="flex wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                <div class="relative flex-shrink-0 w-16 text-center">
+                  <span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-gray-200 dark:border-gray-700"></span>
+                  <div class="w-12 h-12 me-auto rounded-full p-2 bg-gray-100 border border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:bg-opacity-40">
+                    <span class="text-primary-700 text-xl">
+                      3
+                    </span>
+                  </div>
+                </div>
+
+                <div class="ms-4 mb-4 lg:ms-6">
+                  <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">Visual Identity</h3>
+                  <p>Create attributes that can be recognized and have a characteristic in the eyes of consumers.</p>
+                </div>
+              </li>
+            </ol><!-- end processs vertical -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End about -->
+
+    <!-- =========={ SERVICE }==========  -->
+    <div id="service" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20">
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <!-- section header -->
+        <header class="text-center mx-auto mb-12">
+          <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"><span class="font-light">Our</span> Services</h2>
+          <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
+        </header><!-- end section header -->
+
+        <!-- row -->
+        <div class="flex flex-wrap flex-row -mx-4">
+          <div class="flex-shrink max-w-full px-4 w-ful md:w-1/2 lg:w-1/3">
+            <div class="mb-12 px-4 wow fadeInUp" data-wow-duration="1s">
+              <div class="flex flex-wrap flex-row -mx-4">
+                <!-- icon -->
+                <div class="flex-shrink max-w-full px-4 w-1/4 text-center">
+                  <div class="inline-block text-primary-700 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-award" viewBox="0 0 16 16">
+                      <path d="M9.669.864L8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193l.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702 1.509.229z"/>
+                      <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
+                    </svg>
+                  </div>
+                </div>
+                <!-- text service -->
+                <div class="flex-shrink max-w-full px-4 w-9/12">
+                  <h3 class="text-lg leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Visual Identity & Logo</h3>
+                  <p>Find what you need in one template and combine will make your site look professional.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-shrink max-w-full px-4 w-ful md:w-1/2 lg:w-1/3">
+            <div class="mb-12 px-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+              <div class="flex flex-wrap flex-row -mx-4">
+                <!-- icon -->
+                <div class="flex-shrink max-w-full px-4 w-1/4 text-center">
+                  <div class="inline-block text-primary-700 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-badge-tm" viewBox="0 0 16 16">
+                      <path d="M5.295 11V5.995H7V5H2.403v.994h1.701V11h1.19zm3.397 0V7.01h.058l1.428 3.239h.773l1.42-3.24h.057V11H13.5V5.001h-1.2l-1.71 3.894h-.039l-1.71-3.894H7.634V11h1.06z"/>
+                      <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
+                    </svg>
+                  </div>
+                </div>
+                <!-- text service -->
+                <div class="flex-shrink max-w-full px-4 w-9/12">
+                  <h3 class="text-lg leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Brand Naming</h3>
+                  <p>Find what you need in one template and combine will make your site look professional.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-shrink max-w-full px-4 w-ful md:w-1/2 lg:w-1/3">
+            <div class="mb-12 px-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+              <div class="flex flex-wrap flex-row -mx-4">
+                <!-- icon -->
+                <div class="flex-shrink max-w-full px-4 w-1/4 text-center">
+                  <div class="inline-block text-primary-700 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-chat-start-quote" viewBox="0 0 16 16">
+                      <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path d="M7.066 4.76A1.665 1.665 0 0 0 4 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112zm4 0A1.665 1.665 0 0 0 8 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112z"/>
+                    </svg>
+                  </div>
+                </div>
+                <!-- text service -->
+                <div class="flex-shrink max-w-full px-4 w-9/12">
+                  <h3 class="text-lg leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Tagline Development</h3>
+                  <p>Find what you need in one template and combine will make your site look professional.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-shrink max-w-full px-4 w-ful md:w-1/2 lg:w-1/3">
+            <div class="mb-12 px-4 wow fadeInUp" data-wow-duration="1s">
+              <div class="flex flex-wrap flex-row -mx-4">
+                <!-- icon -->
+                <div class="flex-shrink max-w-full px-4 w-1/4 text-center">
+                  <div class="inline-block text-primary-700 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                      <path d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                    </svg>
+                  </div>
+                </div>
+                <!-- text service -->
+                <div class="flex-shrink max-w-full px-4 w-9/12">
+                  <h3 class="text-lg leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Defining brand Vision</h3>
+                  <p>Find what you need in one template and combine will make your site look professional.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-shrink max-w-full px-4 w-ful md:w-1/2 lg:w-1/3">
+            <div class="mb-12 px-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+              <div class="flex flex-wrap flex-row -mx-4">
+                <!-- icon -->
+                <div class="flex-shrink max-w-full px-4 w-1/4 text-center">
+                  <div class="inline-block text-primary-700 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                      <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                    </svg>
+                  </div>
+                </div>
+                <!-- text service -->
+                <div class="flex-shrink max-w-full px-4 w-9/12">
+                  <h3 class="text-lg leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Brand Identity Guideline</h3>
+                  <p>Find what you need in one template and combine will make your site look professional.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-shrink max-w-full px-4 w-ful md:w-1/2 lg:w-1/3">
+            <div class="mb-12 px-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+              <div class="flex flex-wrap flex-row -mx-4">
+                <!-- icon -->
+                <div class="flex-shrink max-w-full px-4 w-1/4 text-center">
+                  <div class="inline-block text-primary-700 mb-4">
+                    <!-- <i class="fas fa-chart-pie"></i> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 512 512"><path stroke="currentColor" d="M256.05,80.65Q263.94,80,272,80c106,0,192,86,192,192S378,464,272,464A192.09,192.09,0,0,1,89.12,330.65" style="fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"></path><path stroke="currentColor" d="M256,48C141.12,48,48,141.12,48,256a207.29,207.29,0,0,0,18.09,85L256,256Z" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path></svg>
+                  </div>
+                </div>
+                <!-- text service -->
+                <div class="flex-shrink max-w-full px-4 w-9/12">
+                  <h3 class="text-lg leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Brand Research</h3>
+                  <p>Find what you need in one template and combine will make your site look professional.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- end row -->
+      </div>
+    </div><!-- End Service -->
+
+    <!-- =========={ PORTFOLIO }==========  -->
+    <div id="portfolio" class="relative py-20 md:py-24 bg-white dark:bg-gray-800">
+      <div x-data="{ tab: 'all' }" class="container xl:max-w-6xl mx-auto px-4">
+        <!-- section header -->
+        <header class="text-center mx-auto mb-12">
+          <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"><span class="font-light">Our</span> Portfolio</h2>
+          <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
+        </header><!-- end section header -->
+
+        <!-- navigation -->
+        <div class="space-x-5 text-center">
+          <button @click.prevent="tab = 'all'" :class="{ 'text-primary-700' : tab === 'all' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none text-primary-700">
+            All
+          </button>
+
+          <button @click.prevent="tab = 'web'" :class="{ 'text-primary-700' : tab === 'web' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none">
+            Web
+          </button>
+
+          <button @click.prevent="tab = 'graphic'" :class="{ 'text-primary-700' : tab === 'graphic' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none">
+            Graphic
+          </button>
+
+          <button @click.prevent="tab = 'photo'" :class="{ 'text-primary-700' : tab === 'photo' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none">
+            Photograpy
+          </button>
+        </div><!-- end navigation -->
+
+        <!-- Portfolio Content -->
+        <div class="flex flex-wrap flex-row -mx-4 lightgallery-thumbnail">
+          <figure x-show="tab === 'graphic' || tab === 'photo' || tab === 'all'" data-src="{{ 'images/img-min/project_1.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+            <div class="relative overflow-hidden cursor-pointer mb-6">
+              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_1.jpg' | asset_url }}" alt="Image Description">
+              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Logo Design</h3>
+                <small class="d-block">Branding</small>
+              </figcaption>
+            </div>
+          </figure>
+
+          <figure x-show="tab === 'web' || tab === 'all'" data-src="{{ 'images/img-min/project_2.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+            <div class="relative overflow-hidden cursor-pointer mb-6">
+              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_2.jpg' | asset_url }}" alt="Image Description">
+              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Web Development</h3>
+                <small class="d-block">Web</small>
+              </figcaption>
+            </div>
+          </figure>
+
+          <figure x-show="tab === 'graphic' || tab === 'all'" data-src="{{ 'images/img-min/project_3.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+            <div class="relative overflow-hidden cursor-pointer mb-6">
+              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_3.jpg' | asset_url }}" alt="Image Description">
+              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Graphic Design</h3>
+                <small class="d-block">Graphic</small>
+              </figcaption>
+            </div>
+          </figure>
+
+          <figure x-show="tab === 'graphic' || tab === 'all'" data-src="{{ 'images/img-min/project_4.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+            <div class="relative overflow-hidden cursor-pointer mb-6">
+              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_4.jpg' | asset_url }}" alt="Image Description">
+              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Video Marketing</h3>
+                <small class="d-block">Video</small>
+              </figcaption>
+            </div>
+          </figure>
+
+          <figure x-show="tab === 'photo' || tab === 'all'" data-src="{{ 'images/img-min/project_5.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+            <div class="relative overflow-hidden cursor-pointer mb-6">
+              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_5.jpg' | asset_url }}" alt="Image Description">
+              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Photography</h3>
+                <small class="d-block">Photo</small>
+              </figcaption>
+            </div>
+          </figure>
+
+          <figure x-show="tab === 'web' || tab === 'all'" data-src="{{ 'images/img-min/project_6.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+            <div class="relative overflow-hidden cursor-pointer mb-6">
+              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_6.jpg' | asset_url }}" alt="Image Description">
+              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Apps Development</h3>
+                <small class="d-block">Apps</small>
+              </figcaption>
+            </div>
+          </figure>
+        </div>
+      </div>
+      
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <div class="flex flex-wrap flex-row -mx-4">
+          <div class="w-full px-4 text-center mt-6">
+            <a href="#" class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0">View all latest project</a>
+          </div>
+        </div>
+      </div>
+    </div><!-- End portfolio -->
+
+    <!-- =========={ BLOG }==========  -->
+    <div id="blogs" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20">
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <!-- section header -->
+        <header class="text-center mx-auto mb-12">
+          <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"><span class="font-light">From the</span> Blog</h2>
+          <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
+        </header><!-- end section header -->
+      
+        <!-- row -->
+        <div class="flex flex-wrap flex-row justify-center -mx-4">
+          <div class="flex-shrink w-11/12 max-w-full md:w-1/2 lg:w-1/3 px-4">
+            <!-- Card -->
+            <div class="flex flex-col bg-white dark:bg-gray-800 mb-12 rounded overflow-hidden shadow wow fadeInUp" data-wow-duration="1s">
+              <div class="relative overflow-hidden">
+                <a href="#">
+                  <div class="absolute inset-0 hover:bg-black opacity-0 transition duration-700 hover:opacity-20"></div>
+                  <img class="max-w-full h-auto" src="{{ 'images/img-min/blog_1.jpg' | asset_url }}" alt="alt title">
+                </a>
+              </div>
+              <div class="py-6 px-8 flex-1">
+                <div class="mb-2">
+                  <h3 class="text-xl leading-normal mb-4 font-semibold text-gray-800 dark:text-gray-200"><a href="#" class="hover:text-primary-700 dark:hover:text-gray-100">New web design layout trends in 2021</a></h3>
+                  <div class="text-gray-500">
+                    <svg class="bi bi-calendar me-2 inline-block" width=".8rem" height=".8rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M14 0H2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M6.5 7a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                      </svg><span>04 May 2020</span>
+                  </div>
+                </div>
+                <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ducimus est, excepturi nam odit possimus.</p>
+              </div>
+            </div><!-- End card -->
+          </div>
+
+          <div class="flex-shrink w-11/12 max-w-full md:w-1/2 lg:w-1/3 px-4">
+            <!-- Card -->
+            <div class="flex flex-col bg-white dark:bg-gray-800 mb-12 rounded overflow-hidden shadow wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+              <div class="relative overflow-hidden">
+                <a href="#">
+                  <div class="absolute inset-0 hover:bg-black opacity-0 transition duration-700 hover:opacity-20"></div>
+                  <img class="max-w-full h-auto" src="{{ 'images/img-min/blog_2.jpg' | asset_url }}" alt="alt title">
+                </a>
+              </div>
+              <div class="py-6 px-8 flex-1">
+               <div class="mb-2">
+                  <h3 class="text-xl leading-normal mb-4 font-semibold text-gray-800 dark:text-gray-200"><a href="#" class="hover:text-primary-700 dark:hover:text-gray-100">Tips and tricks for building a Startup Company</a></h3>
+                  <div class="text-gray-500">
+                    <svg class="bi bi-calendar me-2 inline-block" width=".8rem" height=".8rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M14 0H2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M6.5 7a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                      </svg><span>04 May 2020</span>
+                  </div>
+                </div>
+                <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ducimus est, excepturi nam odit possimus.</p>
+              </div>
+            </div><!-- end card -->
+          </div>
+
+          <div class="flex-shrink w-11/12 max-w-full md:w-1/2 lg:w-1/3 px-4">
+            <!-- Card -->
+            <div class="flex flex-col bg-white dark:bg-gray-800 mb-12 rounded overflow-hidden shadow wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+              <div class="relative overflow-hidden">
+                <a href="#">
+                  <div class="absolute inset-0 hover:bg-black opacity-0 transition duration-700 hover:opacity-20"></div>
+                  <img class="max-w-full h-auto" src="{{ 'images/img-min/blog_3.jpg' | asset_url }}" alt="alt title">
+                </a>
+              </div>
+              <div class="py-6 px-8 flex-1">
+                <div class="mb-2">
+                  <h3 class="text-xl leading-normal mb-4 font-semibold text-gray-800 dark:text-gray-200"><a href="#" class="hover:text-primary-700 dark:hover:text-gray-100">Web Vitals will become SEO ranking signals in 2021</a></h3>
+                  <div class="text-gray-500">
+                    <svg class="bi bi-calendar me-2 inline-block" width=".8rem" height=".8rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M14 0H2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M6.5 7a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                      </svg><span>04 May 2020</span>
+                  </div>
+                </div>
+                <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ducimus est, excepturi nam odit possimus.</p>
+              </div>
+            </div><!-- End card -->
+          </div>
+        </div><!-- end row -->
+      </div>
+    </div><!-- End Blog -->
+
+    <!-- =========={ BRAND }==========  -->
+    <div id="partner-brand" class="relative py-16 bg-white dark:bg-gray-800">
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <div class="lex flex-wrap flex-row -mx-4 justify-center">
+          <div class="w-full px-4">
+            <!-- slider brand -->
+            <div class="nav-dark-button" data-flickity='{ "cellAlign": "left", "wrapAround": true, "adaptiveHeight": true, "pageDots": false, "imagesLoaded": true }'>
+              <div class="flex-shrink max-w-full w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 py-4 lg:py-1 px-6 lg:px-12 text-center">
+                <a href="#" target="_blank">
+                  <img class="brands-image mx-auto opacity-80 hover:opacity-100 max-w-full h-auto" src="{{ 'images/img-min/img1.png' | asset_url }}" alt="Image Description">
+                </a>
+              </div>
+              <div class="flex-shrink max-w-full w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 py-4 lg:py-1 px-6 lg:px-12 text-center">
+                <a href="#" target="_blank">
+                  <img class="brands-image mx-auto opacity-80 hover:opacity-100 max-w-full h-auto" src="{{ 'images/img-min/img2.png' | asset_url }}" alt="Image Description">
+                </a>
+              </div>
+              <div class="flex-shrink max-w-full w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 py-4 lg:py-1 px-6 lg:px-12 text-center">
+                <a href="#" target="_blank">
+                  <img class="brands-image mx-auto opacity-80 hover:opacity-100 max-w-full h-auto" src="{{ 'images/img-min/img3.png' | asset_url }}" alt="Image Description">
+                </a>
+              </div>
+              <div class="flex-shrink max-w-full w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 py-4 lg:py-1 px-6 lg:px-12 text-center">
+                <a href="#" target="_blank">
+                  <img class="brands-image mx-auto opacity-80 hover:opacity-100 max-w-full h-auto" src="{{ 'images/img-min/img4.png' | asset_url }}" alt="Image Description">
+                </a>
+              </div>
+              <div class="flex-shrink max-w-full w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 py-4 lg:py-1 px-6 lg:px-12 text-center">
+                <a href="#" target="_blank">
+                  <img class="brands-image mx-auto opacity-80 hover:opacity-100 max-w-full h-auto" src="{{ 'images/img-min/img5.png' | asset_url }}" alt="Image Description">
+                </a>
+              </div>
+              <div class="flex-shrink max-w-full w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 py-4 lg:py-1 px-6 lg:px-12 text-center">
+                <a href="#" target="_blank">
+                  <img class="brands-image mx-auto opacity-80 hover:opacity-100 max-w-full h-auto" src="{{ 'images/img-min/img6.png' | asset_url }}" alt="Image Description">
+                </a>
+              </div>
+            </div><!-- end slider brand -->
+          </div>
+        </div>
+      </div>
+    </div><!-- End brand-->
+  </main>

@@ -1,0 +1,249 @@
+
+  <main id="content">
+    <!-- =========={ HERO }==========  -->
+    <div id="hero" class="relative py-12 jarallax">
+      <!-- background parallax -->
+      <img class="jarallax-img" src="{{ 'images/img-min/bg-planet.jpg' | asset_url }}" alt="title">
+      <!-- background overlay -->
+      <div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"></div>
+
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <div class="flex flex-wrap flex-row -mx-4 items-center justify-center">
+          <!-- content -->
+          <div class="max-w-full w-full lg:w-7/12 px-4">
+            <nav aria-label="breadcrumb">
+              <ol class="flex flex-wrap justify-center bg-transparent text-sm mb-0 space-x-1">
+                <li>
+                  <a href="#" class="text-gray-200 hover:text-white">
+                    Home
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-200 hover:text-white">
+                    Pages
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                  </a>
+                </li>
+                <li class="hidden md:block text-white" aria-current="page">Pricing</li>
+              </ol>
+            </nav>
+
+            <div class="mt-0 pt-6 text-center">
+              <h1 class="text-2xl md:text-3xl leading-normal mb-2 font-semibold text-white">Pricing</h1>    
+              <hr class="block w-12 h-0.5 mx-auto my-5 bg-yellow-300 border-yellow-300">       
+            </div>
+          </div><!-- end content -->
+        </div>
+      </div>
+    </div><!-- End hero -->
+    
+    <!-- =========={ PRICING }==========  -->
+    <div id="pricing" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20">
+      <div x-data="{ open: false }" class="container xl:max-w-6xl mx-auto px-4">
+        <!-- navigation -->
+        <div class="text-center mb-12 lg:mb-24">
+          <div class="flex justify-center mb-12 lg:mb-16">
+            <label class="flex items-center cursor-pointer justify-between mb-5">
+              <span>Monthly</span>
+              <input type="checkbox" id="js-checkbox" class="hidden">
+              <i @click="open = !open" aria-expanded="false" x-bind:aria-expanded="open.toString()" class="relative inline-block w-24 h-7 border border-gray-200 dark:border-gray-700 rounded-xl transition mx-4">
+                <span :class="{ 'hidden': open, 'block': !(open) }" x-description="off" x-state:on="on" x-state:off="off" class="absolute start-0 w-10 h-6 rounded-xl bg-primary-700" ></span>
+                <span :class="{ 'block': open, 'hidden': !(open) }" x-description="on" x-state:on="on" x-state:off="off" class="absolute end-0 w-10 h-6 rounded-xl bg-primary-700"></span>
+              </i>
+              <span>Yearly</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- row -->
+        <div class="flex flex-wrap flex-row -mx-4 justify-center">
+          <div class="flex-shrink max-w-full w-11/12 md:w-1/2 lg:w-1/3 px-4">
+            <div class="xl:px-2">
+              <!-- price table-->
+              <div class="relative bg-white shadow-xl border border-gray-100 dark:bg-gray-800 dark:border-gray-800 rounded-xl mb-12 wow fadeInLeft" data-wow-duration="1s">
+                <!-- pricing header -->
+                <header class="relative pt-12 px-16 pb-4">
+                  <h3 class="text-2xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Starter</h3>
+                  <p class="text-gray-500">Start Up</p>
+                  <div class="h-1 w-full bg-primary-500 mt-2 mb-5"></div>
+                  <div>
+                    <h4 :class="{ 'hidden': open, 'block': !(open) }" x-description="off" x-state:on="on" x-state:off="off" class="text-2xl leading-normal mb-2 font-semibold text-primary-500">$19.99 <span class="small fw-light">/Month</span></h4>
+                    <h4 :class="{ 'block': open, 'hidden': !(open) }" x-description="on" x-state:on="on" x-state:off="off" class="text-2xl leading-normal mb-2 font-semibold text-primary-500">$199.99 <span class="small fw-light">/Year</span></h4>
+                  </div>
+                </header><!-- end pricing header -->
+
+                <!-- pricing content -->
+                <div class="relative px-16 pb-12 text-gray-500">
+                  <div class="mb-8">
+                    <p class="mb-4">100 Employee</p>
+                    <p class="mb-4">Unlimited Features</p>
+                    <p class="mb-4">Presentation Software</p>
+                    <p class="mb-4">Project Management</p>
+                    <p class="mb-4">Event Management</p>
+                  </div>
+                  <a class="block text-center w-full py-3 px-5 rounded-md leading-5 text-gray-100 bg-gray-800 border border-gray-800 hover:text-white hover:bg-gray-900 hover:ring-0 hover:border-gray-900 focus:bg-gray-900 focus:border-gray-900 focus:outline-none focus:ring-0" href="#">Get Started</a>
+                </div><!-- end pricing content -->
+              </div><!-- End price table-->
+            </div>
+          </div>
+
+          <div class="flex-shrink max-w-full w-11/12 md:w-1/2 lg:w-1/3 px-4">
+            <div class="xl:px-2">
+              <!-- price table-->
+              <div class="relative bg-white shadow-xl border border-gray-100 dark:bg-gray-800 dark:border-gray-800 rounded-xl lg:-mt-8 mb-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                <!-- ribbon -->
+                <div class="absolute top-0 end-0 w-36 h-36 text-sm">
+                  <span class="absolute top-4 end-0 px-4 py-2 block align-center shadow bg-yellow-300 text-gray-800">Popular</span>
+                </div>
+                <!-- pricing header -->
+                <div class="relative pt-12 px-16 pb-4">
+                  <h3 class="text-2xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Professional</h3>
+                  <p class="text-gray-500">Small Business</p>
+                  <div class="h-1 w-full bg-primary-500 mt-2 mb-5"></div>
+                  <div>
+                    <h4 :class="{ 'hidden': open, 'block': !(open) }" x-description="off" x-state:on="on" x-state:off="off" class="text-2xl leading-normal mb-2 font-semibold text-primary-500">$29.99 <span class="small fw-light">/Month</span></h4>
+                    <h4 :class="{ 'block': open, 'hidden': !(open) }" x-description="on" x-state:on="on" x-state:off="off" class="text-2xl leading-normal mb-2 font-semibold text-primary-500">$299.99 <span class="small fw-light">/Year</span></h4>
+                  </div>
+                </div><!-- end pricing header -->
+
+                <!-- pricing content -->
+                <div class="relative px-16 pb-12 text-gray-500">
+                  <div class="mb-8">
+                    <p class="mb-4">500 Employee</p>
+                    <p class="mb-4">Unlimited Features</p>
+                    <p class="mb-4">Presentation Software</p>
+                    <p class="mb-4">Project Management</p>
+                    <p class="mb-4">Event Management</p>
+                    <p class="mb-4">Most Popular</p>
+                  </div>
+                  <a class="block text-center w-full py-3 px-5 rounded-md leading-5 text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="me-2 inline-block transform ltr:rotate-0 rtl:-rotate-90" width="1.5rem" height="1.5rem" viewBox="0 0 512 512"><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line></svg>Get Started
+                  </a>
+                </div><!-- end pricing content -->
+              </div><!-- end pricing table -->
+            </div>
+          </div>
+
+          <div class="flex-shrink max-w-full w-11/12 md:w-1/2 lg:w-1/3 px-4">
+            <div class="xl:px-2">
+              <!-- price table-->
+              <div class="relative bg-white shadow-xl border border-gray-100 dark:bg-gray-800 dark:border-gray-800 rounded-xl mb-12 wow fadeInRight" data-wow-duration="1s">
+                <!-- pricing header -->
+                <header class="relative pt-12 px-16 pb-4">
+                  <h3 class="text-2xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Expert</h3>
+                  <p class="text-gray-500">Big Business</p>
+                  <div class="h-1 w-full bg-primary-500 mt-2 mb-5"></div>
+                  <div>
+                    <h4 :class="{ 'hidden': open, 'block': !(open) }" x-description="off" x-state:on="on" x-state:off="off" class="text-2xl leading-normal mb-2 font-semibold text-primary-500">$39.99 <span class="small fw-light">/Month</span></h4>
+                    <h4 :class="{ 'block': open, 'hidden': !(open) }" x-description="on" x-state:on="on" x-state:off="off" class="text-2xl leading-normal mb-2 font-semibold text-primary-500">$399.99 <span class="small fw-light">/Year</span></h4>
+                  </div>
+                </header><!-- end pricing header -->
+
+                <!-- pricing content -->
+                <div class="relative px-16 pb-12 text-gray-500">
+                  <div class="mb-8">
+                    <p class="mb-4">1000 Employee</p>
+                    <p class="mb-4">Unlimited Features</p>
+                    <p class="mb-4">Presentation Software</p>
+                    <p class="mb-4">Project Management</p>
+                    <p class="mb-4">Event Management</p>
+                  </div>
+                  <a class="block text-center w-full py-3 px-5 rounded-md leading-5 text-gray-100 bg-gray-800 border border-gray-800 hover:text-white hover:bg-gray-900 hover:ring-0 hover:border-gray-900 focus:bg-gray-900 focus:border-gray-900 focus:outline-none focus:ring-0" href="#">Get Started</a>
+                </div><!-- end pricing content -->
+              </div><!-- End price table-->
+            </div>
+          </div>
+        </div><!-- end row -->
+      </div>
+    </div><!-- End Pricing -->
+    
+    <!-- =========={ SUBCRIBE }==========  -->
+    <div id="subcribe" class="relative py-20 md:py-24 bg-white dark:bg-gray-800">
+      <!-- particle moving animation -->
+      <div class="particle">
+        <div class="scroll-rotate absolute opacity-50 text-primary-700" style="right:9%;bottom: 72%;">
+          <svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+            <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+          </svg>
+        </div> 
+        <div class="scroll-rotate absolute opacity-50 text-yellow-300" style="right:12%;bottom: 30%;">
+          <svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+            <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+          </svg>
+        </div> 
+        <div class="scroll-rotate absolute opacity-50 text-red-700 hidden lg:block" style="right:22%;bottom: 55%;">
+          <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+            <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+          </svg>
+        </div> 
+        <div class="scroll-rotate absolute opacity-50 text-red-700 hidden lg:block" style="left:40%;top: 20%;">
+          <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+            <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+          </svg>
+        </div> 
+        <div class="scroll-rotate absolute opacity-50 text-primary-700" style="left:60%;bottom: 20%;">
+          <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+            <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+          </svg>
+        </div> 
+        <div class="scroll-rotate absolute opacity-50 text-yellow-300" style="left:20%;bottom: 60%;">
+          <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+            <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+          </svg>
+        </div> 
+        <div class="scroll-rotate absolute opacity-50 text-primary-700" style="left:12%;bottom: 30%;">
+          <svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+            <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+          </svg>
+        </div> 
+        <div class="scroll-rotate absolute opacity-50 text-green-600" style="left:6%;bottom:75%;">
+          <svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+            <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+          </svg>
+        </div> 
+      </div>
+
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <div class="flex flex-wrap flex-row -mx-4 justify-center">
+          <div class="max-w-full w-8/12 md:w-1/2 px-4" data-aos="fade-up">
+            <!-- Title -->
+            <div class="text-center mx-auto mb-6">
+              <svg class="bi bi-envelope-open text-primary-700 inline-block mb-6" width="5rem" height="5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M.243 6.929l.514-.858L8 10.417l7.243-4.346.514.858L8 11.583.243 6.93z" clip-rule="evenodd"></path>
+                <path fill-rule="evenodd" d="M7.184 10.68L.752 14.432l-.504-.864L6.68 9.816l.504.864zm1.632 0l6.432 3.752.504-.864L9.32 9.816l-.504.864z" clip-rule="evenodd"></path>
+                <path fill-rule="evenodd" d="M8.47 1.318a1 1 0 00-.94 0l-6 3.2A1 1 0 001 5.4V14a1 1 0 001 1h12a1 1 0 001-1V5.4a1 1 0 00-.53-.882l-6-3.2zM7.06.435a2 2 0 011.882 0l6 3.2A2 2 0 0116 5.4V14a2 2 0 01-2 2H2a2 2 0 01-2-2V5.4a2 2 0 011.059-1.765l6-3.2z" clip-rule="evenodd"></path>
+              </svg>
+              <h2 class="text-3xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100"><span class="font-light">Subcribe</span> Newsletter</h2>
+              <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
+              <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">Subscribe to our mailing list to receives daily updates!</p>
+            </div><!-- End Title -->
+
+            <!--form-->
+            <div class="mx-auto">
+              <form id="subscribe1" action="#" novalidate="">
+                <div class="flex flex-wrap flex-row justify-center">
+                  <div class="flex-shrink max-w-full w-full lg:w-8/12 lg:px-4 mb-6 lg:mb-0">
+                    <input type="email" class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" id="email" placeholder="Email address" name="email"  aria-label="newsletter form">
+                  </div>
+                  <div class="flex-shrink max-w-full w-full lg:w-1/3 text-center">
+                    <div class="grid">
+                      <button type="submit" class="py-3 px-5 block sm:inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0">Subcribe!</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div><!--end form-->
+          </div>
+        </div>
+      </div><!-- end subcribe -->
+    </div><!-- End subcribe -->
+  </main>

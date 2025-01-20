@@ -1,0 +1,576 @@
+
+  <main id="content">
+    <!-- =========={ HERO }==========  -->
+    <div id="hero" class="relative py-12 jarallax">
+      <!-- background parallax -->
+      <img class="jarallax-img" src="{{ 'images/img-min/bg-planet.jpg' | asset_url }}" alt="title">
+      <!-- background overlay -->
+      <div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"></div>
+
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <div class="flex flex-wrap flex-row -mx-4 items-center justify-center">
+          <!-- content -->
+          <div class="max-w-full w-full lg:w-7/12 px-4">
+            <nav aria-label="breadcrumb">
+              <ol class="flex flex-wrap justify-center bg-transparent text-sm mb-0 space-x-1">
+                <li>
+                  <a href="#" class="text-gray-200 hover:text-white">
+                    Home
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="/s/index" class="text-gray-200 hover:text-white">
+                    Snippets
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                  </a>
+                </li>
+                <li class="hidden md:block text-white" aria-current="page">Pricing Sections</li>
+              </ol>
+            </nav>
+
+            <div class="mt-0 pt-6 text-center">
+              <h1 class="text-2xl md:text-3xl leading-normal mb-2 font-semibold text-white">Pricing Sections</h1>    
+              <hr class="block w-12 h-0.5 mx-auto my-5 bg-yellow-300 border-yellow-300">       
+            </div>
+          </div><!-- end content -->
+        </div>
+      </div>
+    </div><!-- End hero -->
+
+    <!-- =========={ SNIPPETS }==========  -->
+    <div id="snippets" class="relative pt-12 bg-white dark:bg-gray-800">
+      <div class="container mx-auto px-6 lg:px-4">
+        <!-- row -->
+        <div class="flex flex-wrap flex-row -mx-4">
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Pricing Sections style 1
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- Pricing start -->
+                <div id="pricing" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20">
+                  <div x-data="{ open: false }" class="container xl:max-w-6xl mx-auto px-4">
+                    <!-- section header -->
+                    <header class="text-center mx-auto mb-12">
+                      <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"><span class="font-light">Our</span> Pricing</h2>
+                      <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
+                      <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">Pay only fixed monthly fee and the rest we will handle for you!</p>
+                    </header><!-- end section header -->
+
+                    <!-- navigation -->
+                    <div class="text-center mb-12 lg:mb-24">
+                      <div class="flex justify-center mb-12 lg:mb-16">
+                        <label class="flex items-center cursor-pointer justify-between mb-5">
+                          <span>Monthly</span>
+                          <input type="checkbox" id="js-checkbox" class="hidden">
+                          <i @click="open = !open" aria-expanded="false" x-bind:aria-expanded="open.toString()" class="relative inline-block w-24 h-7 border border-gray-200 dark:border-gray-700 rounded-xl transition mx-4">
+                            <span :class="{ 'hidden': open, 'block': !(open) }" x-description="off" x-state:on="on" x-state:off="off" class="absolute start-0 w-10 h-6 rounded-xl bg-primary-700" ></span>
+                            <span :class="{ 'block': open, 'hidden': !(open) }" x-description="on" x-state:on="on" x-state:off="off" class="absolute end-0 w-10 h-6 rounded-xl bg-primary-700"></span>
+                          </i>
+                          <span>Yearly</span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- row -->
+                    <div class="flex flex-wrap flex-row -mx-4 justify-center">
+                      <div class="flex-shrink max-w-full w-11/12 md:w-1/2 lg:w-1/3 px-4">
+                        <div class="xl:px-2">
+                          <!-- price table-->
+                          <div class="relative bg-white shadow-xl border border-gray-100 dark:bg-gray-800 dark:border-gray-800 rounded-xl mb-12 wow fadeInLeft" data-wow-duration="1s">
+                            <!-- pricing header -->
+                            <header class="relative pt-12 px-16 pb-4">
+                              <h3 class="text-2xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Starter</h3>
+                              <p class="text-gray-500">Start Up</p>
+                              <div class="h-1 w-full bg-primary-500 mt-2 mb-5"></div>
+                              <div>
+                                <h4 :class="{ 'hidden': open, 'block': !(open) }" x-description="off" x-state:on="on" x-state:off="off" class="text-2xl leading-normal mb-2 font-semibold text-primary-500">$19.99 <span class="small fw-light">/Month</span></h4>
+                                <h4 :class="{ 'block': open, 'hidden': !(open) }" x-description="on" x-state:on="on" x-state:off="off" class="text-2xl leading-normal mb-2 font-semibold text-primary-500">$199.99 <span class="small fw-light">/Year</span></h4>
+                              </div>
+                            </header><!-- end pricing header -->
+
+                            <!-- pricing content -->
+                            <div class="relative px-16 pb-12 text-gray-500">
+                              <div class="mb-8">
+                                <p class="mb-4">100 Employee</p>
+                                <p class="mb-4">Unlimited Features</p>
+                                <p class="mb-4">Presentation Software</p>
+                                <p class="mb-4">Project Management</p>
+                                <p class="mb-4">Event Management</p>
+                              </div>
+                              <a class="py-3 px-5 block text-center rounded-md leading-normal text-gray-100 bg-gray-900 border border-gray-900 hover:text-white hover:bg-black hover:ring-0 hover:border-black focus:bg-black focus:border-black focus:outline-none focus:ring-0" href="#">Get Started</a>
+                            </div><!-- end pricing content -->
+                          </div><!-- End price table-->
+                        </div>
+                      </div>
+
+                      <div class="flex-shrink max-w-full w-11/12 md:w-1/2 lg:w-1/3 px-4">
+                        <div class="xl:px-2">
+                          <!-- price table-->
+                          <div class="relative bg-white shadow-xl border border-gray-100 dark:bg-gray-900 dark:bg-opacity-40 dark:border-gray-800 rounded-xl lg:-mt-8 mb-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                            <!-- ribbon -->
+                            <div class="absolute top-0 end-0 text-end w-36 h-36 text-sm">
+                              <span class="absolute top-4 end-0 px-4 py-2 block align-center shadow bg-yellow-300 text-gray-800">Popular</span>
+                            </div>
+                            <!-- pricing header -->
+                            <div class="relative pt-12 px-16 pb-4">
+                              <h3 class="text-2xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Professional</h3>
+                              <p class="text-gray-500">Small Business</p>
+                              <div class="h-1 w-full bg-primary-500 mt-2 mb-5"></div>
+                              <div>
+                                <h4 :class="{ 'hidden': open, 'block': !(open) }" x-description="off" x-state:on="on" x-state:off="off" class="text-2xl leading-normal mb-2 font-semibold text-primary-500">$29.99 <span class="small fw-light">/Month</span></h4>
+                                <h4 :class="{ 'block': open, 'hidden': !(open) }" x-description="on" x-state:on="on" x-state:off="off" class="text-2xl leading-normal mb-2 font-semibold text-primary-500">$299.99 <span class="small fw-light">/Year</span></h4>
+                              </div>
+                            </div><!-- end pricing header -->
+
+                            <!-- pricing content -->
+                            <div class="relative px-16 pb-12 text-gray-500">
+                              <div class="mb-8">
+                                <p class="mb-4">500 Employee</p>
+                                <p class="mb-4">Unlimited Features</p>
+                                <p class="mb-4">Presentation Software</p>
+                                <p class="mb-4">Project Management</p>
+                                <p class="mb-4">Event Management</p>
+                                <p class="mb-4">Most Popular</p>
+                              </div>
+                              <a class="py-3 px-5 block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-2 transform ltr:rotate-0 rtl:-rotate-90 inline-block" width="1.5rem" height="1.5rem" viewBox="0 0 512 512"><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></path><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"></line></svg>Get Started
+                              </a>
+                            </div><!-- end pricing content -->
+                          </div><!-- end pricing table -->
+                        </div>
+                      </div>
+
+                      <div class="flex-shrink max-w-full w-11/12 md:w-1/2 lg:w-1/3 px-4">
+                        <div class="xl:px-2">
+                          <!-- price table-->
+                          <div class="relative bg-white shadow-xl border border-gray-100 dark:bg-gray-800 dark:border-gray-800 rounded-xl mb-12 wow fadeInRight" data-wow-duration="1s">
+                            <!-- pricing header -->
+                            <header class="relative pt-12 px-16 pb-4">
+                              <h3 class="text-2xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">Expert</h3>
+                              <p class="text-gray-500">Big Business</p>
+                              <div class="h-1 w-full bg-primary-500 mt-2 mb-5"></div>
+                              <div>
+                                <h4 :class="{ 'hidden': open, 'block': !(open) }" x-description="off" x-state:on="on" x-state:off="off" class="text-2xl leading-normal mb-2 font-semibold text-primary-500">$39.99 <span class="small fw-light">/Month</span></h4>
+                                <h4 :class="{ 'block': open, 'hidden': !(open) }" x-description="on" x-state:on="on" x-state:off="off" class="text-2xl leading-normal mb-2 font-semibold text-primary-500">$399.99 <span class="small fw-light">/Year</span></h4>
+                              </div>
+                            </header><!-- end pricing header -->
+
+                            <!-- pricing content -->
+                            <div class="relative px-16 pb-12 text-gray-500">
+                              <div class="mb-8">
+                                <p class="mb-4">1000 Employee</p>
+                                <p class="mb-4">Unlimited Features</p>
+                                <p class="mb-4">Presentation Software</p>
+                                <p class="mb-4">Project Management</p>
+                                <p class="mb-4">Event Management</p>
+                              </div>
+                              <a class="py-3 px-5 block text-center rounded-md leading-normal text-gray-100 bg-gray-900 border border-gray-900 hover:text-white hover:bg-black hover:ring-0 hover:border-black focus:bg-black focus:border-black focus:outline-none focus:ring-0" href="#">Get Started</a>
+                            </div><!-- end pricing content -->
+                          </div><!-- End price table-->
+                        </div>
+                      </div>
+                    </div><!-- end row -->
+                  </div>
+                </div><!-- End Pricing -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- Pricing start --&gt;
+                    &lt;div id="pricing" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20"&gt;
+                      &lt;div x-data="{ open: false }" class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;!-- section header --&gt;
+                        &lt;header class="text-center mx-auto mb-12"&gt;
+                          &lt;h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"&gt;&lt;span class="font-light"&gt;Our&lt;/span&gt; Pricing&lt;/h2&gt;
+                          &lt;hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700"&gt;
+                          &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2"&gt;Pay only fixed monthly fee and the rest we will handle for you!&lt;/p&gt;
+                        &lt;/header&gt;&lt;!-- end section header --&gt;
+
+                        &lt;!-- navigation --&gt;
+                        &lt;div class="text-center mb-12 lg:mb-24"&gt;
+                          &lt;div class="flex justify-center mb-12 lg:mb-16"&gt;
+                            &lt;label class="flex items-center cursor-pointer justify-between mb-5"&gt;
+                              &lt;span&gt;Monthly&lt;/span&gt;
+                              &lt;input type="checkbox" id="js-checkbox" class="hidden"&gt;
+                              &lt;i @click="open = !open" aria-expanded="false" x-bind:aria-expanded="open.toString()" class="relative inline-block w-24 h-7 border border-gray-200 dark:border-gray-700 rounded-xl transition mx-4"&gt;
+                                &lt;span :class="{ 'hidden': open, 'block': !(open) }" x-description="off" x-state:on="on" x-state:off="off" class="absolute start-0 w-10 h-6 rounded-xl bg-primary-700" &gt;&lt;/span&gt;
+                                &lt;span :class="{ 'block': open, 'hidden': !(open) }" x-description="on" x-state:on="on" x-state:off="off" class="absolute end-0 w-10 h-6 rounded-xl bg-primary-700"&gt;&lt;/span&gt;
+                              &lt;/i&gt;
+                              &lt;span&gt;Yearly&lt;/span&gt;
+                            &lt;/label&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;!-- row --&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4 justify-center"&gt;
+                          &lt;div class="flex-shrink max-w-full w-11/12 md:w-1/2 lg:w-1/3 px-4"&gt;
+                            &lt;div class="xl:px-2"&gt;
+                              &lt;!-- price table--&gt;
+                              &lt;div class="relative bg-white shadow-xl border border-gray-100 dark:bg-gray-800 dark:border-gray-800 rounded-xl mb-12 wow fadeInLeft" data-wow-duration="1s"&gt;
+                                &lt;!-- pricing header --&gt;
+                                &lt;header class="relative pt-12 px-16 pb-4"&gt;
+                                  &lt;h3 class="text-2xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100"&gt;Starter&lt;/h3&gt;
+                                  &lt;p class="text-gray-500"&gt;Start Up&lt;/p&gt;
+                                  &lt;div class="h-1 w-full bg-primary-500 mt-2 mb-5"&gt;&lt;/div&gt;
+                                  &lt;div&gt;
+                                    &lt;h4 :class="{ 'hidden': open, 'block': !(open) }" x-description="off" x-state:on="on" x-state:off="off" class="text-2xl leading-normal mb-2 font-semibold text-primary-500"&gt;$19.99 &lt;span class="small fw-light"&gt;/Month&lt;/span&gt;&lt;/h4&gt;
+                                    &lt;h4 :class="{ 'block': open, 'hidden': !(open) }" x-description="on" x-state:on="on" x-state:off="off" class="text-2xl leading-normal mb-2 font-semibold text-primary-500"&gt;$199.99 &lt;span class="small fw-light"&gt;/Year&lt;/span&gt;&lt;/h4&gt;
+                                  &lt;/div&gt;
+                                &lt;/header&gt;&lt;!-- end pricing header --&gt;
+
+                                &lt;!-- pricing content --&gt;
+                                &lt;div class="relative px-16 pb-12 text-gray-500"&gt;
+                                  &lt;div class="mb-8"&gt;
+                                    &lt;p class="mb-4"&gt;100 Employee&lt;/p&gt;
+                                    &lt;p class="mb-4"&gt;Unlimited Features&lt;/p&gt;
+                                    &lt;p class="mb-4"&gt;Presentation Software&lt;/p&gt;
+                                    &lt;p class="mb-4"&gt;Project Management&lt;/p&gt;
+                                    &lt;p class="mb-4"&gt;Event Management&lt;/p&gt;
+                                  &lt;/div&gt;
+                                  &lt;a class="py-3 px-5 block text-center rounded-md leading-normal text-gray-100 bg-gray-900 border border-gray-900 hover:text-white hover:bg-black hover:ring-0 hover:border-black focus:bg-black focus:border-black focus:outline-none focus:ring-0" href="#"&gt;Get Started&lt;/a&gt;
+                                &lt;/div&gt;&lt;!-- end pricing content --&gt;
+                              &lt;/div&gt;&lt;!-- End price table--&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+
+                          &lt;div class="flex-shrink max-w-full w-11/12 md:w-1/2 lg:w-1/3 px-4"&gt;
+                            &lt;div class="xl:px-2"&gt;
+                              &lt;!-- price table--&gt;
+                              &lt;div class="relative bg-white shadow-xl border border-gray-100 dark:bg-gray-900 dark:bg-opacity-40 dark:border-gray-800 rounded-xl lg:-mt-8 mb-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"&gt;
+                                &lt;!-- ribbon --&gt;
+                                &lt;div class="absolute top-0 end-0 text-end w-36 h-36 text-sm"&gt;
+                                  &lt;span class="absolute top-4 end-0 px-4 py-2 block align-center shadow bg-yellow-300 text-gray-800"&gt;Popular&lt;/span&gt;
+                                &lt;/div&gt;
+                                &lt;!-- pricing header --&gt;
+                                &lt;div class="relative pt-12 px-16 pb-4"&gt;
+                                  &lt;h3 class="text-2xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100"&gt;Professional&lt;/h3&gt;
+                                  &lt;p class="text-gray-500"&gt;Small Business&lt;/p&gt;
+                                  &lt;div class="h-1 w-full bg-primary-500 mt-2 mb-5"&gt;&lt;/div&gt;
+                                  &lt;div&gt;
+                                    &lt;h4 :class="{ 'hidden': open, 'block': !(open) }" x-description="off" x-state:on="on" x-state:off="off" class="text-2xl leading-normal mb-2 font-semibold text-primary-500"&gt;$29.99 &lt;span class="small fw-light"&gt;/Month&lt;/span&gt;&lt;/h4&gt;
+                                    &lt;h4 :class="{ 'block': open, 'hidden': !(open) }" x-description="on" x-state:on="on" x-state:off="off" class="text-2xl leading-normal mb-2 font-semibold text-primary-500"&gt;$299.99 &lt;span class="small fw-light"&gt;/Year&lt;/span&gt;&lt;/h4&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;&lt;!-- end pricing header --&gt;
+
+                                &lt;!-- pricing content --&gt;
+                                &lt;div class="relative px-16 pb-12 text-gray-500"&gt;
+                                  &lt;div class="mb-8"&gt;
+                                    &lt;p class="mb-4"&gt;500 Employee&lt;/p&gt;
+                                    &lt;p class="mb-4"&gt;Unlimited Features&lt;/p&gt;
+                                    &lt;p class="mb-4"&gt;Presentation Software&lt;/p&gt;
+                                    &lt;p class="mb-4"&gt;Project Management&lt;/p&gt;
+                                    &lt;p class="mb-4"&gt;Event Management&lt;/p&gt;
+                                    &lt;p class="mb-4"&gt;Most Popular&lt;/p&gt;
+                                  &lt;/div&gt;
+                                  &lt;a class="py-3 px-5 block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0" href="#"&gt;
+                                    &lt;svg xmlns="http://www.w3.org/2000/svg" class="me-2 transform ltr:rotate-0 rtl:-rotate-90 inline-block" width="1.5rem" height="1.5rem" viewBox="0 0 512 512"&gt;&lt;path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"&gt;&lt;/path&gt;&lt;line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"&gt;&lt;/line&gt;&lt;/svg&gt;Get Started
+                                  &lt;/a&gt;
+                                &lt;/div&gt;&lt;!-- end pricing content --&gt;
+                              &lt;/div&gt;&lt;!-- end pricing table --&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+
+                          &lt;div class="flex-shrink max-w-full w-11/12 md:w-1/2 lg:w-1/3 px-4"&gt;
+                            &lt;div class="xl:px-2"&gt;
+                              &lt;!-- price table--&gt;
+                              &lt;div class="relative bg-white shadow-xl border border-gray-100 dark:bg-gray-800 dark:border-gray-800 rounded-xl mb-12 wow fadeInRight" data-wow-duration="1s"&gt;
+                                &lt;!-- pricing header --&gt;
+                                &lt;header class="relative pt-12 px-16 pb-4"&gt;
+                                  &lt;h3 class="text-2xl leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100"&gt;Expert&lt;/h3&gt;
+                                  &lt;p class="text-gray-500"&gt;Big Business&lt;/p&gt;
+                                  &lt;div class="h-1 w-full bg-primary-500 mt-2 mb-5"&gt;&lt;/div&gt;
+                                  &lt;div&gt;
+                                    &lt;h4 :class="{ 'hidden': open, 'block': !(open) }" x-description="off" x-state:on="on" x-state:off="off" class="text-2xl leading-normal mb-2 font-semibold text-primary-500"&gt;$39.99 &lt;span class="small fw-light"&gt;/Month&lt;/span&gt;&lt;/h4&gt;
+                                    &lt;h4 :class="{ 'block': open, 'hidden': !(open) }" x-description="on" x-state:on="on" x-state:off="off" class="text-2xl leading-normal mb-2 font-semibold text-primary-500"&gt;$399.99 &lt;span class="small fw-light"&gt;/Year&lt;/span&gt;&lt;/h4&gt;
+                                  &lt;/div&gt;
+                                &lt;/header&gt;&lt;!-- end pricing header --&gt;
+
+                                &lt;!-- pricing content --&gt;
+                                &lt;div class="relative px-16 pb-12 text-gray-500"&gt;
+                                  &lt;div class="mb-8"&gt;
+                                    &lt;p class="mb-4"&gt;1000 Employee&lt;/p&gt;
+                                    &lt;p class="mb-4"&gt;Unlimited Features&lt;/p&gt;
+                                    &lt;p class="mb-4"&gt;Presentation Software&lt;/p&gt;
+                                    &lt;p class="mb-4"&gt;Project Management&lt;/p&gt;
+                                    &lt;p class="mb-4"&gt;Event Management&lt;/p&gt;
+                                  &lt;/div&gt;
+                                  &lt;a class="py-3 px-5 block text-center rounded-md leading-normal text-gray-100 bg-gray-900 border border-gray-900 hover:text-white hover:bg-black hover:ring-0 hover:border-black focus:bg-black focus:border-black focus:outline-none focus:ring-0" href="#"&gt;Get Started&lt;/a&gt;
+                                &lt;/div&gt;&lt;!-- end pricing content --&gt;
+                              &lt;/div&gt;&lt;!-- End price table--&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;&lt;!-- end row --&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- End Pricing --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Pricing Sections style 2
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- Pricing start -->
+                <div id="pricing" class="relative py-20 lg:py-24 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20">
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <!-- section header -->
+                    <header class="text-center mx-auto mb-12">
+                      <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100">Our Pricing</h2>
+                      <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
+                      <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">No additional costs. Pay only one time and free for next update!</p>
+                    </header><!-- end section header -->
+
+                    <div class="pt-6">
+                      <div class="flex flex-wrap flex-row -mx-4 justify-center">
+                        <div class="flex-shrink max-w-full w-11/12 md:w-1/2 lg:w-1/3 px-4 wow fadeInLeft" data-wow-duration="1s">
+                          <div class="px-6 md:px-2 lg:px-4">
+                            <!-- pricing table -->
+                            <div class="relative py-16 px-12 mb-12 bg-white border border-gray-200 dark:bg-gray-800 dark:border-gray-700 shadow-xl text-center rounded-md">
+                              <!-- pricing Title -->
+                              <h3 class="text-lg mb-4 font-semibold uppercase">Multisite</h3>
+                              <div class="pb-2">
+                                <h4 class="text-4xl mb-2 font-semibold text-primary-700"><small>$</small>119</h4>
+                              </div>
+                              <!-- pricing content -->
+                              <ul class="space-y-6 mt-4 mb-12">
+                                <li>Unlimited end products</li>
+                                <li>Personal or client</li>
+                                <li>Lifetime Update</li>
+                                <li>Supports 24/7</li>
+                                <li>Can't product sold</li>
+                                <li>Can't for generators</li>
+                              </ul>
+                              <!-- Pricing Button -->
+                              <div class="py-2">
+                                <a href="#" rel="noopener" class="py-3 px-5 -ms-1 rounded-md leading-5 text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0">Install Template</a>
+                              </div>
+                            </div><!-- end pricing table -->
+                          </div>
+                        </div>
+
+                        <div class="flex-shrink max-w-full w-11/12 md:w-1/2 lg:w-1/3 px-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                          <div class="px-6 md:px-2 lg:px-4">
+                            <!-- pricing table -->
+                            <div class="relative py-16 px-12 mb-12 lg:-mt-6 bg-primary-700 text-gray-100 border border-gray-200 dark:border-gray-700 shadow-xl text-center rounded-md">
+                              <!-- ribbon -->
+                              <div class="absolute top-0 end-0 text-end w-36 h-36 text-sm">
+                                <span class="absolute top-4 end-0 px-4 py-2 block align-center shadow bg-yellow-300 text-gray-800">Popular</span>
+                              </div>
+                              <!-- pricing title -->
+                              <h3 class="text-lg mb-4 font-semibold uppercase text-white">Single</h3>
+                              <div class="pb-2">
+                                <h4 class="text-4xl mb-2 font-semibold text-yellow-300"><small>$</small>39</h4>
+                              </div>
+                              <!-- pricing content -->
+                              <ul class="space-y-6 mt-4 mb-12">
+                                <li>1 end products</li>
+                                <li>Personal or client</li>
+                                <li>Lifetime Update</li>
+                                <li>Supports 24/7</li>
+                                <li>Most Popular</li>
+                                <li>Can't product sold</li>
+                                <li>Can't for generators</li>
+                              </ul>
+                              <!-- Pricing Button -->
+                              <div class="py-2">
+                                <a href="#" rel="noopener" class="py-3 px-5 -ms-1 rounded-md leading-5 text-gray-800 bg-gray-100 border border-gray-100 hover:text-gray-900 hover:ring-0 hover:border-gray-200 focus:bg-gray-200 focus:border-gray-200 focus:outline-none focus:ring-0">
+                                  Install Template
+                                </a>
+                              </div>
+                            </div><!-- end pricing table -->
+                          </div>
+                        </div>
+
+                        <div class="flex-shrink max-w-full w-11/12 md:w-1/2 lg:w-1/3 px-4 wow fadeInRight" data-wow-duration="1s">
+                          <div class="px-6 md:px-2 lg:px-4">
+                            <!-- pricing table -->
+                            <div class="relative py-16 px-12 mb-12 bg-white border border-gray-200 dark:bg-gray-800 dark:border-gray-700 shadow-xl text-center rounded-md">
+                              <!-- pricing Title -->
+                              <h3 class="text-lg mb-4 font-semibold uppercase">Extended</h3>
+                              <div class="pb-2">
+                                <h4 class="text-4xl mb-2 font-semibold text-primary-700"><small>$</small>499</h4>
+                              </div>
+                              <!-- pricing content -->
+                              <ul class="space-y-6 mt-4 mb-12">
+                                <li>1 end products</li>
+                                <li>Personal or client</li>
+                                <li>Lifetime Update</li>
+                                <li>Supports 24/7</li>
+                                <li>Can Use in product sold</li>
+                                <li>Can't for generators</li>
+                              </ul>
+                              <!-- Pricing Button -->
+                              <div class="py-2">
+                                <a href="#" rel="noopener" class="py-3 px-5 -ms-1 rounded-md leading-5 text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0">Install Template</a>
+                              </div>
+                            </div><!-- end pricing table -->
+                          </div>
+                        </div>
+
+                        <div class="flex-shrink max-w-full w-full px-4">
+                          <p class="text-center font-small mb-0">
+                            <a class="text-gray-500" rel="noopener" href="#" target="_blank">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="inline me-2" fill="currentColor" width="1rem" height="1rem" viewBox="0 0 640 512"><path d="M256 336h-.02c0-16.18 1.34-8.73-85.05-181.51-17.65-35.29-68.19-35.36-85.87 0C-2.06 328.75.02 320.33.02 336H0c0 44.18 57.31 80 128 80s128-35.82 128-80zM128 176l72 144H56l72-144zm511.98 160c0-16.18 1.34-8.73-85.05-181.51-17.65-35.29-68.19-35.36-85.87 0-87.12 174.26-85.04 165.84-85.04 181.51H384c0 44.18 57.31 80 128 80s128-35.82 128-80h-.02zM440 320l72-144 72 144H440zm88 128H352V153.25c23.51-10.29 41.16-31.48 46.39-57.25H528c8.84 0 16-7.16 16-16V48c0-8.84-7.16-16-16-16H383.64C369.04 12.68 346.09 0 320 0s-49.04 12.68-63.64 32H112c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h129.61c5.23 25.76 22.87 46.96 46.39 57.25V448H112c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h416c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"></path></svg>
+                              Full license details
+                            </a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End pricing -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- Pricing start --&gt;
+                    &lt;div id="pricing" class="relative py-20 lg:py-24 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20"&gt;
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;!-- section header --&gt;
+                        &lt;header class="text-center mx-auto mb-12"&gt;
+                          &lt;h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"&gt;Our Pricing&lt;/h2&gt;
+                          &lt;hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700"&gt;
+                          &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2"&gt;No additional costs. Pay only one time and free for next update!&lt;/p&gt;
+                        &lt;/header&gt;&lt;!-- end section header --&gt;
+
+                        &lt;div class="pt-6"&gt;
+                          &lt;div class="flex flex-wrap flex-row -mx-4 justify-center"&gt;
+                            &lt;div class="flex-shrink max-w-full w-11/12 md:w-1/2 lg:w-1/3 px-4 wow fadeInLeft" data-wow-duration="1s"&gt;
+                              &lt;div class="px-6 md:px-2 lg:px-4"&gt;
+                                &lt;!-- pricing table --&gt;
+                                &lt;div class="relative py-16 px-12 mb-12 bg-white border border-gray-200 dark:bg-gray-800 dark:border-gray-700 shadow-xl text-center rounded-md"&gt;
+                                  &lt;!-- pricing Title --&gt;
+                                  &lt;h3 class="text-lg mb-4 font-semibold uppercase"&gt;Multisite&lt;/h3&gt;
+                                  &lt;div class="pb-2"&gt;
+                                    &lt;h4 class="text-4xl mb-2 font-semibold text-primary-700"&gt;&lt;small&gt;$&lt;/small&gt;119&lt;/h4&gt;
+                                  &lt;/div&gt;
+                                  &lt;!-- pricing content --&gt;
+                                  &lt;ul class="space-y-6 mt-4 mb-12"&gt;
+                                    &lt;li&gt;Unlimited end products&lt;/li&gt;
+                                    &lt;li&gt;Personal or client&lt;/li&gt;
+                                    &lt;li&gt;Lifetime Update&lt;/li&gt;
+                                    &lt;li&gt;Supports 24/7&lt;/li&gt;
+                                    &lt;li&gt;Can't product sold&lt;/li&gt;
+                                    &lt;li&gt;Can't for generators&lt;/li&gt;
+                                  &lt;/ul&gt;
+                                  &lt;!-- Pricing Button --&gt;
+                                  &lt;div class="py-2"&gt;
+                                    &lt;a href="#" rel="noopener" class="py-3 px-5 -ms-1 rounded-md leading-5 text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0"&gt;Install Template&lt;/a&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;&lt;!-- end pricing table --&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class="flex-shrink max-w-full w-11/12 md:w-1/2 lg:w-1/3 px-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"&gt;
+                              &lt;div class="px-6 md:px-2 lg:px-4"&gt;
+                                &lt;!-- pricing table --&gt;
+                                &lt;div class="relative py-16 px-12 mb-12 lg:-mt-6 bg-primary-700 text-gray-100 border border-gray-200 dark:border-gray-700 shadow-xl text-center rounded-md"&gt;
+                                  &lt;!-- ribbon --&gt;
+                                  &lt;div class="absolute top-0 end-0 text-end w-36 h-36 text-sm"&gt;
+                                    &lt;span class="absolute top-4 end-0 px-4 py-2 block align-center shadow bg-yellow-300 text-gray-800"&gt;Popular&lt;/span&gt;
+                                  &lt;/div&gt;
+                                  &lt;!-- pricing title --&gt;
+                                  &lt;h3 class="text-lg mb-4 font-semibold uppercase text-white"&gt;Single&lt;/h3&gt;
+                                  &lt;div class="pb-2"&gt;
+                                    &lt;h4 class="text-4xl mb-2 font-semibold text-yellow-300"&gt;&lt;small&gt;$&lt;/small&gt;39&lt;/h4&gt;
+                                  &lt;/div&gt;
+                                  &lt;!-- pricing content --&gt;
+                                  &lt;ul class="space-y-6 mt-4 mb-12"&gt;
+                                    &lt;li&gt;1 end products&lt;/li&gt;
+                                    &lt;li&gt;Personal or client&lt;/li&gt;
+                                    &lt;li&gt;Lifetime Update&lt;/li&gt;
+                                    &lt;li&gt;Supports 24/7&lt;/li&gt;
+                                    &lt;li&gt;Most Popular&lt;/li&gt;
+                                    &lt;li&gt;Can't product sold&lt;/li&gt;
+                                    &lt;li&gt;Can't for generators&lt;/li&gt;
+                                  &lt;/ul&gt;
+                                  &lt;!-- Pricing Button --&gt;
+                                  &lt;div class="py-2"&gt;
+                                    &lt;a href="#" rel="noopener" class="py-3 px-5 -ms-1 rounded-md leading-5 text-gray-800 bg-gray-100 border border-gray-100 hover:text-gray-900 hover:ring-0 hover:border-gray-200 focus:bg-gray-200 focus:border-gray-200 focus:outline-none focus:ring-0"&gt;
+                                      Install Template
+                                    &lt;/a&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;&lt;!-- end pricing table --&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class="flex-shrink max-w-full w-11/12 md:w-1/2 lg:w-1/3 px-4 wow fadeInRight" data-wow-duration="1s"&gt;
+                              &lt;div class="px-6 md:px-2 lg:px-4"&gt;
+                                &lt;!-- pricing table --&gt;
+                                &lt;div class="relative py-16 px-12 mb-12 bg-white border border-gray-200 dark:bg-gray-800 dark:border-gray-700 shadow-xl text-center rounded-md"&gt;
+                                  &lt;!-- pricing Title --&gt;
+                                  &lt;h3 class="text-lg mb-4 font-semibold uppercase"&gt;Extended&lt;/h3&gt;
+                                  &lt;div class="pb-2"&gt;
+                                    &lt;h4 class="text-4xl mb-2 font-semibold text-primary-700"&gt;&lt;small&gt;$&lt;/small&gt;499&lt;/h4&gt;
+                                  &lt;/div&gt;
+                                  &lt;!-- pricing content --&gt;
+                                  &lt;ul class="space-y-6 mt-4 mb-12"&gt;
+                                    &lt;li&gt;1 end products&lt;/li&gt;
+                                    &lt;li&gt;Personal or client&lt;/li&gt;
+                                    &lt;li&gt;Lifetime Update&lt;/li&gt;
+                                    &lt;li&gt;Supports 24/7&lt;/li&gt;
+                                    &lt;li&gt;Can Use in product sold&lt;/li&gt;
+                                    &lt;li&gt;Can't for generators&lt;/li&gt;
+                                  &lt;/ul&gt;
+                                  &lt;!-- Pricing Button --&gt;
+                                  &lt;div class="py-2"&gt;
+                                    &lt;a href="#" rel="noopener" class="py-3 px-5 -ms-1 rounded-md leading-5 text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0"&gt;Install Template&lt;/a&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;&lt;!-- end pricing table --&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class="flex-shrink max-w-full w-full px-4"&gt;
+                              &lt;p class="text-center font-small mb-0"&gt;
+                                &lt;a class="text-gray-500" rel="noopener" href="#" target="_blank"&gt;
+                                  &lt;svg xmlns="http://www.w3.org/2000/svg" class="inline me-2" fill="currentColor" width="1rem" height="1rem" viewBox="0 0 640 512"&gt;&lt;path d="M256 336h-.02c0-16.18 1.34-8.73-85.05-181.51-17.65-35.29-68.19-35.36-85.87 0C-2.06 328.75.02 320.33.02 336H0c0 44.18 57.31 80 128 80s128-35.82 128-80zM128 176l72 144H56l72-144zm511.98 160c0-16.18 1.34-8.73-85.05-181.51-17.65-35.29-68.19-35.36-85.87 0-87.12 174.26-85.04 165.84-85.04 181.51H384c0 44.18 57.31 80 128 80s128-35.82 128-80h-.02zM440 320l72-144 72 144H440zm88 128H352V153.25c23.51-10.29 41.16-31.48 46.39-57.25H528c8.84 0 16-7.16 16-16V48c0-8.84-7.16-16-16-16H383.64C369.04 12.68 346.09 0 320 0s-49.04 12.68-63.64 32H112c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h129.61c5.23 25.76 22.87 46.96 46.39 57.25V448H112c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h416c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"&gt;&lt;/path&gt;&lt;/svg&gt;
+                                  Full license details
+                                &lt;/a&gt;
+                              &lt;/p&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;!-- End pricing --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+        </div><!-- end row -->
+      </div>
+    </div><!-- End snippets -->
+  </main>

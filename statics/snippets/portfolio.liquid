@@ -1,0 +1,736 @@
+
+  <main id="content">
+    <!-- =========={ HERO }==========  -->
+    <div id="hero" class="relative py-12 jarallax">
+      <!-- background parallax -->
+      <img class="jarallax-img" src="{{ 'images/img-min/bg-planet.jpg' | asset_url }}" alt="title">
+      <!-- background overlay -->
+      <div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"></div>
+
+      <div class="container xl:max-w-6xl mx-auto px-4">
+        <div class="flex flex-wrap flex-row -mx-4 items-center justify-center">
+          <!-- content -->
+          <div class="max-w-full w-full lg:w-7/12 px-4">
+            <nav aria-label="breadcrumb">
+              <ol class="flex flex-wrap justify-center bg-transparent text-sm mb-0 space-x-1">
+                <li>
+                  <a href="#" class="text-gray-200 hover:text-white">
+                    Home
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="/s/index" class="text-gray-200 hover:text-white">
+                    Snippets
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
+                  </a>
+                </li>
+                <li class="hidden md:block text-white" aria-current="page">Portfolio Sections</li>
+              </ol>
+            </nav>
+
+            <div class="mt-0 pt-6 text-center">
+              <h1 class="text-2xl md:text-3xl leading-normal mb-2 font-semibold text-white">Portfolio Sections</h1>    
+              <hr class="block w-12 h-0.5 mx-auto my-5 bg-yellow-300 border-yellow-300">       
+            </div>
+          </div><!-- end content -->
+        </div>
+      </div>
+    </div><!-- End hero -->
+
+    <!-- =========={ SNIPPETS }==========  -->
+    <div id="snippets" class="relative pt-12 bg-white dark:bg-gray-800">
+      <div class="container mx-auto px-6 lg:px-4">
+        <!-- row -->
+        <div class="flex flex-wrap flex-row -mx-4">
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Portfolio Sections style 1
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- portfolio start -->
+                <div id="portfolio" class="relative py-20 md:py-24 bg-white dark:bg-gray-800">
+						      <div x-data="{ tab: 'all' }" class="container xl:max-w-6xl mx-auto px-4">
+                    <!-- section header -->
+                    <header class="text-center mx-auto mb-12">
+                      <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"><span class="font-light">Our</span> Portfolio</h2>
+                      <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
+                    </header><!-- end section header -->
+
+						        <!-- navigation -->
+						        <div class="space-x-5 text-center">
+						          <button @click.prevent="tab = 'all'" :class="{ 'text-primary-700' : tab === 'all' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none text-primary-700">
+						            All
+						          </button>
+
+						          <button @click.prevent="tab = 'web'" :class="{ 'text-primary-700' : tab === 'web' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none">
+						            Web
+						          </button>
+
+						          <button @click.prevent="tab = 'graphic'" :class="{ 'text-primary-700' : tab === 'graphic' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none">
+						            Graphic
+						          </button>
+
+						          <button @click.prevent="tab = 'photo'" :class="{ 'text-primary-700' : tab === 'photo' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none">
+						            Photograpy
+						          </button>
+						        </div><!-- end navigation -->
+
+						        <!-- Portfolio Content -->
+						        <div class="flex flex-wrap flex-row -mx-4 lightgallery-thumbnail">
+						          <figure x-show="tab === 'graphic' || tab === 'photo' || tab === 'all'" data-src="{{ 'images/img-min/project_1.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+						            <div class="relative overflow-hidden cursor-pointer mb-6">
+						              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_1.jpg' | asset_url }}" alt="Image Description">
+						              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+						                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Logo Design</h3>
+						                <small class="d-block">Branding</small>
+						              </figcaption>
+						            </div>
+						          </figure>
+
+						          <figure x-show="tab === 'web' || tab === 'all'" data-src="{{ 'images/img-min/project_2.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+						            <div class="relative overflow-hidden cursor-pointer mb-6">
+						              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_2.jpg' | asset_url }}" alt="Image Description">
+						              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+						                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Web Development</h3>
+						                <small class="d-block">Web</small>
+						              </figcaption>
+						            </div>
+						          </figure>
+
+						          <figure x-show="tab === 'graphic' || tab === 'all'" data-src="{{ 'images/img-min/project_3.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+						            <div class="relative overflow-hidden cursor-pointer mb-6">
+						              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_3.jpg' | asset_url }}" alt="Image Description">
+						              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+						                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Graphic Design</h3>
+						                <small class="d-block">Graphic</small>
+						              </figcaption>
+						            </div>
+						          </figure>
+
+						          <figure x-show="tab === 'graphic' || tab === 'all'" data-src="{{ 'images/img-min/project_4.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+						            <div class="relative overflow-hidden cursor-pointer mb-6">
+						              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_4.jpg' | asset_url }}" alt="Image Description">
+						              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+						                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Video Marketing</h3>
+						                <small class="d-block">Video</small>
+						              </figcaption>
+						            </div>
+						          </figure>
+
+						          <figure x-show="tab === 'photo' || tab === 'all'" data-src="{{ 'images/img-min/project_5.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+						            <div class="relative overflow-hidden cursor-pointer mb-6">
+						              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_5.jpg' | asset_url }}" alt="Image Description">
+						              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+						                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Photography</h3>
+						                <small class="d-block">Photo</small>
+						              </figcaption>
+						            </div>
+						          </figure>
+
+						          <figure x-show="tab === 'web' || tab === 'all'" data-src="{{ 'images/img-min/project_6.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+						            <div class="relative overflow-hidden cursor-pointer mb-6">
+						              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_6.jpg' | asset_url }}" alt="Image Description">
+						              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+						                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Apps Development</h3>
+						                <small class="d-block">Apps</small>
+						              </figcaption>
+						            </div>
+						          </figure>
+						        </div>
+						      </div>
+						      
+						      <div class="container xl:max-w-6xl mx-auto px-4">
+						        <div class="flex flex-wrap flex-row -mx-4">
+						          <div class="w-full px-4 text-center mt-6">
+						            <a href="#" class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0">View all latest project</a>
+						          </div>
+						        </div>
+						      </div>
+						    </div><!-- End portfolio -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- portfolio start --&gt;
+                    &lt;div id="portfolio" class="relative py-20 md:py-24 bg-white dark:bg-gray-800"&gt;
+                      &lt;div x-data="{ tab: 'all' }" class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;!-- section header --&gt;
+                        &lt;header class="text-center mx-auto mb-12"&gt;
+                          &lt;h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"&gt;&lt;span class="font-light"&gt;Our&lt;/span&gt; Portfolio&lt;/h2&gt;
+                          &lt;hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700"&gt;
+                        &lt;/header&gt;&lt;!-- end section header --&gt;
+
+                        &lt;!-- navigation --&gt;
+                        &lt;div class="space-x-5 text-center"&gt;
+                          &lt;button @click.prevent="tab = 'all'" :class="{ 'text-primary-700' : tab === 'all' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none text-primary-700"&gt;
+                            All
+                          &lt;/button&gt;
+
+                          &lt;button @click.prevent="tab = 'web'" :class="{ 'text-primary-700' : tab === 'web' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none"&gt;
+                            Web
+                          &lt;/button&gt;
+
+                          &lt;button @click.prevent="tab = 'graphic'" :class="{ 'text-primary-700' : tab === 'graphic' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none"&gt;
+                            Graphic
+                          &lt;/button&gt;
+
+                          &lt;button @click.prevent="tab = 'photo'" :class="{ 'text-primary-700' : tab === 'photo' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none"&gt;
+                            Photograpy
+                          &lt;/button&gt;
+                        &lt;/div&gt;&lt;!-- end navigation --&gt;
+
+                        &lt;!-- Portfolio Content --&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4 lightgallery-thumbnail"&gt;
+                          &lt;figure x-show="tab === 'graphic' || tab === 'photo' || tab === 'all'" data-src="{{ 'images/img-min/project_1.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images"&gt;
+                            &lt;div class="relative overflow-hidden cursor-pointer mb-6"&gt;
+                              &lt;img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_1.jpg' | asset_url }}" alt="Image Description"&gt;
+                              &lt;figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center"&gt;
+                                &lt;h3 class="text-base leading-normal font-semibold my-1 text-gray-100"&gt;Logo Design&lt;/h3&gt;
+                                &lt;small class="d-block"&gt;Branding&lt;/small&gt;
+                              &lt;/figcaption&gt;
+                            &lt;/div&gt;
+                          &lt;/figure&gt;
+
+                          &lt;figure x-show="tab === 'web' || tab === 'all'" data-src="{{ 'images/img-min/project_2.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images"&gt;
+                            &lt;div class="relative overflow-hidden cursor-pointer mb-6"&gt;
+                              &lt;img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_2.jpg' | asset_url }}" alt="Image Description"&gt;
+                              &lt;figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center"&gt;
+                                &lt;h3 class="text-base leading-normal font-semibold my-1 text-gray-100"&gt;Web Development&lt;/h3&gt;
+                                &lt;small class="d-block"&gt;Web&lt;/small&gt;
+                              &lt;/figcaption&gt;
+                            &lt;/div&gt;
+                          &lt;/figure&gt;
+
+                          &lt;figure x-show="tab === 'graphic' || tab === 'all'" data-src="{{ 'images/img-min/project_3.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images"&gt;
+                            &lt;div class="relative overflow-hidden cursor-pointer mb-6"&gt;
+                              &lt;img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_3.jpg' | asset_url }}" alt="Image Description"&gt;
+                              &lt;figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center"&gt;
+                                &lt;h3 class="text-base leading-normal font-semibold my-1 text-gray-100"&gt;Graphic Design&lt;/h3&gt;
+                                &lt;small class="d-block"&gt;Graphic&lt;/small&gt;
+                              &lt;/figcaption&gt;
+                            &lt;/div&gt;
+                          &lt;/figure&gt;
+
+                          &lt;figure x-show="tab === 'graphic' || tab === 'all'" data-src="{{ 'images/img-min/project_4.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images"&gt;
+                            &lt;div class="relative overflow-hidden cursor-pointer mb-6"&gt;
+                              &lt;img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_4.jpg' | asset_url }}" alt="Image Description"&gt;
+                              &lt;figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center"&gt;
+                                &lt;h3 class="text-base leading-normal font-semibold my-1 text-gray-100"&gt;Video Marketing&lt;/h3&gt;
+                                &lt;small class="d-block"&gt;Video&lt;/small&gt;
+                              &lt;/figcaption&gt;
+                            &lt;/div&gt;
+                          &lt;/figure&gt;
+
+                          &lt;figure x-show="tab === 'photo' || tab === 'all'" data-src="{{ 'images/img-min/project_5.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images"&gt;
+                            &lt;div class="relative overflow-hidden cursor-pointer mb-6"&gt;
+                              &lt;img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_5.jpg' | asset_url }}" alt="Image Description"&gt;
+                              &lt;figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center"&gt;
+                                &lt;h3 class="text-base leading-normal font-semibold my-1 text-gray-100"&gt;Photography&lt;/h3&gt;
+                                &lt;small class="d-block"&gt;Photo&lt;/small&gt;
+                              &lt;/figcaption&gt;
+                            &lt;/div&gt;
+                          &lt;/figure&gt;
+
+                          &lt;figure x-show="tab === 'web' || tab === 'all'" data-src="{{ 'images/img-min/project_6.jpg' | asset_url }}" class="flex-shrink max-w-full px-4 w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images"&gt;
+                            &lt;div class="relative overflow-hidden cursor-pointer mb-6"&gt;
+                              &lt;img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_6.jpg' | asset_url }}" alt="Image Description"&gt;
+                              &lt;figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center"&gt;
+                                &lt;h3 class="text-base leading-normal font-semibold my-1 text-gray-100"&gt;Apps Development&lt;/h3&gt;
+                                &lt;small class="d-block"&gt;Apps&lt;/small&gt;
+                              &lt;/figcaption&gt;
+                            &lt;/div&gt;
+                          &lt;/figure&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4"&gt;
+                          &lt;div class="w-full px-4 text-center mt-6"&gt;
+                            &lt;a href="#" class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0"&gt;View all latest project&lt;/a&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- End portfolio --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Portfolio Sections style 2
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- portfolio start -->
+                <div id="portfolio" class="relative py-20 md:py-24 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20">
+						      <div x-data="{ tab: 'all' }" class="container xl:max-w-6xl mx-auto px-4">
+                    <!-- section header -->
+                    <header class="text-center mx-auto mb-12">
+                      <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"><span class="font-light">Our</span> Portfolio</h2>
+                      <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
+                    </header><!-- end section header -->
+
+						        <!-- navigation -->
+						        <div class="space-x-5 text-center">
+						          <button @click.prevent="tab = 'all'" :class="{ 'text-primary-700' : tab === 'all' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none text-primary-700">
+						            All
+						          </button>
+
+						          <button @click.prevent="tab = 'web'" :class="{ 'text-primary-700' : tab === 'web' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none">
+						            Web
+						          </button>
+
+						          <button @click.prevent="tab = 'graphic'" :class="{ 'text-primary-700' : tab === 'graphic' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none">
+						            Graphic
+						          </button>
+
+						          <button @click.prevent="tab = 'photo'" :class="{ 'text-primary-700' : tab === 'photo' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none">
+						            Photograpy
+						          </button>
+						        </div><!-- end navigation -->
+
+						        <!-- Portfolio Content -->
+						        <div class="flex flex-wrap flex-row lightgallery-thumbnail">
+						          <figure x-show="tab === 'graphic' || tab === 'photo' || tab === 'all'" data-src="{{ 'images/img-min/project_1.jpg' | asset_url }}" class="flex-shrink max-w-full w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+						            <div class="relative overflow-hidden cursor-pointer">
+						              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_1.jpg' | asset_url }}" alt="Image Description">
+						              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+						                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Logo Design</h3>
+						                <small class="d-block">Branding</small>
+						              </figcaption>
+						            </div>
+						          </figure>
+
+						          <figure x-show="tab === 'web' || tab === 'all'" data-src="{{ 'images/img-min/project_2.jpg' | asset_url }}" class="flex-shrink max-w-full w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+						            <div class="relative overflow-hidden cursor-pointer">
+						              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_2.jpg' | asset_url }}" alt="Image Description">
+						              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+						                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Web Development</h3>
+						                <small class="d-block">Web</small>
+						              </figcaption>
+						            </div>
+						          </figure>
+
+						          <figure x-show="tab === 'graphic' || tab === 'all'" data-src="{{ 'images/img-min/project_3.jpg' | asset_url }}" class="flex-shrink max-w-full w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+						            <div class="relative overflow-hidden cursor-pointer">
+						              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_3.jpg' | asset_url }}" alt="Image Description">
+						              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+						                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Graphic Design</h3>
+						                <small class="d-block">Graphic</small>
+						              </figcaption>
+						            </div>
+						          </figure>
+
+						          <figure x-show="tab === 'graphic' || tab === 'all'" data-src="{{ 'images/img-min/project_4.jpg' | asset_url }}" class="flex-shrink max-w-full w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+						            <div class="relative overflow-hidden cursor-pointer">
+						              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_4.jpg' | asset_url }}" alt="Image Description">
+						              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+						                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Video Marketing</h3>
+						                <small class="d-block">Video</small>
+						              </figcaption>
+						            </div>
+						          </figure>
+
+						          <figure x-show="tab === 'photo' || tab === 'all'" data-src="{{ 'images/img-min/project_5.jpg' | asset_url }}" class="flex-shrink max-w-full w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+						            <div class="relative overflow-hidden cursor-pointer">
+						              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_5.jpg' | asset_url }}" alt="Image Description">
+						              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+						                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Photography</h3>
+						                <small class="d-block">Photo</small>
+						              </figcaption>
+						            </div>
+						          </figure>
+
+						          <figure x-show="tab === 'web' || tab === 'all'" data-src="{{ 'images/img-min/project_6.jpg' | asset_url }}" class="flex-shrink max-w-full w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images">
+						            <div class="relative overflow-hidden cursor-pointer">
+						              <img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_6.jpg' | asset_url }}" alt="Image Description">
+						              <figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center">
+						                <h3 class="text-base leading-normal font-semibold my-1 text-gray-100">Apps Development</h3>
+						                <small class="d-block">Apps</small>
+						              </figcaption>
+						            </div>
+						          </figure>
+						        </div>
+						      </div>
+						      
+						      <div class="container xl:max-w-6xl mx-auto px-4">
+						        <div class="flex flex-wrap flex-row -mx-4">
+						          <div class="w-full px-4 text-center mt-12">
+						            <a href="#" class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0">View all latest project</a>
+						          </div>
+						        </div>
+						      </div>
+						    </div><!-- End portfolio -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- portfolio start --&gt;
+                    &lt;div id="portfolio" class="relative py-20 md:py-24 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20"&gt;
+                      &lt;div x-data="{ tab: 'all' }" class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;!-- section header --&gt;
+                        &lt;header class="text-center mx-auto mb-12"&gt;
+                          &lt;h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"&gt;&lt;span class="font-light"&gt;Our&lt;/span&gt; Portfolio&lt;/h2&gt;
+                          &lt;hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700"&gt;
+                        &lt;/header&gt;&lt;!-- end section header --&gt;
+
+                        &lt;!-- navigation --&gt;
+                        &lt;div class="space-x-5 text-center"&gt;
+                          &lt;button @click.prevent="tab = 'all'" :class="{ 'text-primary-700' : tab === 'all' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none text-primary-700"&gt;
+                            All
+                          &lt;/button&gt;
+
+                          &lt;button @click.prevent="tab = 'web'" :class="{ 'text-primary-700' : tab === 'web' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none"&gt;
+                            Web
+                          &lt;/button&gt;
+
+                          &lt;button @click.prevent="tab = 'graphic'" :class="{ 'text-primary-700' : tab === 'graphic' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none"&gt;
+                            Graphic
+                          &lt;/button&gt;
+
+                          &lt;button @click.prevent="tab = 'photo'" :class="{ 'text-primary-700' : tab === 'photo' }" class="inline-block  bg-transparent border-0 outline-none mb-6 md:mb-12 focus:text-primary-700 focus:ring-0 focus:outline-none"&gt;
+                            Photograpy
+                          &lt;/button&gt;
+                        &lt;/div&gt;&lt;!-- end navigation --&gt;
+
+                        &lt;!-- Portfolio Content --&gt;
+                        &lt;div class="flex flex-wrap flex-row lightgallery-thumbnail"&gt;
+                          &lt;figure x-show="tab === 'graphic' || tab === 'photo' || tab === 'all'" data-src="{{ 'images/img-min/project_1.jpg' | asset_url }}" class="flex-shrink max-w-full w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images"&gt;
+                            &lt;div class="relative overflow-hidden cursor-pointer"&gt;
+                              &lt;img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_1.jpg' | asset_url }}" alt="Image Description"&gt;
+                              &lt;figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center"&gt;
+                                &lt;h3 class="text-base leading-normal font-semibold my-1 text-gray-100"&gt;Logo Design&lt;/h3&gt;
+                                &lt;small class="d-block"&gt;Branding&lt;/small&gt;
+                              &lt;/figcaption&gt;
+                            &lt;/div&gt;
+                          &lt;/figure&gt;
+
+                          &lt;figure x-show="tab === 'web' || tab === 'all'" data-src="{{ 'images/img-min/project_2.jpg' | asset_url }}" class="flex-shrink max-w-full w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images"&gt;
+                            &lt;div class="relative overflow-hidden cursor-pointer"&gt;
+                              &lt;img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_2.jpg' | asset_url }}" alt="Image Description"&gt;
+                              &lt;figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center"&gt;
+                                &lt;h3 class="text-base leading-normal font-semibold my-1 text-gray-100"&gt;Web Development&lt;/h3&gt;
+                                &lt;small class="d-block"&gt;Web&lt;/small&gt;
+                              &lt;/figcaption&gt;
+                            &lt;/div&gt;
+                          &lt;/figure&gt;
+
+                          &lt;figure x-show="tab === 'graphic' || tab === 'all'" data-src="{{ 'images/img-min/project_3.jpg' | asset_url }}" class="flex-shrink max-w-full w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images"&gt;
+                            &lt;div class="relative overflow-hidden cursor-pointer"&gt;
+                              &lt;img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_3.jpg' | asset_url }}" alt="Image Description"&gt;
+                              &lt;figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center"&gt;
+                                &lt;h3 class="text-base leading-normal font-semibold my-1 text-gray-100"&gt;Graphic Design&lt;/h3&gt;
+                                &lt;small class="d-block"&gt;Graphic&lt;/small&gt;
+                              &lt;/figcaption&gt;
+                            &lt;/div&gt;
+                          &lt;/figure&gt;
+
+                          &lt;figure x-show="tab === 'graphic' || tab === 'all'" data-src="{{ 'images/img-min/project_4.jpg' | asset_url }}" class="flex-shrink max-w-full w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images"&gt;
+                            &lt;div class="relative overflow-hidden cursor-pointer"&gt;
+                              &lt;img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_4.jpg' | asset_url }}" alt="Image Description"&gt;
+                              &lt;figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center"&gt;
+                                &lt;h3 class="text-base leading-normal font-semibold my-1 text-gray-100"&gt;Video Marketing&lt;/h3&gt;
+                                &lt;small class="d-block"&gt;Video&lt;/small&gt;
+                              &lt;/figcaption&gt;
+                            &lt;/div&gt;
+                          &lt;/figure&gt;
+
+                          &lt;figure x-show="tab === 'photo' || tab === 'all'" data-src="{{ 'images/img-min/project_5.jpg' | asset_url }}" class="flex-shrink max-w-full w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images"&gt;
+                            &lt;div class="relative overflow-hidden cursor-pointer"&gt;
+                              &lt;img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_5.jpg' | asset_url }}" alt="Image Description"&gt;
+                              &lt;figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center"&gt;
+                                &lt;h3 class="text-base leading-normal font-semibold my-1 text-gray-100"&gt;Photography&lt;/h3&gt;
+                                &lt;small class="d-block"&gt;Photo&lt;/small&gt;
+                              &lt;/figcaption&gt;
+                            &lt;/div&gt;
+                          &lt;/figure&gt;
+
+                          &lt;figure x-show="tab === 'web' || tab === 'all'" data-src="{{ 'images/img-min/project_6.jpg' | asset_url }}" class="flex-shrink max-w-full w-full sm:w-1/2 lg:w-1/3 group" data-sub-html="title images"&gt;
+                            &lt;div class="relative overflow-hidden cursor-pointer"&gt;
+                              &lt;img class="block w-full h-auto transform duration-500 hover:scale-125" src="{{ 'images/img-min/project_6.jpg' | asset_url }}" alt="Image Description"&gt;
+                              &lt;figcaption class="absolute inset-x-0 bottom-0 h-20 transition-opacity duration-500 ease-in opacity-0 group-hover:opacity-100 overflow-hidden px-4 py-2 text-gray-100 bg-primary-700 text-center"&gt;
+                                &lt;h3 class="text-base leading-normal font-semibold my-1 text-gray-100"&gt;Apps Development&lt;/h3&gt;
+                                &lt;small class="d-block"&gt;Apps&lt;/small&gt;
+                              &lt;/figcaption&gt;
+                            &lt;/div&gt;
+                          &lt;/figure&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;div class="flex flex-wrap flex-row -mx-4"&gt;
+                          &lt;div class="w-full px-4 text-center mt-12"&gt;
+                            &lt;a href="#" class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0"&gt;View all latest project&lt;/a&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- End portfolio --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
+            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+              <div class="flex-shrink min-w-0 flex items-center">
+                Portfolio Sections style 3
+              </div>
+              <div class="ms-4 flex flex-shrink-0 items-center">
+                <div class="flex items-center text-sm md:text-base">
+                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Preview
+                  </button>
+                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                    Code
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div x-show="tabs === 1">
+                <!-- =========={ PORTFOLIO }==========  -->
+                <div id="portfolio" class="relative py-20 md:py-24 bg-gray-100 dark:bg-gray-800">
+                  <div class="container xl:max-w-6xl mx-auto px-4">
+                    <!-- section header -->
+                    <header class="text-center mx-auto mb-12">
+                      <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"><span class="font-light">Our</span> Portfolio</h2>
+                      <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
+                    </header><!-- end section header -->
+                    
+                    <!-- slider -->
+                    <div class="lightgallery-slider mb-20 lg:mb-4 carousel nav-dark-button nav-outset-button" data-flickity='{ "cellAlign": "left", "wrapAround": true, "pageDots": false, "draggable": false, "adaptiveHeight": true, "prevNextButtons": true , "imagesLoaded": true }'>
+                      <!-- item -->
+                      <div class="slider-item max-w-full w-full md:w-1/2 lg:w-1/3 px-4 cursor-pointer" data-src="{{ 'images/img/web/project1.jpg' | asset_url }}" data-sub-html="Screenshot 2">
+                        <div class="relative">
+                          <div class="h-72 relative"> 
+                            <div class="absolute inset-0 bg-top hover:bg-bottom" style='background-image: url("{{ 'images/img/web/project1.jpg' | asset_url }}");background-repeat: no-repeat;transition: 2s;background-size: 100%;'>
+                              <img class="hidden" src="{{ 'images/img/web/project1.jpg' | asset_url }}">
+                            </div> 
+                          </div> 
+                          <div class="relative bg-white dark:bg-gray-900">
+                            <div class="p-4">
+                              <p class="text-sm text-gray-500 mb-1.5">App</p> 
+                              <h3 class="text-xl font-bold mb-1.5">Project Name</h3> 
+                              <p class="text-lg">Website of the Business Center</p>
+                            </div>
+
+                            <div class="relative p-4"> 
+                              <button class="inline-block py-2 px-6 bg-white text-black font-semibold uppercase border-2 border-black hover:bg-black hover:text-white mb-3">Look</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- item -->
+                      <div class="slider-item max-w-full w-full md:w-1/2 lg:w-1/3 px-4 cursor-pointer" data-src="{{ 'images/img/web/project2.jpg' | asset_url }}" data-sub-html="Screenshot 3">
+                        <div class="relative">
+                          <div class="h-72 relative"> 
+                            <div class="absolute inset-0 bg-top hover:bg-bottom" style='background-image: url("{{ 'images/img/web/project2.jpg' | asset_url }}");background-repeat: no-repeat;transition: 2s;background-size: 100%;'>
+                              <img class="hidden" src="{{ 'images/img/web/project2.jpg' | asset_url }}">
+                            </div> 
+                          </div> 
+                          <div class="relative bg-white dark:bg-gray-900">
+                            <div class="p-4">
+                              <p class="text-sm text-gray-500 mb-1.5">Web</p> 
+                              <h3 class="text-xl font-bold mb-1.5">Project Name</h3> 
+                              <p class="text-lg">Website of the Business Center</p>
+                            </div>
+
+                            <div class="relative p-4"> 
+                              <button class="inline-block py-2 px-6 bg-white text-black font-semibold uppercase border-2 border-black hover:bg-black hover:text-white mb-3">Look</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- item -->
+                      <div class="slider-item max-w-full w-full md:w-1/2 lg:w-1/3 px-4 cursor-pointer" data-src="{{ 'images/img/web/project3.jpg' | asset_url }}" data-sub-html="Screenshot 3">
+                        <div class="relative">
+                          <div class="h-72 relative"> 
+                            <div class="absolute inset-0 bg-top hover:bg-bottom" style='background-image: url("{{ 'images/img/web/project3.jpg' | asset_url }}");background-repeat: no-repeat;transition: 2s;background-size: 100%;'>
+                              <img class="hidden" src="{{ 'images/img/web/project3.jpg' | asset_url }}">
+                            </div> 
+                          </div> 
+                          <div class="relative bg-white dark:bg-gray-900">
+                            <div class="p-4">
+                              <p class="text-sm text-gray-500 mb-1.5">Web</p> 
+                              <h3 class="text-xl font-bold mb-1.5">Project Name</h3> 
+                              <p class="text-lg">Website of the Business Center</p>
+                            </div>
+
+                            <div class="relative p-4"> 
+                              <button class="inline-block py-2 px-6 bg-white text-black font-semibold uppercase border-2 border-black hover:bg-black hover:text-white mb-3">Look</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- item -->
+                      <div class="slider-item max-w-full w-full md:w-1/2 lg:w-1/3 px-4 cursor-pointer" data-src="{{ 'images/img/web/project4.jpg' | asset_url }}" data-sub-html="Screenshot 1">
+                        <div class="relative">
+                          <div class="h-72 relative"> 
+                            <div class="absolute inset-0 bg-top hover:bg-bottom" style='background-image: url("{{ 'images/img/web/project1.jpg' | asset_url }}");background-repeat: no-repeat;transition: 2s;background-size: 100%;'>
+                              <img class="hidden" src="{{ 'images/img/web/project4.jpg' | asset_url }}">
+                            </div> 
+                          </div> 
+                          <div class="relative bg-white dark:bg-gray-900">
+                            <div class="p-4">
+                              <p class="text-sm text-gray-500 mb-1.5">Web</p> 
+                              <h3 class="text-xl font-bold mb-1.5">Project Name</h3> 
+                              <p class="text-lg">Website of the Business Center</p>
+                            </div>
+
+                            <div class="relative p-4"> 
+                              <button class="inline-block py-2 px-6 bg-white text-black font-semibold uppercase border-2 border-black hover:bg-black hover:text-white mb-3">Look</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- end slider -->
+
+                  </div>
+                </div><!-- End portfolio -->
+              </div>
+              <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;!-- =========={ PORTFOLIO }==========  --&gt;
+                    &lt;div id="portfolio" class="relative py-20 md:py-24 bg-gray-100 dark:bg-gray-800"&gt;
+                      &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
+                        &lt;!-- section header --&gt;
+                        &lt;header class="text-center mx-auto mb-12"&gt;
+                          &lt;h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"&gt;&lt;span class="font-light"&gt;Our&lt;/span&gt; Portfolio&lt;/h2&gt;
+                          &lt;hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700"&gt;
+                        &lt;/header&gt;&lt;!-- end section header --&gt;
+                        
+                        &lt;!-- slider --&gt;
+                        &lt;div class="lightgallery-slider mb-20 lg:mb-4 carousel nav-dark-button nav-outset-button" data-flickity='{ "cellAlign": "left", "wrapAround": true, "pageDots": false, "draggable": false, "adaptiveHeight": true, "prevNextButtons": true , "imagesLoaded": true }'&gt;
+                          &lt;!-- item --&gt;
+                          &lt;div class="slider-item max-w-full w-full md:w-1/2 lg:w-1/3 px-4 cursor-pointer" data-src="{{ 'images/img/web/project1.jpg' | asset_url }}" data-sub-html="Screenshot 2"&gt;
+                            &lt;div class="relative"&gt;
+                              &lt;div class="h-72 relative"&gt; 
+                                &lt;div class="absolute inset-0 bg-top hover:bg-bottom" style="background-image: url('src/img/web/project1.jpg');background-repeat: no-repeat;transition: 2s;background-size: 100%;"&gt;
+                                  &lt;img class="hidden" src="{{ 'images/img/web/project1.jpg' | asset_url }}"&gt;
+                                &lt;/div&gt; 
+                              &lt;/div&gt; 
+                              &lt;div class="relative bg-white dark:bg-gray-900"&gt;
+                                &lt;div class="p-4"&gt;
+                                  &lt;p class="text-sm text-gray-500 mb-1.5"&gt;App&lt;/p&gt; 
+                                  &lt;h3 class="text-xl font-bold mb-1.5"&gt;Project Name&lt;/h3&gt; 
+                                  &lt;p class="text-lg"&gt;Website of the Business Center&lt;/p&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class="relative p-4"&gt; 
+                                  &lt;button class="inline-block py-2 px-6 bg-white text-black font-semibold uppercase border-2 border-black hover:bg-black hover:text-white mb-3"&gt;Look&lt;/button&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+
+                          &lt;!-- item --&gt;
+                          &lt;div class="slider-item max-w-full w-full md:w-1/2 lg:w-1/3 px-4 cursor-pointer" data-src="{{ 'images/img/web/project2.jpg' | asset_url }}" data-sub-html="Screenshot 3"&gt;
+                            &lt;div class="relative"&gt;
+                              &lt;div class="h-72 relative"&gt; 
+                                &lt;div class="absolute inset-0 bg-top hover:bg-bottom" style="background-image: url('src/img/web/project2.jpg');background-repeat: no-repeat;transition: 2s;background-size: 100%;"&gt;
+                                  &lt;img class="hidden" src="{{ 'images/img/web/project2.jpg' | asset_url }}"&gt;
+                                &lt;/div&gt; 
+                              &lt;/div&gt; 
+                              &lt;div class="relative bg-white dark:bg-gray-900"&gt;
+                                &lt;div class="p-4"&gt;
+                                  &lt;p class="text-sm text-gray-500 mb-1.5"&gt;Web&lt;/p&gt; 
+                                  &lt;h3 class="text-xl font-bold mb-1.5"&gt;Project Name&lt;/h3&gt; 
+                                  &lt;p class="text-lg"&gt;Website of the Business Center&lt;/p&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class="relative p-4"&gt; 
+                                  &lt;button class="inline-block py-2 px-6 bg-white text-black font-semibold uppercase border-2 border-black hover:bg-black hover:text-white mb-3"&gt;Look&lt;/button&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+
+                          &lt;!-- item --&gt;
+                          &lt;div class="slider-item max-w-full w-full md:w-1/2 lg:w-1/3 px-4 cursor-pointer" data-src="{{ 'images/img/web/project3.jpg' | asset_url }}" data-sub-html="Screenshot 3"&gt;
+                            &lt;div class="relative"&gt;
+                              &lt;div class="h-72 relative"&gt; 
+                                &lt;div class="absolute inset-0 bg-top hover:bg-bottom" style="background-image: url('src/img/web/project3.jpg');background-repeat: no-repeat;transition: 2s;background-size: 100%;"&gt;
+                                  &lt;img class="hidden" src="{{ 'images/img/web/project3.jpg' | asset_url }}"&gt;
+                                &lt;/div&gt; 
+                              &lt;/div&gt; 
+                              &lt;div class="relative bg-white dark:bg-gray-900"&gt;
+                                &lt;div class="p-4"&gt;
+                                  &lt;p class="text-sm text-gray-500 mb-1.5"&gt;Web&lt;/p&gt; 
+                                  &lt;h3 class="text-xl font-bold mb-1.5"&gt;Project Name&lt;/h3&gt; 
+                                  &lt;p class="text-lg"&gt;Website of the Business Center&lt;/p&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class="relative p-4"&gt; 
+                                  &lt;button class="inline-block py-2 px-6 bg-white text-black font-semibold uppercase border-2 border-black hover:bg-black hover:text-white mb-3"&gt;Look&lt;/button&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+
+                          &lt;!-- item --&gt;
+                          &lt;div class="slider-item max-w-full w-full md:w-1/2 lg:w-1/3 px-4 cursor-pointer" data-src="{{ 'images/img/web/project4.jpg' | asset_url }}" data-sub-html="Screenshot 1"&gt;
+                            &lt;div class="relative"&gt;
+                              &lt;div class="h-72 relative"&gt; 
+                                &lt;div class="absolute inset-0 bg-top hover:bg-bottom" style="background-image: url('src/img/web/project4.jpg');background-repeat: no-repeat;transition: 2s;background-size: 100%;"&gt;
+                                  &lt;img class="hidden" src="{{ 'images/img/web/project4.jpg' | asset_url }}"&gt;
+                                &lt;/div&gt; 
+                              &lt;/div&gt; 
+                              &lt;div class="relative bg-white dark:bg-gray-900"&gt;
+                                &lt;div class="p-4"&gt;
+                                  &lt;p class="text-sm text-gray-500 mb-1.5"&gt;Web&lt;/p&gt; 
+                                  &lt;h3 class="text-xl font-bold mb-1.5"&gt;Project Name&lt;/h3&gt; 
+                                  &lt;p class="text-lg"&gt;Website of the Business Center&lt;/p&gt;
+                                &lt;/div&gt;
+
+                                &lt;div class="relative p-4"&gt; 
+                                  &lt;button class="inline-block py-2 px-6 bg-white text-black font-semibold uppercase border-2 border-black hover:bg-black hover:text-white mb-3"&gt;Look&lt;/button&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;&lt;!-- end slider --&gt;
+
+                      &lt;/div&gt;
+                    &lt;/div&gt;&lt;!-- End portfolio --&gt;
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+        </div><!-- end row -->
+      </div>
+    </div><!-- End snippets -->
+  </main>

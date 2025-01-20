@@ -1,0 +1,69 @@
+{% comment %} 页面内容部分 {% endcomment %}
+<main class="flex flex-row min-h-screen bg-gray-100">
+
+  <div class="flex-1 w-0">
+
+    <turbo-frame id="main-content" data-turbo-action="advance" :class="">
+      <div class="px-0 py-0 sm:px-6 sm:py-8 mx-auto space-y-6 max-w-screen-2xl xl:px-12">
+        <article class="w-full px-2 pt-6 pb-8 space-y-6 bg-white rounded-md shadow-sm shadow-gray-200 lg:pb-10 lg:pt-10 lg:px-6">
+          <div class="max-w-screen-md mx-auto">
+            <h2 class="text-2xl font-semibold text-center text-gray-800 md:text-3xl xl:text-4xl">{{ page.settings.title }}</h2>
+            <p class="my-4 text-sm text-center text-gray-600">{{ page.settings.description }}</p>
+          </div>
+          {% if page.settings.thumb_image_url %}
+            <img src="{{ page.settings.thumb_image_url }}" alt="image cover" class="object-cover w-full rounded-lg shadow lg:shadow-lg max-h-96">
+          {% endif %}
+          <div class="max-w-screen-sm pt-6 mx-auto space-y-6 text-sm text-gray-700">
+            <div class="overflow-x-auto">
+              <div data-controller="view_images" class="ProseMirror break-words">
+                {{ page.settings.content }}
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </turbo-frame>
+
+  </div>
+</main>
+
+
+{% schema %}
+  {
+    "name": "Page",
+    "thumb_url": "images/theme/page.png",
+    "sub_page_templates": ["page"],
+    "settings": [
+      {
+        "id": "title",
+        "type": "text",
+        "placeholder": "",
+        "label": "t:settings_schema.page.settings.title.label",
+        "info": "t:settings_schema.page.settings.title.info"
+      },
+      {
+        "id": "description",
+        "type": "textarea",
+        "label": "t:settings_schema.page.settings.description.label"
+      },
+      {
+        "id": "tags",
+        "type": "tag_picker",
+        "multiple": true,
+        "label": "t:settings_schema.page.settings.tags.label"
+      },
+      {
+        "id": "thumb_image_url",
+        "type": "image_picker",
+        "ratio": "4:1",
+        "width": 640,
+        "label": "t:settings_schema.page.settings.thumb_image_url.label"
+      },
+      {
+        "id": "content",
+        "type": "richtext",
+        "label": "t:settings_schema.page.settings.content.label"
+      }
+    ]
+  }
+{% endschema %}
