@@ -20,7 +20,10 @@ class DataExtractor
     # <!-- [[main start]] --> ... <!-- [[main end]] -->
 
     puts "\n =============== extract other single page--------------------"
-    temp_list = Dir.glob("*.html")
+    # 当前目录下的所有html文件
+    # temp_list = Dir.glob("*.html")
+    # 当前目录及子目录下的所有html文件
+    temp_list = Dir.glob("**/*.html")
     temp_list.each do |t|
       next if t !~ /^(.*)\.html$/i
 

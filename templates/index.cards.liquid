@@ -1,0 +1,104 @@
+{% assign default_hero_url = 'images/img-min/bg-planet.jpg' | asset_url  %} 
+{% assign card_pages = site.pages['/'].children_in_nav_menu  | limit: 24 %}
+
+<main id="content">
+  <!-- =========={ HERO }==========  -->
+  <div id="hero" class="relative py-12 jarallax">
+    <!-- background parallax -->
+    <img class="jarallax-img" src="{{ page.settings.hero_image_url |  default: default_hero_url }}" alt="title">
+    <!-- background overlay -->
+    <div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"></div>
+
+    <div class="container xl:max-w-6xl mx-auto px-4 relative">
+      <div class="flex flex-wrap flex-row -mx-4 items-center justify-center">
+        <!-- content -->
+        <div class="max-w-full w-full lg:w-8/12 px-4">
+          <div class="mt-0 lg:pt-6 text-center">
+            <h1 class="text-2xl md:text-3xl leading-normal mb-2 font-semibold text-white">{{ page.settings.slogan }}</h1>    
+            <hr class="block w-12 h-0.5 mx-auto my-5 bg-yellow-300 border-yellow-300">
+            <p class="text-gray-100 leading-relaxed font-light text-xl mx-auto pb-2">{{ page.settings.description |  default: '24 category sections snippet that you are ready to use to build your site.' }}</p>    
+          </div>
+        </div><!-- end content -->
+      </div>
+      <div class="max-w-2xl mx-auto mt-4 lg:mt-8 -mb-12">
+          {% form_tag 'search', class: 'relative' %}
+              <input 
+                  type="text" 
+                  name="{{form.keywords_field_name}}" value="{{ search.keywords | escape_once }}"
+                  placeholder="{{ "placeholders.search" | t }}"
+                  class="w-full px-4 py-3 rounded-full bg-white shadow-md focus:outline-none focus:ring-2 focus:ring-primary-300"
+              >
+              <div class="absolute inset-y-0 right-0 flex items-center pr-4">
+                  <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                  </svg>
+              </div>
+          {% endform_tag %}
+      </div>
+    </div>
+  </div><!-- End hero -->
+
+  <!-- =========={ SNIPPETS }==========  -->
+  <div id="snippets" class="relative pt-12 pb-8 md:pt-16 md:pb-12 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20">
+    <div class="container xl:max-w-6xl mx-auto px-4">
+      <!-- row -->
+      <div class="flex flex-wrap flex-row justify-center -mx-4 text-center">
+        {% for card_page in card_pages %}
+          {% assign page_count = card_page.children_in_nav_menu | size %}
+          <div class="flex-shrink w-11/12 max-w-full sm:w-1/2 lg:w-1/3 px-4">
+            <div class="relative flex flex-col bg-white border border-gray-200 dark:bg-gray-800 dark:border-gray-700 mb-12 rounded-md overflow-hidden shadow hover:shadow-2xl transform transition duration-300 ease-in-out hover:-translate-y-2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+              <div class="flex-1 p-5">
+                <a href="{{ card_page.path }}">
+                  <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">{{ card_page.link_text }}</h3>
+                  <p class="text-gray-500">{{ page_count }} {{ 'generic.articles'| t}}</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+
+      </div><!-- end row -->
+    </div>
+  </div><!-- End snippets -->
+</main>
+
+{% schema %}
+  {
+    "name": "List Dictionary",
+    "description": "home like list dictionary style",
+    "thumb_url": "images/theme/index.webp",
+    "preview_image_urls": [
+      "images/theme/index.webp"
+    ],
+    "sub_page_templates": ["page"],
+    "settings": [
+      {
+          "id": "hero_image_url",
+          "type": "image_picker",
+          "ratio": "19:6",
+          "width": 900,
+          "label": "t:settings_schema.generic.settings.hero_image_url.label",
+          "info": "t:settings_schema.generic.settings.hero_image_url.info"
+        },
+        {
+          "id": "slogan",
+          "type": "text",
+          "label": "站点首页口号",
+          "default": "Frequently Asked Questions"
+        },
+        {
+          "id": "description",
+          "type": "text",
+          "label": "站点首页一句话描述",
+          "default": "👋 24 category sections snippet that you are ready to use to build your site."
+        },
+        {
+          "id": "tags",
+          "type": "tag_picker",
+          "multiple": true,
+          "label": "t:settings_schema.page.settings.tags.label",
+          "info": "设置以后，标签列表会显示在首页搜索栏下方"
+        }
+      ]
+  }
+{% endschema %}

@@ -1,6 +1,6 @@
 {
-  "theme_label": "Tailpro CMS",
-  "theme_description": "Multipurpose Template to build website for Advertising, Branding and more",
+  "theme_label": "Wiki Tailwiki",
+  "theme_description": "Tailwiki is a multipurpose Wiki template designed for creating fast-loading pages.  offering a variety of pre-designed components and layouts to streamline your development process.",
   "generic": {
     "search": "👋 What Can We Help?",
     "search_from": "All search results from: ",
@@ -8,7 +8,11 @@
     "popular": "Popular",
     "home": "Home",
     "back": "Back",
+    "tags": "Tags",
     "submit": "Submit",
+    "contact": "Contact",
+    "with_support": "with Support",
+    "articles": "articles",
     "empty": "Content is Empty",
     "published_at": "Published at",
     "visits": "visits",

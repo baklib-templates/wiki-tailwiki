@@ -47,5 +47,5 @@ document.addEventListener("turbo:load", () => {
 })
 
 
-// custom tailpro themes
+// custom tailwiki themes
 
