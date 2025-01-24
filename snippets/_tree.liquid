@@ -17,7 +17,7 @@
   <div class="flex space-x-1">
     <div style="width: calc(26px * {{ depth }})" class="flex-none justify-center"></div>
 
-    <div class="flex-initial items-center max-w-72 px-1">
+    <div class="flex-initial items-center max-w-80 px-1">
       {% if children_size > 0 %}
         <div @click="expanded = !expanded" class="flex items-center justify-center cursor-pointer">
     
@@ -60,6 +60,7 @@
         id="frame-treeview__{{ dom_id }}"
         src="{{ site.nav_tree_path |  append: '?parent=' | append: page.id | append: '&selected_ids=' | append: selected_ids | append: '&depth=' | append: depth }}"
         loading="lazy"
+        class="w-full float-none flex flex-col space-y-2 font-normal"
       >
       </turbo-frame>
     </template>

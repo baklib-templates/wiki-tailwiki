@@ -82,11 +82,18 @@
         "info": "t:settings_schema.generic.settings.logo_url.info"
       },
       {
+        "id": "contact_name",
+        "type": "text",
+        "label": "[联系我们]按钮名称",
+        "default": "联系我们",
+        "info": "如果不希望显示按钮则不填"
+      },
+      {
         "id": "contact_url",
         "type": "text",
         "label": "[联系我们]按钮 URL",
         "default": "https://www.baklib.cn/about",
-        "info": "如果不希望显示按钮则不填内容"
+        "info": "如果不希望显示按钮则不填"
       },
       {
         "id": "copyright_info",
